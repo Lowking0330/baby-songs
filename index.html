@@ -909,8 +909,8 @@ function onYtStateChange(event) {
   }
 }
 
-vocabAudio.addEventListener('play', () => { if (currentType() === 'audio') document.getElementById('playBtn').textContent = '⏸'; });
-vocabAudio.addEventListener('pause', () => { if (currentType() === 'audio') document.getElementById('playBtn').textContent = '▶'; });
+vocabAudio.addEventListener('play', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '⏸'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; } });
+vocabAudio.addEventListener('pause', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '▶'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; } });
 vocabAudio.addEventListener('ended', () => {
   if (currentType() !== 'audio') return;
   markDone(currentCat, currentLang, currentIndex);
@@ -990,6 +990,28 @@ function updateNowPlaying() {
   const track = list[currentIndex];
   document.getElementById('npTitle').textContent = track.title;
   document.getElementById('npSub').textContent = track.sub;
+  updateMediaSession(track);
+}
+
+function updateMediaSession(track) {
+  if (!('mediaSession' in navigator)) return;
+  try {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: track.title,
+      artist: track.sub || '',
+      album: '太魯閣語 ＆ 海岸阿美語學習App'
+    });
+    navigator.mediaSession.setActionHandler('play', () => {
+      if (currentType() === 'video') { if (isYtReady) ytPlayer.playVideo(); }
+      else { vocabAudio.play().catch(()=>{}); }
+    });
+    navigator.mediaSession.setActionHandler('pause', () => {
+      if (currentType() === 'video') { if (isYtReady) ytPlayer.pauseVideo(); }
+      else { vocabAudio.pause(); }
+    });
+    navigator.mediaSession.setActionHandler('previoustrack', () => goPrev());
+    navigator.mediaSession.setActionHandler('nexttrack', () => goNext(true));
+  } catch(e) { /* 部分瀏覽器不支援，忽略即可 */ }
 }
 
 function goNext(autoplay) {
