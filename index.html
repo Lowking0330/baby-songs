@@ -599,10 +599,10 @@ function onYtStateChange(event) {
   }
 }
 
-vocabAudio.addEventListener('play', () => { if (currentCat === 'vocab') document.getElementById('playBtn').textContent = '⏸'; });
-vocabAudio.addEventListener('pause', () => { if (currentCat === 'vocab') document.getElementById('playBtn').textContent = '▶'; });
+vocabAudio.addEventListener('play', () => { if (currentType() === 'audio') document.getElementById('playBtn').textContent = '⏸'; });
+vocabAudio.addEventListener('pause', () => { if (currentType() === 'audio') document.getElementById('playBtn').textContent = '▶'; });
 vocabAudio.addEventListener('ended', () => {
-  if (currentCat !== 'vocab') return;
+  if (currentType() !== 'audio') return;
   markDone(currentCat, currentLang, currentIndex);
   if (autoNext) { setTimeout(() => goNext(true), 1000); } else { document.getElementById('playBtn').textContent = '▶'; }
 });
