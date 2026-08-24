@@ -268,7 +268,7 @@
 
 <header>
   <h1 id="headerTitle">🎵 寶寶雙語兒歌播放器</h1>
-  <p id="headerSub">太魯閣語 ＆ 阿美語（秀姑巒腔）・自動連續播放</p>
+  <p id="headerSub">太魯閣語 ＆ 海岸阿美語・自動連續播放</p>
 </header>
 
 <div class="cat-tabs">
@@ -279,7 +279,7 @@
 
 <div class="lang-tabs">
   <div class="lang-tab active" data-lang="truku">太魯閣語</div>
-  <div class="lang-tab" data-lang="amis">阿美語</div>
+  <div class="lang-tab" data-lang="amis">海岸阿美語</div>
 </div>
 
 <!-- Song player (YouTube) -->
@@ -915,7 +915,7 @@ vocabAudio.addEventListener('ended', () => {
   if (currentType() !== 'audio') return;
   markDone(currentCat, currentLang, currentIndex);
   if (autoNext) {
-    const gap = (currentCat === 'vocab') ? 1000 : 0;
+    const gap = (currentCat === 'song') ? 0 : 1000;
     setTimeout(() => goNext(true), gap);
   } else {
     document.getElementById('playBtn').textContent = '▶';
