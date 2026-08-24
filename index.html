@@ -294,6 +294,9 @@
 </div>
 <audio id="vocabAudio"></audio>
 
+<!-- WaWa外部連結捷徑列表 -->
+<div class="playlist" id="wawalinkList" style="display:none; margin-top:14px;"></div>
+
 <div class="now-playing" id="npBlock">
   <div id="npTitle">載入中...</div>
   <div class="sub" id="npSub"></div>
@@ -331,30 +334,94 @@
 const DATA = {
   song: {
     label: "歌謠篇",
-    type: "video",
+    type: "audio",
     truku: [
-      { title: "01 Alang mu", sub: "我的部落", id: "uy0j6xCsECc" },
-      { title: "02 Manu ka nii?", sub: "這是什麼？", id: "wSzeQ30XNPY" },
-      { title: "03 Keeman da", sub: "天黑了", id: "l2L65gPQKfw" },
-      { title: "04 Uyas Hakaw Utux", sub: "靈橋歌", id: "EpNScRhOfcA" },
-      { title: "05 Iyah hini kana", sub: "大家一起來", id: "aKK79neNpTs" },
-      { title: "06 Uyas kndsan", sub: "生活歌", id: "rj3h7Phojmc" },
-      { title: "07 Lupung mu", sub: "我的朋友", id: "qWdfm2HNcOg" },
-      { title: "08 Qnpahan sari", sub: "芋頭田", id: "ZVTmh3VQzLs" },
-      { title: "09 Wauwa Truku", sub: "太魯閣族女孩", id: "ZuM-GF4FMKw" },
-      { title: "10 Yami ni quyu", sub: "我們和蛇", id: "WAb37mBt48w" }
+      { title: "01 Alang mu ①", sub: "我的部落", url: "https://web.klokah.tw/text/sound/17343/214232.mp3" },
+      { title: "01 Alang mu ②", sub: "我的部落", url: "https://web.klokah.tw/text/sound/17343/214233.mp3" },
+      { title: "02 Manu ka nii? ①", sub: "這是什麼？", url: "https://web.klokah.tw/text/sound/17344/214234.mp3" },
+      { title: "02 Manu ka nii? ②", sub: "這是什麼？", url: "https://web.klokah.tw/text/sound/17344/214235.mp3" },
+      { title: "02 Manu ka nii? ③", sub: "這是什麼？", url: "https://web.klokah.tw/text/sound/17344/214236.mp3" },
+      { title: "02 Manu ka nii? ④", sub: "這是什麼？", url: "https://web.klokah.tw/text/sound/17344/214237.mp3" },
+      { title: "02 Manu ka nii? ⑤", sub: "這是什麼？", url: "https://web.klokah.tw/text/sound/17344/214238.mp3" },
+      { title: "03 Keeman da ①", sub: "天黑了", url: "https://web.klokah.tw/text/sound/17345/214239.mp3" },
+      { title: "03 Keeman da ②", sub: "天黑了", url: "https://web.klokah.tw/text/sound/17345/214240.mp3" },
+      { title: "04 Uyas Hakaw Utux ①", sub: "靈橋歌", url: "https://web.klokah.tw/text/sound/17346/214241.mp3" },
+      { title: "04 Uyas Hakaw Utux ②", sub: "靈橋歌", url: "https://web.klokah.tw/text/sound/17346/214242.mp3" },
+      { title: "04 Uyas Hakaw Utux ③", sub: "靈橋歌", url: "https://web.klokah.tw/text/sound/17346/214243.mp3" },
+      { title: "04 Uyas Hakaw Utux ④", sub: "靈橋歌", url: "https://web.klokah.tw/text/sound/17346/214244.mp3" },
+      { title: "05 Iyah hini kana ①", sub: "大家一起來", url: "https://web.klokah.tw/text/sound/17347/214245.mp3" },
+      { title: "05 Iyah hini kana ②", sub: "大家一起來", url: "https://web.klokah.tw/text/sound/17347/214246.mp3" },
+      { title: "05 Iyah hini kana ③", sub: "大家一起來", url: "https://web.klokah.tw/text/sound/17347/214247.mp3" },
+      { title: "06 Uyas kndsan ①", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214248.mp3" },
+      { title: "06 Uyas kndsan ②", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214249.mp3" },
+      { title: "06 Uyas kndsan ③", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214250.mp3" },
+      { title: "06 Uyas kndsan ④", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214251.mp3" },
+      { title: "06 Uyas kndsan ⑤", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214252.mp3" },
+      { title: "06 Uyas kndsan ⑥", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214253.mp3" },
+      { title: "06 Uyas kndsan ⑦", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214254.mp3" },
+      { title: "06 Uyas kndsan ⑧", sub: "生活歌", url: "https://web.klokah.tw/text/sound/17348/214255.mp3" },
+      { title: "07 Lupung mu ①", sub: "我的朋友", url: "https://web.klokah.tw/text/sound/17349/214256.mp3" },
+      { title: "07 Lupung mu ②", sub: "我的朋友", url: "https://web.klokah.tw/text/sound/17349/214257.mp3" },
+      { title: "07 Lupung mu ③", sub: "我的朋友", url: "https://web.klokah.tw/text/sound/17349/214258.mp3" },
+      { title: "07 Lupung mu ④", sub: "我的朋友", url: "https://web.klokah.tw/text/sound/17349/214259.mp3" },
+      { title: "08 Qnpahan sari ①", sub: "芋頭田", url: "https://web.klokah.tw/text/sound/17350/214260.mp3" },
+      { title: "08 Qnpahan sari ②", sub: "芋頭田", url: "https://web.klokah.tw/text/sound/17350/214261.mp3" },
+      { title: "08 Qnpahan sari ③", sub: "芋頭田", url: "https://web.klokah.tw/text/sound/17350/214262.mp3" },
+      { title: "08 Qnpahan sari ④", sub: "芋頭田", url: "https://web.klokah.tw/text/sound/17350/214263.mp3" },
+      { title: "09 Wauwa Truku ①", sub: "太魯閣族女孩", url: "https://web.klokah.tw/text/sound/17351/214264.mp3" },
+      { title: "09 Wauwa Truku ②", sub: "太魯閣族女孩", url: "https://web.klokah.tw/text/sound/17351/214265.mp3" },
+      { title: "10 Yami ni quyu ①", sub: "我們和蛇", url: "https://web.klokah.tw/text/sound/17352/214266.mp3" },
+      { title: "10 Yami ni quyu ②", sub: "我們和蛇", url: "https://web.klokah.tw/text/sound/17352/214267.mp3" },
+      { title: "10 Yami ni quyu ③", sub: "我們和蛇", url: "https://web.klokah.tw/text/sound/17352/214268.mp3" }
     ],
     amis: [
-      { title: "01 Mitilid", sub: "上學", id: "q8KpoJ9GgOA" },
-      { title: "02 Cima kiso?", sub: "你是誰？", id: "lrggZZy5820" },
-      { title: "03 Sorita", sub: "章魚", id: "vED2sOA5Yu8" },
-      { title: "04 Mi'ocil", sub: "送別", id: "EJOP--AzymI" },
-      { title: "05 'Alopal", sub: "小柿子", id: "HnliC9urH18" },
-      { title: "06 Koliciw", sub: "腳踏車", id: "SwQMtvaNnGA" },
-      { title: "07 Tolawtolaw", sub: "白鷺鷥", id: "7ePGYwlVppU" },
-      { title: "08 Takola'", sub: "小青蛙", id: "ClhqsbUqBDo" },
-      { title: "09 Kiso kako cingra", sub: "你我他", id: "PrnbUpBzKRo" },
-      { title: "10 Makalat no kakonah kako", sub: "螞蟻欺侮我", id: "Yhalx9e88r4" }
+      { title: "01 Mitilid ①", sub: "上學", url: "https://web.klokah.tw/text/sound/16167/203293.mp3" },
+      { title: "01 Mitilid ②", sub: "上學", url: "https://web.klokah.tw/text/sound/16167/203294.mp3" },
+      { title: "01 Mitilid ③", sub: "上學", url: "https://web.klokah.tw/text/sound/16167/203295.mp3" },
+      { title: "01 Mitilid ④", sub: "上學", url: "https://web.klokah.tw/text/sound/16167/203296.mp3" },
+      { title: "02 Cima kiso? ①", sub: "你是誰？", url: "https://web.klokah.tw/text/sound/16168/203297.mp3" },
+      { title: "02 Cima kiso? ②", sub: "你是誰？", url: "https://web.klokah.tw/text/sound/16168/203327.mp3" },
+      { title: "03 Sorita ①", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203298.mp3" },
+      { title: "03 Sorita ②", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203299.mp3" },
+      { title: "03 Sorita ③", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203300.mp3" },
+      { title: "03 Sorita ④", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203301.mp3" },
+      { title: "03 Sorita ⑤", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203302.mp3" },
+      { title: "03 Sorita ⑥", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203303.mp3" },
+      { title: "03 Sorita ⑦", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203304.mp3" },
+      { title: "03 Sorita ⑧", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203305.mp3" },
+      { title: "03 Sorita ⑨", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203328.mp3" },
+      { title: "03 Sorita ⑩", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203329.mp3" },
+      { title: "03 Sorita ⑪", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203330.mp3" },
+      { title: "03 Sorita ⑫", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203331.mp3" },
+      { title: "03 Sorita ⑬", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203332.mp3" },
+      { title: "03 Sorita ⑭", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203333.mp3" },
+      { title: "03 Sorita ⑮", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203334.mp3" },
+      { title: "03 Sorita ⑯", sub: "章魚", url: "https://web.klokah.tw/text/sound/16169/203335.mp3" },
+      { title: "04 Mi'ocil ①", sub: "送別", url: "https://web.klokah.tw/text/sound/16170/203306.mp3" },
+      { title: "04 Mi'ocil ②", sub: "送別", url: "https://web.klokah.tw/text/sound/16170/203307.mp3" },
+      { title: "05 'Alopal ①", sub: "小柿子", url: "https://web.klokah.tw/text/sound/16171/203308.mp3" },
+      { title: "05 'Alopal ②", sub: "小柿子", url: "https://web.klokah.tw/text/sound/16171/203309.mp3" },
+      { title: "05 'Alopal ③", sub: "小柿子", url: "https://web.klokah.tw/text/sound/16171/203310.mp3" },
+      { title: "05 'Alopal ④", sub: "小柿子", url: "https://web.klokah.tw/text/sound/16171/203311.mp3" },
+      { title: "05 'Alopal ⑤", sub: "小柿子", url: "https://web.klokah.tw/text/sound/16171/203434.mp3" },
+      { title: "06 Koliciw ①", sub: "腳踏車", url: "https://web.klokah.tw/text/sound/16172/203312.mp3" },
+      { title: "06 Koliciw ②", sub: "腳踏車", url: "https://web.klokah.tw/text/sound/16172/203313.mp3" },
+      { title: "06 Koliciw ③", sub: "腳踏車", url: "https://web.klokah.tw/text/sound/16172/203336.mp3" },
+      { title: "06 Koliciw ④", sub: "腳踏車", url: "https://web.klokah.tw/text/sound/16172/203337.mp3" },
+      { title: "07 Tolawtolaw ①", sub: "白鷺鷥", url: "https://web.klokah.tw/text/sound/16173/203314.mp3" },
+      { title: "07 Tolawtolaw ②", sub: "白鷺鷥", url: "https://web.klokah.tw/text/sound/16173/203315.mp3" },
+      { title: "07 Tolawtolaw ③", sub: "白鷺鷥", url: "https://web.klokah.tw/text/sound/16173/203316.mp3" },
+      { title: "07 Tolawtolaw ④", sub: "白鷺鷥", url: "https://web.klokah.tw/text/sound/16173/203338.mp3" },
+      { title: "08 Takola' ①", sub: "小青蛙", url: "https://web.klokah.tw/text/sound/16174/203317.mp3" },
+      { title: "08 Takola' ②", sub: "小青蛙", url: "https://web.klokah.tw/text/sound/16174/203318.mp3" },
+      { title: "08 Takola' ③", sub: "小青蛙", url: "https://web.klokah.tw/text/sound/16174/203319.mp3" },
+      { title: "08 Takola' ④", sub: "小青蛙", url: "https://web.klokah.tw/text/sound/16174/203320.mp3" },
+      { title: "09 Kiso kako cingra ①", sub: "你我他", url: "https://web.klokah.tw/text/sound/16175/203321.mp3" },
+      { title: "09 Kiso kako cingra ②", sub: "你我他", url: "https://web.klokah.tw/text/sound/16175/203322.mp3" },
+      { title: "09 Kiso kako cingra ③", sub: "你我他", url: "https://web.klokah.tw/text/sound/16175/203323.mp3" },
+      { title: "09 Kiso kako cingra ④", sub: "你我他", url: "https://web.klokah.tw/text/sound/16175/203324.mp3" },
+      { title: "10 Makalat no kakonah kako ①", sub: "螞蟻欺侮我", url: "https://web.klokah.tw/text/sound/16176/203325.mp3" },
+      { title: "10 Makalat no kakonah kako ②", sub: "螞蟻欺侮我", url: "https://web.klokah.tw/text/sound/16176/203326.mp3" }
     ]
   },
   vocab: {
@@ -541,9 +608,36 @@ vocabAudio.addEventListener('ended', () => {
 });
 
 function switchCatUI() {
-  const isVideo = currentType() === 'video';
-  document.getElementById('ytWrap').style.display = isVideo ? 'block' : 'none';
-  document.getElementById('vocabCard').style.display = isVideo ? 'none' : 'block';
+  const type = currentType();
+  const isVideo = type === 'video';
+  const isLink = type === 'link';
+  document.getElementById('ytWrap').style.display = (isVideo && !isLink) ? 'block' : 'none';
+  document.getElementById('vocabCard').style.display = (!isVideo && !isLink) ? 'block' : 'none';
+  document.getElementById('wawalinkList').style.display = isLink ? 'grid' : 'none';
+  document.getElementById('npBlock').style.display = isLink ? 'none' : 'block';
+  document.querySelector('.controls').style.display = isLink ? 'none' : 'flex';
+  document.querySelector('.toggle-row').style.display = isLink ? 'none' : 'flex';
+  document.querySelector('.progress-wrap').style.display = isLink ? 'none' : 'block';
+  document.getElementById('playlist').style.display = isLink ? 'none' : 'grid';
+  document.getElementById('noteBlock').style.display = isLink ? 'none' : 'block';
+  if (isLink) renderWawalinks();
+}
+
+function renderWawalinks() {
+  const list = currentList();
+  const container = document.getElementById('wawalinkList');
+  container.innerHTML = '';
+  list.forEach(item => {
+    const row = document.createElement('a');
+    row.className = 'track';
+    row.style.textDecoration = 'none';
+    row.style.color = 'inherit';
+    row.href = 'https://web.klokah.tw/wawa/song.php?pid=' + item.pid;
+    row.target = '_blank';
+    row.rel = 'noopener';
+    row.innerHTML = `<div class="play-icon">🔗</div><div class="track-info"><div class="track-title">${item.title}</div><div class="track-sub">${item.sub}</div></div><div class="play-icon">▶</div>`;
+    container.appendChild(row);
+  });
 }
 
 function loadTrack(cat, lang, index, autoplay) {
@@ -551,6 +645,7 @@ function loadTrack(cat, lang, index, autoplay) {
   if (isYtReady && ytPlayer && ytPlayer.pauseVideo) { try { ytPlayer.pauseVideo(); } catch(e){} }
   currentCat = cat; currentLang = lang; currentIndex = index;
   switchCatUI();
+  if (currentType() === 'link') { return; }
   const list = currentList();
   if (!list.length) {
     document.getElementById('npTitle').textContent = '此分類尚無內容';
