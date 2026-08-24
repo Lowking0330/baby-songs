@@ -167,6 +167,24 @@
     background: var(--accent2);
     color: white;
   }
+  .speed-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 16px 0;
+  }
+  .speed-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #eee;
+    color: #888;
+    font-size: 12px;
+    border: none;
+  }
+  .speed-btn.active {
+    background: var(--accent);
+    color: white;
+  }
 
   .progress-wrap {
     margin: 16px 16px 0;
@@ -292,6 +310,12 @@
   <div class="toggle-pill" id="loopToggle">整輪循環：關</div>
 </div>
 
+<div class="speed-row">
+  <button class="speed-btn" data-speed="0.85">🐢 0.85x</button>
+  <button class="speed-btn active" data-speed="1">1x</button>
+  <button class="speed-btn" data-speed="1.15">🐇 1.15x</button>
+</div>
+
 <div class="progress-wrap">
   <div class="progress-text"><span id="doneCount">0</span> / <span id="totalCount">10</span> 已完成</div>
   <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
@@ -321,16 +345,16 @@ const DATA = {
       { title: "10 Yami ni quyu", sub: "我們和蛇", id: "WAb37mBt48w" }
     ],
     amis: [
-      { title: "01 Micudad", sub: "上學", id: "ep7eLcyvuIE" },
-      { title: "02 Cima kiso?", sub: "你是誰？", id: "JaCwZQBMZpo" },
-      { title: "03 Solita^", sub: "大章魚", id: "KfZgYzPj33Q" },
-      { title: "04 Mo'ocil", sub: "跟屁蟲", id: "W7WnoqZrwQ4" },
-      { title: "05 'Alopal", sub: "小柿子", id: "xuF9Gq9y0gY" },
-      { title: "06 Koliciw", sub: "腳踏車", id: "zHo8O7cNlYI" },
-      { title: "07 Tolatolaw", sub: "白腹秧雞", id: "DinAhT0Qg7M" },
-      { title: "08 Takora'", sub: "小青蛙", id: "paWT5Emt6Bk" },
-      { title: "09 Kiso kako cira", sub: "你我他", id: "vrwRst1a4_w" },
-      { title: "10 Kalatan no kakonah kako", sub: "螞蟻欺侮我", id: "HjI8n5wQDfA" }
+      { title: "01 Mitilid", sub: "上學", id: "q8KpoJ9GgOA" },
+      { title: "02 Cima kiso?", sub: "你是誰？", id: "lrggZZy5820" },
+      { title: "03 Sorita", sub: "章魚", id: "vED2sOA5Yu8" },
+      { title: "04 Mi'ocil", sub: "送別", id: "EJOP--AzymI" },
+      { title: "05 'Alopal", sub: "小柿子", id: "HnliC9urH18" },
+      { title: "06 Koliciw", sub: "腳踏車", id: "SwQMtvaNnGA" },
+      { title: "07 Tolawtolaw", sub: "白鷺鷥", id: "7ePGYwlVppU" },
+      { title: "08 Takola'", sub: "小青蛙", id: "ClhqsbUqBDo" },
+      { title: "09 Kiso kako cingra", sub: "你我他", id: "PrnbUpBzKRo" },
+      { title: "10 Makalat no kakonah kako", sub: "螞蟻欺侮我", id: "Yhalx9e88r4" }
     ]
   },
   vocab: {
@@ -366,9 +390,100 @@ const DATA = {
       { title: "rudan balay", sub: "耆老", url: "https://web.klokah.tw/wawa/sound/word/33/3-7.mp3" },
       { title: "masu", sub: "小米", url: "https://web.klokah.tw/wawa/sound/word/33/3-8.mp3" },
       { title: "sbiki", sub: "檳榔", url: "https://web.klokah.tw/wawa/sound/word/33/3-9.mp3" },
-      { title: "sinaw", sub: "酒", url: "https://web.klokah.tw/wawa/sound/word/33/3-10.mp3" }
+      { title: "sinaw", sub: "酒", url: "https://web.klokah.tw/wawa/sound/word/33/3-10.mp3" },
+      { title: "isu", sub: "你", url: "https://web.klokah.tw/wawa/sound/word/33/4-1.mp3" },
+      { title: "yaku", sub: "我", url: "https://web.klokah.tw/wawa/sound/word/33/4-2.mp3" },
+      { title: "hangan", sub: "名字", url: "https://web.klokah.tw/wawa/sound/word/33/4-3.mp3" },
+      { title: "hngkwasan", sub: "幾歲", url: "https://web.klokah.tw/wawa/sound/word/33/4-4.mp3" },
+      { title: "trima baga", sub: "洗手", url: "https://web.klokah.tw/wawa/sound/word/33/4-5.mp3" },
+      { title: "baga", sub: "手", url: "https://web.klokah.tw/wawa/sound/word/33/4-6.mp3" },
+      { title: "dduyrawa laqi", sub: "玩具", url: "https://web.klokah.tw/wawa/sound/word/33/4-7.mp3" },
+      { title: "nikan", sub: "有", url: "https://web.klokah.tw/wawa/sound/word/33/4-8.mp3" },
+      { title: "ungat", sub: "沒有", url: "https://web.klokah.tw/wawa/sound/word/33/4-9.mp3" },
+      { title: "smeku", sub: "收拾", url: "https://web.klokah.tw/wawa/sound/word/33/4-10.mp3" },
+      { title: "kingal", sub: "一", url: "https://web.klokah.tw/wawa/sound/word/33/5-1.mp3" },
+      { title: "dha", sub: "二", url: "https://web.klokah.tw/wawa/sound/word/33/5-2.mp3" },
+      { title: "tru", sub: "三", url: "https://web.klokah.tw/wawa/sound/word/33/5-3.mp3" },
+      { title: "spat", sub: "四", url: "https://web.klokah.tw/wawa/sound/word/33/5-4.mp3" },
+      { title: "rima", sub: "五", url: "https://web.klokah.tw/wawa/sound/word/33/5-5.mp3" },
+      { title: "mataru", sub: "六", url: "https://web.klokah.tw/wawa/sound/word/33/5-6.mp3" },
+      { title: "empitu", sub: "七", url: "https://web.klokah.tw/wawa/sound/word/33/5-7.mp3" },
+      { title: "maspat", sub: "八", url: "https://web.klokah.tw/wawa/sound/word/33/5-8.mp3" },
+      { title: "mangri", sub: "九", url: "https://web.klokah.tw/wawa/sound/word/33/5-9.mp3" },
+      { title: "maxal", sub: "十", url: "https://web.klokah.tw/wawa/sound/word/33/5-10.mp3" },
+      { title: "huling", sub: "狗", url: "https://web.klokah.tw/wawa/sound/word/33/6-1.mp3" },
+      { title: "kumay", sub: "熊", url: "https://web.klokah.tw/wawa/sound/word/33/6-2.mp3" },
+      { title: "ngiyaw", sub: "貓", url: "https://web.klokah.tw/wawa/sound/word/33/6-3.mp3" },
+      { title: "rudux", sub: "雞", url: "https://web.klokah.tw/wawa/sound/word/33/6-4.mp3" },
+      { title: "qbhni", sub: "小鳥", url: "https://web.klokah.tw/wawa/sound/word/33/6-5.mp3" },
+      { title: "babuy", sub: "豬", url: "https://web.klokah.tw/wawa/sound/word/33/6-6.mp3" },
+      { title: "bowyak", sub: "山豬", url: "https://web.klokah.tw/wawa/sound/word/33/6-7.mp3" },
+      { title: "rapit", sub: "飛鼠", url: "https://web.klokah.tw/wawa/sound/word/33/6-8.mp3" },
+      { title: "qsurux", sub: "魚", url: "https://web.klokah.tw/wawa/sound/word/33/6-9.mp3" },
+      { title: "puurung", sub: "貓頭鷹", url: "https://web.klokah.tw/wawa/sound/word/33/6-10.mp3" }
     ],
-    amis: []
+    amis: [
+      { title: "lomowad", sub: "起床", url: "https://web.klokah.tw/wawa/sound/word/3/1-1.mp3" },
+      { title: "miriiw", sub: "刷牙", url: "https://web.klokah.tw/wawa/sound/word/3/1-2.mp3" },
+      { title: "laloop", sub: "洗臉", url: "https://web.klokah.tw/wawa/sound/word/3/1-3.mp3" },
+      { title: "maranam", sub: "吃飯(早餐)", url: "https://web.klokah.tw/wawa/sound/word/3/1-4.mp3" },
+      { title: "mafecol", sub: "吃飽", url: "https://web.klokah.tw/wawa/sound/word/3/1-5.mp3" },
+      { title: "cima", sub: "誰", url: "https://web.klokah.tw/wawa/sound/word/3/1-6.mp3" },
+      { title: "hawikid", sub: "帶", url: "https://web.klokah.tw/wawa/sound/word/3/1-7.mp3" },
+      { title: "mitilid", sub: "上學", url: "https://web.klokah.tw/wawa/sound/word/3/1-8.mp3" },
+      { title: "oron", sub: "背", url: "https://web.klokah.tw/wawa/sound/word/3/1-9.mp3" },
+      { title: "kapang", sub: "書包", url: "https://web.klokah.tw/wawa/sound/word/3/1-10.mp3" },
+      { title: "loma", sub: "家", url: "https://web.klokah.tw/wawa/sound/word/3/2-1.mp3" },
+      { title: "akong", sub: "(外)祖父", url: "https://web.klokah.tw/wawa/sound/word/3/2-2.mp3" },
+      { title: "fufu", sub: "(外)祖母", url: "https://web.klokah.tw/wawa/sound/word/3/2-3.mp3" },
+      { title: "wama", sub: "爸爸", url: "https://web.klokah.tw/wawa/sound/word/3/2-4.mp3" },
+      { title: "wina", sub: "媽媽", url: "https://web.klokah.tw/wawa/sound/word/3/2-5.mp3" },
+      { title: "salikaka", sub: "兄弟姊妹", url: "https://web.klokah.tw/wawa/sound/word/3/2-6.mp3" },
+      { title: "fainayan a kaka", sub: "哥哥", url: "https://web.klokah.tw/wawa/sound/word/3/2-7.mp3" },
+      { title: "fafahiyan a kaka", sub: "姊姊", url: "https://web.klokah.tw/wawa/sound/word/3/2-8.mp3" },
+      { title: "fainayan a safa", sub: "弟弟", url: "https://web.klokah.tw/wawa/sound/word/3/2-9.mp3" },
+      { title: "fafahiyan a safa", sub: "妹妹", url: "https://web.klokah.tw/wawa/sound/word/3/2-10.mp3" },
+      { title: "kailomaan", sub: "豐年祭", url: "https://web.klokah.tw/wawa/sound/word/3/3-1.mp3" },
+      { title: "makero", sub: "跳舞", url: "https://web.klokah.tw/wawa/sound/word/3/3-2.mp3" },
+      { title: "romadiw", sub: "唱歌", url: "https://web.klokah.tw/wawa/sound/word/3/3-3.mp3" },
+      { title: "no liteng a riko", sub: "傳統服", url: "https://web.klokah.tw/wawa/sound/word/3/3-4.mp3" },
+      { title: "i cowa", sub: "哪裡", url: "https://web.klokah.tw/wawa/sound/word/3/3-5.mp3" },
+      { title: "sfi", sub: "集會所", url: "https://web.klokah.tw/wawa/sound/word/3/3-6.mp3" },
+      { title: "matoasay", sub: "耆老", url: "https://web.klokah.tw/wawa/sound/word/3/3-7.mp3" },
+      { title: "hafay", sub: "小米", url: "https://web.klokah.tw/wawa/sound/word/3/3-8.mp3" },
+      { title: "icep", sub: "檳榔", url: "https://web.klokah.tw/wawa/sound/word/3/3-9.mp3" },
+      { title: "kurah", sub: "酒", url: "https://web.klokah.tw/wawa/sound/word/3/3-10.mp3" },
+      { title: "kiso", sub: "你", url: "https://web.klokah.tw/wawa/sound/word/3/4-1.mp3" },
+      { title: "kako", sub: "我", url: "https://web.klokah.tw/wawa/sound/word/3/4-2.mp3" },
+      { title: "ngangan", sub: "名字", url: "https://web.klokah.tw/wawa/sound/word/3/4-3.mp3" },
+      { title: "pina ko mihecaan", sub: "幾歲", url: "https://web.klokah.tw/wawa/sound/word/3/4-4.mp3" },
+      { title: "minanaw", sub: "洗(手)", url: "https://web.klokah.tw/wawa/sound/word/3/4-5.mp3" },
+      { title: "kamay", sub: "手", url: "https://web.klokah.tw/wawa/sound/word/3/4-6.mp3" },
+      { title: "tasalamaan", sub: "玩具", url: "https://web.klokah.tw/wawa/sound/word/3/4-7.mp3" },
+      { title: "iraay", sub: "有", url: "https://web.klokah.tw/wawa/sound/word/3/4-8.mp3" },
+      { title: "awaay", sub: "沒有", url: "https://web.klokah.tw/wawa/sound/word/3/4-9.mp3" },
+      { title: "solamet", sub: "收拾", url: "https://web.klokah.tw/wawa/sound/word/3/4-10.mp3" },
+      { title: "cecay", sub: "一", url: "https://web.klokah.tw/wawa/sound/word/3/5-1.mp3" },
+      { title: "tosa", sub: "二", url: "https://web.klokah.tw/wawa/sound/word/3/5-2.mp3" },
+      { title: "tolo", sub: "三", url: "https://web.klokah.tw/wawa/sound/word/3/5-3.mp3" },
+      { title: "sepat", sub: "四", url: "https://web.klokah.tw/wawa/sound/word/3/5-4.mp3" },
+      { title: "lima", sub: "五", url: "https://web.klokah.tw/wawa/sound/word/3/5-5.mp3" },
+      { title: "enem", sub: "六", url: "https://web.klokah.tw/wawa/sound/word/3/5-6.mp3" },
+      { title: "pito", sub: "七", url: "https://web.klokah.tw/wawa/sound/word/3/5-7.mp3" },
+      { title: "falo", sub: "八", url: "https://web.klokah.tw/wawa/sound/word/3/5-8.mp3" },
+      { title: "siwa", sub: "九", url: "https://web.klokah.tw/wawa/sound/word/3/5-9.mp3" },
+      { title: "moetep", sub: "十", url: "https://web.klokah.tw/wawa/sound/word/3/5-10.mp3" },
+      { title: "waco", sub: "狗", url: "https://web.klokah.tw/wawa/sound/word/3/6-1.mp3" },
+      { title: "tomay", sub: "熊", url: "https://web.klokah.tw/wawa/sound/word/3/6-2.mp3" },
+      { title: "pusi", sub: "貓", url: "https://web.klokah.tw/wawa/sound/word/3/6-3.mp3" },
+      { title: "ko'ko", sub: "雞", url: "https://web.klokah.tw/wawa/sound/word/3/6-4.mp3" },
+      { title: "ayam", sub: "小鳥", url: "https://web.klokah.tw/wawa/sound/word/3/6-5.mp3" },
+      { title: "diyong", sub: "豬", url: "https://web.klokah.tw/wawa/sound/word/3/6-6.mp3" },
+      { title: "fafoy", sub: "山豬", url: "https://web.klokah.tw/wawa/sound/word/3/6-7.mp3" },
+      { title: "kalalapid", sub: "飛鼠", url: "https://web.klokah.tw/wawa/sound/word/3/6-8.mp3" },
+      { title: "futin", sub: "魚", url: "https://web.klokah.tw/wawa/sound/word/3/6-9.mp3" },
+      { title: "ekong", sub: "貓頭鷹", url: "https://web.klokah.tw/wawa/sound/word/3/6-10.mp3" }
+    ]
   }
 };
 
@@ -382,6 +497,7 @@ let currentLang = "truku";
 let currentIndex = 0;
 let autoNext = true;
 let loopAll = false;
+let playbackSpeed = 1;
 let ytPlayer = null;
 let isYtReady = false;
 const vocabAudio = document.getElementById('vocabAudio');
@@ -401,7 +517,7 @@ function onYouTubeIframeAPIReady() {
     videoId: DATA.song.truku[0].id,
     playerVars: { rel: 0, playsinline: 1 },
     events: {
-      'onReady': () => { isYtReady = true; if (currentCat === 'song') updateNowPlaying(); },
+      'onReady': () => { isYtReady = true; try { ytPlayer.setPlaybackRate(playbackSpeed); } catch(e){}; if (currentCat === 'song') updateNowPlaying(); },
       'onStateChange': onYtStateChange
     }
   });
@@ -412,7 +528,7 @@ function onYtStateChange(event) {
   else if (event.data === YT.PlayerState.PAUSED) { document.getElementById('playBtn').textContent = '▶'; }
   else if (event.data === YT.PlayerState.ENDED) {
     markDone(currentCat, currentLang, currentIndex);
-    if (autoNext) { goNext(true); } else { document.getElementById('playBtn').textContent = '▶'; }
+    if (autoNext) { setTimeout(() => goNext(true), 1000); } else { document.getElementById('playBtn').textContent = '▶'; }
   }
 }
 
@@ -421,7 +537,7 @@ vocabAudio.addEventListener('pause', () => { if (currentCat === 'vocab') documen
 vocabAudio.addEventListener('ended', () => {
   if (currentCat !== 'vocab') return;
   markDone(currentCat, currentLang, currentIndex);
-  if (autoNext) { goNext(true); } else { document.getElementById('playBtn').textContent = '▶'; }
+  if (autoNext) { setTimeout(() => goNext(true), 1000); } else { document.getElementById('playBtn').textContent = '▶'; }
 });
 
 function switchCatUI() {
@@ -449,6 +565,7 @@ function loadTrack(cat, lang, index, autoplay) {
     }
   } else {
     vocabAudio.src = track.url;
+    vocabAudio.playbackRate = playbackSpeed;
     document.getElementById('vocabWord').textContent = track.title;
     document.getElementById('vocabMeaning').textContent = track.sub;
     if (autoplay) { vocabAudio.play().catch(()=>{}); }
@@ -545,6 +662,18 @@ document.getElementById('loopToggle').onclick = function() {
   this.classList.toggle('on', loopAll);
   this.textContent = '整輪循環：' + (loopAll ? '開' : '關');
 };
+
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    playbackSpeed = parseFloat(btn.dataset.speed);
+    vocabAudio.playbackRate = playbackSpeed;
+    if (isYtReady && ytPlayer && ytPlayer.setPlaybackRate) {
+      try { ytPlayer.setPlaybackRate(playbackSpeed); } catch(e){}
+    }
+  };
+});
 
 document.querySelectorAll('.cat-tab').forEach(tab => {
   tab.onclick = () => {
