@@ -877,6 +877,23 @@ let loopAll = false;
 let playbackSpeed = 1;
 let ytPlayer = null;
 let isYtReady = false;
+let wakeLock = null;
+
+async function requestWakeLock() {
+  try {
+    if ('wakeLock' in navigator) {
+      wakeLock = await navigator.wakeLock.request('screen');
+    }
+  } catch(e) { /* 部分瀏覽器不支援或被拒絕，忽略即可 */ }
+}
+function releaseWakeLock() {
+  if (wakeLock) { wakeLock.release().catch(()=>{}); wakeLock = null; }
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && !vocabAudio.paused) {
+    requestWakeLock();
+  }
+});
 const vocabAudio = document.getElementById('vocabAudio');
 
 function currentList() { return DATA[currentCat][currentLang]; }
@@ -901,16 +918,16 @@ function onYouTubeIframeAPIReady() {
 }
 function onYtStateChange(event) {
   if (currentCat !== 'song') return;
-  if (event.data === YT.PlayerState.PLAYING) { document.getElementById('playBtn').textContent = '⏸'; }
-  else if (event.data === YT.PlayerState.PAUSED) { document.getElementById('playBtn').textContent = '▶'; }
+  if (event.data === YT.PlayerState.PLAYING) { document.getElementById('playBtn').textContent = '⏸'; requestWakeLock(); }
+  else if (event.data === YT.PlayerState.PAUSED) { document.getElementById('playBtn').textContent = '▶'; releaseWakeLock(); }
   else if (event.data === YT.PlayerState.ENDED) {
     markDone(currentCat, currentLang, currentIndex);
     if (autoNext) { setTimeout(() => goNext(true), 1000); } else { document.getElementById('playBtn').textContent = '▶'; }
   }
 }
 
-vocabAudio.addEventListener('play', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '⏸'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; } });
-vocabAudio.addEventListener('pause', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '▶'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; } });
+vocabAudio.addEventListener('play', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '⏸'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing'; requestWakeLock(); } });
+vocabAudio.addEventListener('pause', () => { if (currentType() === 'audio') { document.getElementById('playBtn').textContent = '▶'; if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused'; releaseWakeLock(); } });
 vocabAudio.addEventListener('ended', () => {
   if (currentType() !== 'audio') return;
   markDone(currentCat, currentLang, currentIndex);
