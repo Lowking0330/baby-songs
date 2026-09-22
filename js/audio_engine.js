@@ -212,7 +212,19 @@ const AudioEngine = (function() {
 
       const utterance = new SpeechSynthesisUtterance(pureText);
       utterance.lang = "zh-TW";
-      utterance.rate = 0.95; // 幼兒聽力溫和語速
+      utterance.rate = 0.92; // 幼兒聽力溫和清晰語速
+
+      // 優先尋找正港台灣女聲（微軟 HsiaoChen/Mei-Jia, 漢漢, 雅婷等），避免機械音或非台灣腔調
+      if (typeof window !== "undefined" && window.speechSynthesis && window.speechSynthesis.getVoices) {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices && voices.length > 0) {
+          const twVoice = voices.find(v => (v.lang === 'zh-TW' || v.lang === 'zh_TW') && /HsiaoChen|Mei-Jia|Hanhan|Yating|Zhiwei|Taiwan|臺灣|台灣/i.test(v.name))
+            || voices.find(v => v.lang === 'zh-TW' || v.lang === 'zh_TW');
+          if (twVoice) {
+            utterance.voice = twVoice;
+          }
+        }
+      }
 
       let finished = false;
       const done = () => {

@@ -195,7 +195,7 @@ const CommutePlayer = (function() {
         if (thisSession !== playbackSessionId || !isPlaying) return;
         scheduleTask(500, () => {
           if (thisSession !== playbackSessionId || !isPlaying) return;
-          AudioEngine.speakChinese(item.sub, () => {
+          playChineseTranslation(item, thisSession, () => {
             if (thisSession !== playbackSessionId || !isPlaying) return;
             const gapMs = Math.max(800, Math.round(sentenceGap * 1000));
             scheduleTask(gapMs, () => {
@@ -211,7 +211,7 @@ const CommutePlayer = (function() {
         if (thisSession !== playbackSessionId || !isPlaying) return;
         scheduleTask(500, () => {
           if (thisSession !== playbackSessionId || !isPlaying) return;
-          AudioEngine.speakChinese(item.sub, () => {
+          playChineseTranslation(item, thisSession, () => {
             if (thisSession !== playbackSessionId || !isPlaying) return;
             const gapMs = Math.max(800, Math.round(sentenceGap * 1000));
             scheduleTask(gapMs, () => {
@@ -221,6 +221,30 @@ const CommutePlayer = (function() {
           });
         });
       });
+    }
+  }
+
+  // 輔助：播放中文意涵（優先播放預製微軟曉臻高品質台灣幼教女聲 MP3，其次平滑降級至瀏覽器語音）
+  function playChineseTranslation(item, sessionToken, onComplete) {
+    if (!item) {
+      if (typeof onComplete === "function") onComplete();
+      return;
+    }
+
+    const next = () => {
+      if (sessionToken !== playbackSessionId || !isPlaying) return;
+      if (typeof onComplete === "function") onComplete();
+    };
+
+    if (item.zh_url) {
+      AudioEngine.playUrl(item.zh_url, 1.0, next, (err) => {
+        console.warn("Chinese audio fallback to speech synthesis:", err);
+        AudioEngine.speakChinese(item.sub, next);
+      });
+    } else if (item.sub) {
+      AudioEngine.speakChinese(item.sub, next);
+    } else {
+      next();
     }
   }
 

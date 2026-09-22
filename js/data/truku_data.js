@@ -1905,7 +1905,9 @@ const TRUKU_DATA = {
       "title": "Tutuy da!",
       "sub": "起床了!",
       "url": "https://web.klokah.tw/text/sound/582/8987.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_3c521bae52.mp3",
+      "zh_clean": "起床了!"
     },
     {
       "id": "sent_582_8988",
@@ -1913,7 +1915,9 @@ const TRUKU_DATA = {
       "title": "Tutuy ku da.",
       "sub": "我起床了。",
       "url": "https://web.klokah.tw/text/sound/582/8988.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_2fed207a25.mp3",
+      "zh_clean": "我起床了。"
     },
     {
       "id": "sent_582_8989",
@@ -1921,7 +1925,9 @@ const TRUKU_DATA = {
       "title": "Usa smgus gupun da.",
       "sub": "刷牙！",
       "url": "https://web.klokah.tw/text/sound/582/8989.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_b307e8ebf1.mp3",
+      "zh_clean": "刷牙！"
     },
     {
       "id": "sent_582_8990",
@@ -1929,7 +1935,9 @@ const TRUKU_DATA = {
       "title": "Iq! Musa ku smgus gupun da.",
       "sub": "好，我去刷牙。",
       "url": "https://web.klokah.tw/text/sound/582/8990.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_b3e2462a12.mp3",
+      "zh_clean": "好，我去刷牙。"
     },
     {
       "id": "sent_582_8991",
@@ -1937,7 +1945,9 @@ const TRUKU_DATA = {
       "title": "Mtngi su da hug?",
       "sub": "你吃飽了嗎？",
       "url": "https://web.klokah.tw/text/sound/582/8991.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_fcd1a04ae0.mp3",
+      "zh_clean": "你吃飽了嗎？"
     },
     {
       "id": "sent_582_8992",
@@ -1945,7 +1955,9 @@ const TRUKU_DATA = {
       "title": "Mtngi ku da.",
       "sub": "我吃飽了。",
       "url": "https://web.klokah.tw/text/sound/582/8992.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_287f22e57d.mp3",
+      "zh_clean": "我吃飽了。"
     },
     {
       "id": "sent_582_8993",
@@ -1953,7 +1965,9 @@ const TRUKU_DATA = {
       "title": "Ima ka madas isu musa ptasan hug?",
       "sub": "誰帶你去上學?",
       "url": "https://web.klokah.tw/text/sound/582/8993.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_a978a897ec.mp3",
+      "zh_clean": "誰帶你去上學?"
     },
     {
       "id": "sent_582_8994",
@@ -1961,7 +1975,9 @@ const TRUKU_DATA = {
       "title": "Bubu mu ka madas knang musa ptasan.",
       "sub": "媽媽帶我去上學。",
       "url": "https://web.klokah.tw/text/sound/582/8994.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_7ae5009bcd.mp3",
+      "zh_clean": "媽媽帶我去上學。"
     },
     {
       "id": "sent_582_8995",
@@ -1969,7 +1985,9 @@ const TRUKU_DATA = {
       "title": "Gaga su mapa abapatas dhug?",
       "sub": "你背書包了嗎?",
       "url": "https://web.klokah.tw/text/sound/582/8995.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_5cde04964c.mp3",
+      "zh_clean": "你背書包了嗎?"
     },
     {
       "id": "sent_582_8996",
@@ -1977,7 +1995,9 @@ const TRUKU_DATA = {
       "title": "Iq! Nii ku mapa da.",
       "sub": "是，我背了。",
       "url": "https://web.klokah.tw/text/sound/582/8996.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_61e4bdd567.mp3",
+      "zh_clean": "是，我背了。"
     },
     {
       "id": "sent_583_8997",
@@ -1985,7 +2005,9 @@ const TRUKU_DATA = {
       "title": "Piya hiyi seejiq ka sapah su?",
       "sub": "你家有幾個人?",
       "url": "https://web.klokah.tw/text/sound/583/8997.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_9c10a73b97.mp3",
+      "zh_clean": "你家有幾個人?"
     },
     {
       "id": "sent_583_8998",
@@ -1993,7 +2015,9 @@ const TRUKU_DATA = {
       "title": "Nikan mngari seejiq ka sapah mu.",
       "sub": "我家有9個人。",
       "url": "https://web.klokah.tw/text/sound/583/8998.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_7d76d6b300.mp3",
+      "zh_clean": "我家有9個人。"
     },
     {
       "id": "sent_583_8999",
@@ -2001,7 +2025,9 @@ const TRUKU_DATA = {
       "title": "Nikan mswayi su hug?",
       "sub": "你有兄弟姊妹嗎?",
       "url": "https://web.klokah.tw/text/sound/583/8999.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_c06ef01a91.mp3",
+      "zh_clean": "你有兄弟姊妹嗎?"
     },
     {
       "id": "sent_583_9000",
@@ -2009,7 +2035,9 @@ const TRUKU_DATA = {
       "title": "Nikan. Nikan spat.",
       "sub": "有，我有四個。",
       "url": "https://web.klokah.tw/text/sound/583/9000.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_fab7d1e3f3.mp3",
+      "zh_clean": "有，我有四個。"
     },
     {
       "id": "sent_583_9001",
@@ -2017,7 +2045,9 @@ const TRUKU_DATA = {
       "title": "Nikan piya hiyi seejiq ka mnswayi su hug?",
       "sub": "你有幾個兄弟姊妹?",
       "url": "https://web.klokah.tw/text/sound/583/9001.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_b3790d2c1e.mp3",
+      "zh_clean": "你有幾個兄弟姊妹?"
     },
     {
       "id": "sent_583_9002",
@@ -2025,7 +2055,9 @@ const TRUKU_DATA = {
       "title": "Nika kingal qbsuransnaw ni kingal swayisnaw ni kingal qbsurankuyuh ni kingal swayikuyuh mu.",
       "sub": "我有1個哥哥、1個弟弟、1個姊姊、1個妹妹。",
       "url": "https://web.klokah.tw/text/sound/583/9002.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_4277f508e3.mp3",
+      "zh_clean": "我有1個哥哥、1個弟弟、1個姊姊、1個妹妹。"
     },
     {
       "id": "sent_583_9003",
@@ -2033,7 +2065,9 @@ const TRUKU_DATA = {
       "title": "Ima hangan na ka qbsurankuyuh su?",
       "sub": "你的姊姊叫什麼名字?",
       "url": "https://web.klokah.tw/text/sound/583/9003.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_5e48c5e7dc.mp3",
+      "zh_clean": "你的姊姊叫什麼名字?"
     },
     {
       "id": "sent_583_9004",
@@ -2041,7 +2075,9 @@ const TRUKU_DATA = {
       "title": "Icyang ka hangan na.",
       "sub": "她叫Icyang 。",
       "url": "https://web.klokah.tw/text/sound/583/9004.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_060ee8fcef.mp3",
+      "zh_clean": "她叫Icyang 。"
     },
     {
       "id": "sent_583_9005",
@@ -2049,7 +2085,9 @@ const TRUKU_DATA = {
       "title": "Mkla rmgaw endaang rudan ka payi su hug?",
       "sub": "你祖母會說故事給你聽嗎?",
       "url": "https://web.klokah.tw/text/sound/583/9005.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_807eacb7de.mp3",
+      "zh_clean": "你祖母會說故事給你聽嗎?"
     },
     {
       "id": "sent_583_9006",
@@ -2057,7 +2095,9 @@ const TRUKU_DATA = {
       "title": "Mkla.",
       "sub": "她會說故事。",
       "url": "https://web.klokah.tw/text/sound/583/9006.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_15b833a5db.mp3",
+      "zh_clean": "她會說故事。"
     },
     {
       "id": "sent_584_9007",
@@ -2065,7 +2105,9 @@ const TRUKU_DATA = {
       "title": "Smkuxul su rmgrig hug?",
       "sub": "你喜歡跳舞嗎?",
       "url": "https://web.klokah.tw/text/sound/584/9007.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_931b509e12.mp3",
+      "zh_clean": "你喜歡跳舞嗎?"
     },
     {
       "id": "sent_584_9008",
@@ -2073,7 +2115,9 @@ const TRUKU_DATA = {
       "title": "Smkuxul ku bi rmgrig.",
       "sub": "我喜歡跳舞。",
       "url": "https://web.klokah.tw/text/sound/584/9008.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_d2965b1564.mp3",
+      "zh_clean": "我喜歡跳舞。"
     },
     {
       "id": "sent_584_9009",
@@ -2081,7 +2125,9 @@ const TRUKU_DATA = {
       "title": "Mkla su meuyas hug?",
       "sub": "你會唱歌嗎?",
       "url": "https://web.klokah.tw/text/sound/584/9009.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_2add1e708d.mp3",
+      "zh_clean": "你會唱歌嗎?"
     },
     {
       "id": "sent_584_9010",
@@ -2089,7 +2135,9 @@ const TRUKU_DATA = {
       "title": "Iq!Mkla ku meuyas.",
       "sub": "是的，我會唱歌。",
       "url": "https://web.klokah.tw/text/sound/584/9010.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_de00143baa.mp3",
+      "zh_clean": "是的，我會唱歌。"
     },
     {
       "id": "sent_584_9011",
@@ -2097,7 +2145,9 @@ const TRUKU_DATA = {
       "title": "Ima ka madas isu mowsa tuumal Su Mgay Bari hug?",
       "sub": "誰要帶你參加感恩祭?",
       "url": "https://web.klokah.tw/text/sound/584/9011.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_31922d5865.mp3",
+      "zh_clean": "誰要帶你參加感恩祭?"
     },
     {
       "id": "sent_584_9012",
@@ -2105,7 +2155,9 @@ const TRUKU_DATA = {
       "title": "Ddesu ku na baki mu.",
       "sub": "祖父要帶我去。",
       "url": "https://web.klokah.tw/text/sound/584/9012.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_7fd7fae087.mp3",
+      "zh_clean": "祖父要帶我去。"
     },
     {
       "id": "sent_584_9013",
@@ -2113,7 +2165,9 @@ const TRUKU_DATA = {
       "title": "Gaga namu meuyas ni rmgrig inu hug?",
       "sub": "你們在哪裡唱歌跳舞呢?",
       "url": "https://web.klokah.tw/text/sound/584/9013.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_c14a8cf0ab.mp3",
+      "zh_clean": "你們在哪裡唱歌跳舞呢?"
     },
     {
       "id": "sent_584_9014",
@@ -2121,7 +2175,9 @@ const TRUKU_DATA = {
       "title": "Ga nami Plglug Euda hiya.",
       "sub": "在集會所。",
       "url": "https://web.klokah.tw/text/sound/584/9014.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_4ef9a49ae3.mp3",
+      "zh_clean": "在集會所。"
     },
     {
       "id": "sent_584_9015",
@@ -2129,7 +2185,9 @@ const TRUKU_DATA = {
       "title": "Manu ka djiyun ta Su Mgay Bari hug?",
       "sub": "感恩祭要用什麼物品?",
       "url": "https://web.klokah.tw/text/sound/584/9015.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_1f162e9582.mp3",
+      "zh_clean": "感恩祭要用什麼物品?"
     },
     {
       "id": "sent_584_9016",
@@ -2137,7 +2195,9 @@ const TRUKU_DATA = {
       "title": "masu, sinaw, hiyi babuy.",
       "sub": "小米、酒、豬肉。",
       "url": "https://web.klokah.tw/text/sound/584/9016.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_65841c3724.mp3",
+      "zh_clean": "小米、酒、豬肉。"
     },
     {
       "id": "sent_585_9017",
@@ -2145,7 +2205,9 @@ const TRUKU_DATA = {
       "title": "Piya hnkawsan su hug?",
       "sub": "你幾歲?",
       "url": "https://web.klokah.tw/text/sound/585/9017.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_85cf9b5b68.mp3",
+      "zh_clean": "你幾歲?"
     },
     {
       "id": "sent_585_9018",
@@ -2153,7 +2215,9 @@ const TRUKU_DATA = {
       "title": "Rimal ka hnkawsan mu.",
       "sub": "我 5 歲。",
       "url": "https://web.klokah.tw/text/sound/585/9018.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_b443a21d83.mp3",
+      "zh_clean": "我 5 歲。"
     },
     {
       "id": "sent_585_9019",
@@ -2161,7 +2225,9 @@ const TRUKU_DATA = {
       "title": "Gaga su musa ptasan da?",
       "sub": "你上學了嗎?",
       "url": "https://web.klokah.tw/text/sound/585/9019.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_3f4c3e0c1f.mp3",
+      "zh_clean": "你上學了嗎?"
     },
     {
       "id": "sent_585_9020",
@@ -2169,7 +2235,9 @@ const TRUKU_DATA = {
       "title": "Aq!Ga ku matas ptasa lqlaqi bilaq.",
       "sub": "有！我上幼兒園了。",
       "url": "https://web.klokah.tw/text/sound/585/9020.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_050c866683.mp3",
+      "zh_clean": "有！我上幼兒園了。"
     },
     {
       "id": "sent_585_9021",
@@ -2177,7 +2245,9 @@ const TRUKU_DATA = {
       "title": "Gaga su hmuya hug?",
       "sub": "你在做什麼?",
       "url": "https://web.klokah.tw/text/sound/585/9021.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_17e563cd98.mp3",
+      "zh_clean": "你在做什麼?"
     },
     {
       "id": "sent_585_9022",
@@ -2185,7 +2255,9 @@ const TRUKU_DATA = {
       "title": "Ga ku hmrapas dduyrawa laqi.",
       "sub": "我在玩玩具。",
       "url": "https://web.klokah.tw/text/sound/585/9022.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_9dea0eca3a.mp3",
+      "zh_clean": "我在玩玩具。"
     },
     {
       "id": "sent_585_9023",
@@ -2193,7 +2265,9 @@ const TRUKU_DATA = {
       "title": "Gaga su dwaung smeku ka dduyrawa laqi hug?",
       "sub": "玩具收好了嗎?",
       "url": "https://web.klokah.tw/text/sound/585/9023.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_b2bf3ea408.mp3",
+      "zh_clean": "玩具收好了嗎?"
     },
     {
       "id": "sent_585_9024",
@@ -2201,7 +2275,9 @@ const TRUKU_DATA = {
       "title": "Ga mu ngdwaung smeku da.",
       "sub": "我收好了。",
       "url": "https://web.klokah.tw/text/sound/585/9024.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_acbbacea41.mp3",
+      "zh_clean": "我收好了。"
     },
     {
       "id": "sent_585_9025",
@@ -2209,7 +2285,9 @@ const TRUKU_DATA = {
       "title": "Emtrima su baga da?",
       "sub": "你有沒有洗手?",
       "url": "https://web.klokah.tw/text/sound/585/9025.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_ea299d8645.mp3",
+      "zh_clean": "你有沒有洗手?"
     },
     {
       "id": "sent_585_9026",
@@ -2217,7 +2295,9 @@ const TRUKU_DATA = {
       "title": "Ini ku trima na.",
       "sub": "我還沒有洗手。",
       "url": "https://web.klokah.tw/text/sound/585/9026.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_1f02c7d106.mp3",
+      "zh_clean": "我還沒有洗手。"
     },
     {
       "id": "sent_587_9092",
@@ -2225,7 +2305,9 @@ const TRUKU_DATA = {
       "title": "Nikan piya pusu qhuni ka alang nii hug?",
       "sub": "部落裡有幾棵樹?",
       "url": "https://web.klokah.tw/text/sound/587/9092.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_d8bc6dbe29.mp3",
+      "zh_clean": "部落裡有幾棵樹?"
     },
     {
       "id": "sent_587_9093",
@@ -2233,7 +2315,9 @@ const TRUKU_DATA = {
       "title": "Nikan kingal pusu qhuni.",
       "sub": "有一顆樹。",
       "url": "https://web.klokah.tw/text/sound/587/9093.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_946fdf090e.mp3",
+      "zh_clean": "有一顆樹。"
     },
     {
       "id": "sent_587_9094",
@@ -2241,7 +2325,9 @@ const TRUKU_DATA = {
       "title": "Nikan piya ka rurul gaga spriqbeenux hiya hug?",
       "sub": "草地上有幾隻鴨子?",
       "url": "https://web.klokah.tw/text/sound/587/9094.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_196f3c7520.mp3",
+      "zh_clean": "草地上有幾隻鴨子?"
     },
     {
       "id": "sent_587_9095",
@@ -2249,7 +2335,9 @@ const TRUKU_DATA = {
       "title": "Nikan dha.",
       "sub": "有兩隻鴨子。",
       "url": "https://web.klokah.tw/text/sound/587/9095.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_71ba2f50f3.mp3",
+      "zh_clean": "有兩隻鴨子。"
     },
     {
       "id": "sent_587_9096",
@@ -2257,7 +2345,9 @@ const TRUKU_DATA = {
       "title": "Piya ka sapah ga hiya?",
       "sub": "這裡有幾棟房子?",
       "url": "https://web.klokah.tw/text/sound/587/9096.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_c8c4f385ba.mp3",
+      "zh_clean": "這裡有幾棟房子?"
     },
     {
       "id": "sent_587_9097",
@@ -2265,7 +2355,9 @@ const TRUKU_DATA = {
       "title": "Nikan spat sapah.",
       "sub": "有四棟房子。",
       "url": "https://web.klokah.tw/text/sound/587/9097.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_20b5cccc71.mp3",
+      "zh_clean": "有四棟房子。"
     },
     {
       "id": "sent_587_9098",
@@ -2273,7 +2365,9 @@ const TRUKU_DATA = {
       "title": "Supu ta smpu! Kingal, dha, tru, spat, rimal.",
       "sub": "我們一起數數兒!一二三四五。",
       "url": "https://web.klokah.tw/text/sound/587/9098.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_93f36f1b49.mp3",
+      "zh_clean": "我們一起數數兒!一二三四五。"
     },
     {
       "id": "sent_587_9099",
@@ -2281,7 +2375,9 @@ const TRUKU_DATA = {
       "title": "Kingal, dha, tru, spat, rimal.",
       "sub": "一二三四五。",
       "url": "https://web.klokah.tw/text/sound/587/9099.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_2dfca1af2d.mp3",
+      "zh_clean": "一二三四五。"
     },
     {
       "id": "sent_587_9100",
@@ -2289,7 +2385,9 @@ const TRUKU_DATA = {
       "title": "Smpu yamu han! Mataru, empit, maspat, mangari, maxal.",
       "sub": "你們一起數數兒!六七八九十。",
       "url": "https://web.klokah.tw/text/sound/587/9100.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_02b909dd66.mp3",
+      "zh_clean": "你們一起數數兒!六七八九十。"
     },
     {
       "id": "sent_587_9101",
@@ -2297,7 +2395,9 @@ const TRUKU_DATA = {
       "title": "Mataru, empit, maspat, mangari, maxal.",
       "sub": "六七八九十。",
       "url": "https://web.klokah.tw/text/sound/587/9101.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_fa5ae898e8.mp3",
+      "zh_clean": "六七八九十。"
     },
     {
       "id": "sent_588_9102",
@@ -2305,7 +2405,9 @@ const TRUKU_DATA = {
       "title": "Manu ka mneudus nii?",
       "sub": "這是什麼動物?",
       "url": "https://web.klokah.tw/text/sound/588/9102.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_7c5d415265.mp3",
+      "zh_clean": "這是什麼動物?"
     },
     {
       "id": "sent_588_9103",
@@ -2313,7 +2415,9 @@ const TRUKU_DATA = {
       "title": "Nii o huling.",
       "sub": "這是狗。",
       "url": "https://web.klokah.tw/text/sound/588/9103.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_9aad78b854.mp3",
+      "zh_clean": "這是狗。"
     },
     {
       "id": "sent_588_9104",
@@ -2321,7 +2425,9 @@ const TRUKU_DATA = {
       "title": "Mew Mew Mew o rngat mneudus ciinu hug?",
       "sub": "是什麼動物喵喵叫?",
       "url": "https://web.klokah.tw/text/sound/588/9104.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_1c39304b4a.mp3",
+      "zh_clean": "是什麼動物喵喵叫?"
     },
     {
       "id": "sent_588_9105",
@@ -2329,7 +2435,9 @@ const TRUKU_DATA = {
       "title": "ngiyaw Mew Mew Mew.",
       "sub": "貓咪喵喵叫。",
       "url": "https://web.klokah.tw/text/sound/588/9105.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_4dfdfe82e1.mp3",
+      "zh_clean": "貓咪喵喵叫。"
     },
     {
       "id": "sent_588_9106",
@@ -2337,7 +2445,9 @@ const TRUKU_DATA = {
       "title": "Quri mneudus manu ka ga tmapaq yaung hiya?",
       "sub": "什麼動物在水裡?",
       "url": "https://web.klokah.tw/text/sound/588/9106.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_cd674fc666.mp3",
+      "zh_clean": "什麼動物在水裡?"
     },
     {
       "id": "sent_588_9107",
@@ -2345,7 +2455,9 @@ const TRUKU_DATA = {
       "title": "Qsurux ka ga hiya.",
       "sub": "魚在水裡。",
       "url": "https://web.klokah.tw/text/sound/588/9107.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_f5c99dc916.mp3",
+      "zh_clean": "魚在水裡。"
     },
     {
       "id": "sent_588_9108",
@@ -2353,7 +2465,9 @@ const TRUKU_DATA = {
       "title": "Quri mneudus manu ka ga qhuni hiya?",
       "sub": "什麼動物在樹上?",
       "url": "https://web.klokah.tw/text/sound/588/9108.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_ebbd95c6f1.mp3",
+      "zh_clean": "什麼動物在樹上?"
     },
     {
       "id": "sent_588_9109",
@@ -2361,7 +2475,9 @@ const TRUKU_DATA = {
       "title": "Puurung ka ga hiya.",
       "sub": "貓頭鷹在樹上。",
       "url": "https://web.klokah.tw/text/sound/588/9109.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_122351d9a4.mp3",
+      "zh_clean": "貓頭鷹在樹上。"
     },
     {
       "id": "sent_588_9110",
@@ -2369,7 +2485,9 @@ const TRUKU_DATA = {
       "title": "Quri mneudus o manu ka kuxul su hug?",
       "sub": "你喜歡什麼動物?",
       "url": "https://web.klokah.tw/text/sound/588/9110.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_7392237e68.mp3",
+      "zh_clean": "你喜歡什麼動物?"
     },
     {
       "id": "sent_588_9111",
@@ -2377,1061 +2495,1483 @@ const TRUKU_DATA = {
       "title": "Smkuxuk ku qbhni.",
       "sub": "我喜歡鳥。",
       "url": "https://web.klokah.tw/text/sound/588/9111.mp3",
-      "type": "sentence"
+      "type": "sentence",
+      "zh_url": "audio/zh/zh_8b3ef786df.mp3",
+      "zh_clean": "我喜歡鳥。"
     }
   ],
   "vocab": [
     {
       "title": "tutuy / mtutuy",
       "sub": "起床",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-1.mp3",
+      "zh_url": "audio/zh/zh_59b19552d6.mp3",
+      "zh_clean": "起床"
     },
     {
       "title": "smgus gupun",
       "sub": "刷牙",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-2.mp3",
+      "zh_url": "audio/zh/zh_bf65a273f6.mp3",
+      "zh_clean": "刷牙"
     },
     {
       "title": "trima dqras",
       "sub": "洗臉",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-3.mp3",
+      "zh_url": "audio/zh/zh_aa14742d71.mp3",
+      "zh_clean": "洗臉"
     },
     {
       "title": "mkan nhapuy",
       "sub": "吃飯",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-4.mp3",
+      "zh_url": "audio/zh/zh_786e34092f.mp3",
+      "zh_clean": "吃飯"
     },
     {
       "title": "mtngi",
       "sub": "吃飽",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-5.mp3",
+      "zh_url": "audio/zh/zh_8e0a3466b2.mp3",
+      "zh_clean": "吃飽"
     },
     {
       "title": "ima",
       "sub": "誰",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-6.mp3",
+      "zh_url": "audio/zh/zh_e2ec67dbd6.mp3",
+      "zh_clean": "誰"
     },
     {
       "title": "madas",
       "sub": "帶",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-7.mp3",
+      "zh_url": "audio/zh/zh_e3e7d9e879.mp3",
+      "zh_clean": "帶"
     },
     {
       "title": "musa ptasan",
       "sub": "上學",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-8.mp3",
+      "zh_url": "audio/zh/zh_25562b9e79.mp3",
+      "zh_clean": "上學"
     },
     {
       "title": "mapa",
       "sub": "背",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-9.mp3",
+      "zh_url": "audio/zh/zh_a6d9108337.mp3",
+      "zh_clean": "背"
     },
     {
       "title": "abapatas",
       "sub": "書包",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/1-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/1-10.mp3",
+      "zh_url": "audio/zh/zh_8d8690bc55.mp3",
+      "zh_clean": "書包"
     },
     {
       "title": "Sapah",
       "sub": "家",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-1.mp3",
+      "zh_url": "audio/zh/zh_a6cdd2a00b.mp3",
+      "zh_clean": "家"
     },
     {
       "title": "baki",
       "sub": "(外)祖父",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-2.mp3",
+      "zh_url": "audio/zh/zh_2c5f282304.mp3",
+      "zh_clean": "外祖父"
     },
     {
       "title": "payi",
       "sub": "(外)祖母",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-3.mp3",
+      "zh_url": "audio/zh/zh_6c5cdcde5a.mp3",
+      "zh_clean": "外祖母"
     },
     {
       "title": "tama",
       "sub": "爸爸",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-4.mp3",
+      "zh_url": "audio/zh/zh_0d00c80f61.mp3",
+      "zh_clean": "爸爸"
     },
     {
       "title": "bubu",
       "sub": "媽媽",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-5.mp3",
+      "zh_url": "audio/zh/zh_b2bc0f0bfe.mp3",
+      "zh_clean": "媽媽"
     },
     {
       "title": "mswayi",
       "sub": "兄弟姊妹",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-6.mp3",
+      "zh_url": "audio/zh/zh_30efaeab93.mp3",
+      "zh_clean": "兄弟姊妹"
     },
     {
       "title": "qbsuran snaw",
       "sub": "哥哥",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-7.mp3",
+      "zh_url": "audio/zh/zh_39af35e7b7.mp3",
+      "zh_clean": "哥哥"
     },
     {
       "title": "qbsuran kuyuh",
       "sub": "姊姊",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-8.mp3",
+      "zh_url": "audio/zh/zh_d88344cc23.mp3",
+      "zh_clean": "姊姊"
     },
     {
       "title": "swayi snaw",
       "sub": "弟弟",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-9.mp3",
+      "zh_url": "audio/zh/zh_427034659a.mp3",
+      "zh_clean": "弟弟"
     },
     {
       "title": "swayi kuyuh",
       "sub": "妹妹",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/2-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/2-10.mp3",
+      "zh_url": "audio/zh/zh_1c097b12de.mp3",
+      "zh_clean": "妹妹"
     },
     {
       "title": "Mgay Bari",
       "sub": "感恩祭",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-1.mp3",
+      "zh_url": "audio/zh/zh_b42451466f.mp3",
+      "zh_clean": "感恩祭"
     },
     {
       "title": "rmgrig",
       "sub": "跳舞",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-2.mp3",
+      "zh_url": "audio/zh/zh_fad50bfdcb.mp3",
+      "zh_clean": "跳舞"
     },
     {
       "title": "meuyas",
       "sub": "唱歌",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-3.mp3",
+      "zh_url": "audio/zh/zh_d49c9b66f6.mp3",
+      "zh_clean": "唱歌"
     },
     {
       "title": "Lukus truku",
       "sub": "傳統服",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-4.mp3",
+      "zh_url": "audio/zh/zh_14d6c92dcb.mp3",
+      "zh_clean": "傳統服"
     },
     {
       "title": "inu",
       "sub": "哪裡",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-5.mp3",
+      "zh_url": "audio/zh/zh_315ac3feb8.mp3",
+      "zh_clean": "哪裡"
     },
     {
       "title": "Plglug Euda",
       "sub": "集會所",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-6.mp3",
+      "zh_url": "audio/zh/zh_3e029981d5.mp3",
+      "zh_clean": "集會所"
     },
     {
       "title": "rudan balay",
       "sub": "耆老",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-7.mp3",
+      "zh_url": "audio/zh/zh_d3eb2ca8c2.mp3",
+      "zh_clean": "耆老"
     },
     {
       "title": "masu",
       "sub": "小米",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-8.mp3",
+      "zh_url": "audio/zh/zh_2be4465777.mp3",
+      "zh_clean": "小米"
     },
     {
       "title": "sbiki",
       "sub": "檳榔",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-9.mp3",
+      "zh_url": "audio/zh/zh_b09e07d18e.mp3",
+      "zh_clean": "檳榔"
     },
     {
       "title": "sinaw",
       "sub": "酒",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/3-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/3-10.mp3",
+      "zh_url": "audio/zh/zh_811ba9ddbf.mp3",
+      "zh_clean": "酒"
     },
     {
       "title": "isu",
       "sub": "你",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-1.mp3",
+      "zh_url": "audio/zh/zh_df1fd91011.mp3",
+      "zh_clean": "你"
     },
     {
       "title": "yaku",
       "sub": "我",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-2.mp3",
+      "zh_url": "audio/zh/zh_1681525453.mp3",
+      "zh_clean": "我"
     },
     {
       "title": "hangan",
       "sub": "名字",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-3.mp3",
+      "zh_url": "audio/zh/zh_689fad203a.mp3",
+      "zh_clean": "名字"
     },
     {
       "title": "hngkwasan",
       "sub": "幾歲",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-4.mp3",
+      "zh_url": "audio/zh/zh_893d0e2953.mp3",
+      "zh_clean": "幾歲"
     },
     {
       "title": "trima baga",
       "sub": "洗手",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-5.mp3",
+      "zh_url": "audio/zh/zh_fd6d26e916.mp3",
+      "zh_clean": "洗手"
     },
     {
       "title": "baga",
       "sub": "手",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-6.mp3",
+      "zh_url": "audio/zh/zh_3c7d183f1b.mp3",
+      "zh_clean": "手"
     },
     {
       "title": "dduyrawa laqi",
       "sub": "玩具",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-7.mp3",
+      "zh_url": "audio/zh/zh_c11b5af7f6.mp3",
+      "zh_clean": "玩具"
     },
     {
       "title": "nikan",
       "sub": "有",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-8.mp3",
+      "zh_url": "audio/zh/zh_cc4ad2fd27.mp3",
+      "zh_clean": "有"
     },
     {
       "title": "ungat",
       "sub": "沒有",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-9.mp3",
+      "zh_url": "audio/zh/zh_ffeb3033f6.mp3",
+      "zh_clean": "沒有"
     },
     {
       "title": "smeku",
       "sub": "收拾",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/4-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/4-10.mp3",
+      "zh_url": "audio/zh/zh_3ae6a8da14.mp3",
+      "zh_clean": "收拾"
     },
     {
       "title": "kingal",
       "sub": "一",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-1.mp3",
+      "zh_url": "audio/zh/zh_7941da94db.mp3",
+      "zh_clean": "一"
     },
     {
       "title": "dha",
       "sub": "二",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-2.mp3",
+      "zh_url": "audio/zh/zh_2d8be272c9.mp3",
+      "zh_clean": "二"
     },
     {
       "title": "tru",
       "sub": "三",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-3.mp3",
+      "zh_url": "audio/zh/zh_e662ff59a0.mp3",
+      "zh_clean": "三"
     },
     {
       "title": "spat",
       "sub": "四",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-4.mp3",
+      "zh_url": "audio/zh/zh_21716cf311.mp3",
+      "zh_clean": "四"
     },
     {
       "title": "rima",
       "sub": "五",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-5.mp3",
+      "zh_url": "audio/zh/zh_1fcc29d077.mp3",
+      "zh_clean": "五"
     },
     {
       "title": "mataru",
       "sub": "六",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-6.mp3",
+      "zh_url": "audio/zh/zh_61b453523d.mp3",
+      "zh_clean": "六"
     },
     {
       "title": "empitu",
       "sub": "七",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-7.mp3",
+      "zh_url": "audio/zh/zh_aad6914f8f.mp3",
+      "zh_clean": "七"
     },
     {
       "title": "maspat",
       "sub": "八",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-8.mp3",
+      "zh_url": "audio/zh/zh_edf1acd5c6.mp3",
+      "zh_clean": "八"
     },
     {
       "title": "mangri",
       "sub": "九",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-9.mp3",
+      "zh_url": "audio/zh/zh_9b4851f85d.mp3",
+      "zh_clean": "九"
     },
     {
       "title": "maxal",
       "sub": "十",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/5-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/5-10.mp3",
+      "zh_url": "audio/zh/zh_181245720b.mp3",
+      "zh_clean": "十"
     },
     {
       "title": "huling",
       "sub": "狗",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-1.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-1.mp3",
+      "zh_url": "audio/zh/zh_5090e44ef9.mp3",
+      "zh_clean": "狗"
     },
     {
       "title": "kumay",
       "sub": "熊",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-2.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-2.mp3",
+      "zh_url": "audio/zh/zh_8df702f4ac.mp3",
+      "zh_clean": "熊"
     },
     {
       "title": "ngiyaw",
       "sub": "貓",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-3.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-3.mp3",
+      "zh_url": "audio/zh/zh_f984737f35.mp3",
+      "zh_clean": "貓"
     },
     {
       "title": "rudux",
       "sub": "雞",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-4.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-4.mp3",
+      "zh_url": "audio/zh/zh_3a1c36d2b3.mp3",
+      "zh_clean": "雞"
     },
     {
       "title": "qbhni",
       "sub": "小鳥",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-5.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-5.mp3",
+      "zh_url": "audio/zh/zh_7db390f8f7.mp3",
+      "zh_clean": "小鳥"
     },
     {
       "title": "babuy",
       "sub": "豬",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-6.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-6.mp3",
+      "zh_url": "audio/zh/zh_2c3c891256.mp3",
+      "zh_clean": "豬"
     },
     {
       "title": "bowyak",
       "sub": "山豬",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-7.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-7.mp3",
+      "zh_url": "audio/zh/zh_aa7be52ee8.mp3",
+      "zh_clean": "山豬"
     },
     {
       "title": "rapit",
       "sub": "飛鼠",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-8.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-8.mp3",
+      "zh_url": "audio/zh/zh_a157aa0927.mp3",
+      "zh_clean": "飛鼠"
     },
     {
       "title": "qsurux",
       "sub": "魚",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-9.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-9.mp3",
+      "zh_url": "audio/zh/zh_ee4a1ce61e.mp3",
+      "zh_clean": "魚"
     },
     {
       "title": "puurung",
       "sub": "貓頭鷹",
-      "url": "https://web.klokah.tw/wawa/sound/word/33/6-10.mp3"
+      "url": "https://web.klokah.tw/wawa/sound/word/33/6-10.mp3",
+      "zh_url": "audio/zh/zh_7b4a7da6c8.mp3",
+      "zh_clean": "貓頭鷹"
     }
   ],
   "lima": [
     {
       "title": "kingal idas",
       "sub": "L01 一月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-01.mp3",
+      "zh_url": "audio/zh/zh_43bc301e73.mp3",
+      "zh_clean": "一月"
     },
     {
       "title": "dha idas",
       "sub": "L01 二月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-02.mp3",
+      "zh_url": "audio/zh/zh_b61c626886.mp3",
+      "zh_clean": "二月"
     },
     {
       "title": "tru idas",
       "sub": "L01 三月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-03.mp3",
+      "zh_url": "audio/zh/zh_eade91dc00.mp3",
+      "zh_clean": "三月"
     },
     {
       "title": "spat idas",
       "sub": "L01 四月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-07.mp3",
+      "zh_url": "audio/zh/zh_5178fda8e7.mp3",
+      "zh_clean": "四月"
     },
     {
       "title": "rima idas",
       "sub": "L01 五月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-08.mp3",
+      "zh_url": "audio/zh/zh_cd474e4125.mp3",
+      "zh_clean": "五月"
     },
     {
       "title": "mataru idas",
       "sub": "L01 六月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-09.mp3",
+      "zh_url": "audio/zh/zh_dc71b73f68.mp3",
+      "zh_clean": "六月"
     },
     {
       "title": "empitu idas",
       "sub": "L01 七月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-13.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-13.mp3",
+      "zh_url": "audio/zh/zh_328dcec7ed.mp3",
+      "zh_clean": "七月"
     },
     {
       "title": "maspat idas",
       "sub": "L01 八月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-14.mp3",
+      "zh_url": "audio/zh/zh_b7263939ac.mp3",
+      "zh_clean": "八月"
     },
     {
       "title": "mngari idas",
       "sub": "L01 九月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-15.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-15.mp3",
+      "zh_url": "audio/zh/zh_cd9559ebaf.mp3",
+      "zh_clean": "九月"
     },
     {
       "title": "maxal idas",
       "sub": "L01 十月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-20.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-20.mp3",
+      "zh_url": "audio/zh/zh_ade2e82d67.mp3",
+      "zh_clean": "十月"
     },
     {
       "title": "maxal kingal idas",
       "sub": "L01 十一月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-21.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-21.mp3",
+      "zh_url": "audio/zh/zh_4e04f1a9c3.mp3",
+      "zh_clean": "十一月"
     },
     {
       "title": "maxal dha idas",
       "sub": "L01 十二月",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-26.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-26.mp3",
+      "zh_url": "audio/zh/zh_5c28133800.mp3",
+      "zh_clean": "十二月"
     },
     {
       "title": "jiyax sayang",
       "sub": "L01 今天",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-29.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-29.mp3",
+      "zh_url": "audio/zh/zh_800dfdd902.mp3",
+      "zh_clean": "今天"
     },
     {
       "title": "shiga",
       "sub": "L01 昨天",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-22.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-22.mp3",
+      "zh_url": "audio/zh/zh_2f8d6f1584.mp3",
+      "zh_clean": "昨天"
     },
     {
       "title": "saman",
       "sub": "L01 明天",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-23.mp3",
+      "zh_url": "audio/zh/zh_8bcbd77d1f.mp3",
+      "zh_clean": "明天"
     },
     {
       "title": "Tg1 jiyax iyax sngayang",
       "sub": "L01 星期一",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-05.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-05.mp3",
+      "zh_url": "audio/zh/zh_5ce438210f.mp3",
+      "zh_clean": "星期一"
     },
     {
       "title": "Tg2 jiyax iyax sngayang",
       "sub": "L01 星期二",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-06.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-06.mp3",
+      "zh_url": "audio/zh/zh_34e5216bc3.mp3",
+      "zh_clean": "星期二"
     },
     {
       "title": "Tg3 jiyax iyax sngayang",
       "sub": "L01 星期三",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-12.mp3",
+      "zh_url": "audio/zh/zh_711d996d87.mp3",
+      "zh_clean": "星期三"
     },
     {
       "title": "Tg4 jiyax iyax sngayang",
       "sub": "L01 星期四",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-17.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-17.mp3",
+      "zh_url": "audio/zh/zh_3df6af796b.mp3",
+      "zh_clean": "星期四"
     },
     {
       "title": "Tg5 jiyax iyax sngayang",
       "sub": "L01 星期五",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-11.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-11.mp3",
+      "zh_url": "audio/zh/zh_450ea3af46.mp3",
+      "zh_clean": "星期五"
     },
     {
       "title": "Tg6 jiyax iyax sngayang",
       "sub": "L01 星期六",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-10.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-10.mp3",
+      "zh_url": "audio/zh/zh_1ae72f6826.mp3",
+      "zh_clean": "星期六"
     },
     {
       "title": "jiyax sngayang",
       "sub": "L01 星期日",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P1-04.mp3",
+      "zh_url": "audio/zh/zh_67b19578d0.mp3",
+      "zh_clean": "星期日"
     },
     {
       "title": "bhngay",
       "sub": "L02 白色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-29.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-29.mp3",
+      "zh_url": "audio/zh/zh_2fc96b2704.mp3",
+      "zh_clean": "白色"
     },
     {
       "title": "mgpajiq",
       "sub": "L02 綠色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-10.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-10.mp3",
+      "zh_url": "audio/zh/zh_c6f885142e.mp3",
+      "zh_clean": "綠色"
     },
     {
       "title": "embanah",
       "sub": "L02 紅色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-11.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-11.mp3",
+      "zh_url": "audio/zh/zh_c375f3bdf9.mp3",
+      "zh_clean": "紅色"
     },
     {
       "title": "mqalux",
       "sub": "L02 黑色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-25.mp3",
+      "zh_url": "audio/zh/zh_9d2d1f62ae.mp3",
+      "zh_clean": "黑色"
     },
     {
       "title": "Mtlawa",
       "sub": "L02 藍色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-14.mp3",
+      "zh_url": "audio/zh/zh_a51c5bc8a8.mp3",
+      "zh_clean": "藍色"
     },
     {
       "title": "empurah/mbrhibung",
       "sub": "L02 黃色",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-15.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-15.mp3",
+      "zh_url": "audio/zh/zh_df398ab201.mp3",
+      "zh_clean": "黃色"
     },
     {
       "title": "mqurug",
       "sub": "L02 圓形",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-35.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-35.mp3",
+      "zh_url": "audio/zh/zh_979e65e561.mp3",
+      "zh_clean": "圓形"
     },
     {
       "title": "Tru muhing hnigan",
       "sub": "L02 三角形",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-08.mp3",
+      "zh_url": "audio/zh/zh_29f12d8069.mp3",
+      "zh_clean": "三角形"
     },
     {
       "title": "Spat muhing hnigan",
       "sub": "L02 正方形",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-09.mp3",
+      "zh_url": "audio/zh/zh_3c5669187b.mp3",
+      "zh_clean": "正方形"
     },
     {
       "title": "hnigan qqhluyuq",
       "sub": "L02 菱形",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-12.mp3",
+      "zh_url": "audio/zh/zh_d28e2cf66b.mp3",
+      "zh_clean": "菱形"
     },
     {
       "title": "Spat muhing bbaraw hnigan",
       "sub": "L02 長方形",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-34.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-34.mp3",
+      "zh_url": "audio/zh/zh_c0577f78d4.mp3",
+      "zh_clean": "長方形"
     },
     {
       "title": "kingal",
       "sub": "L02 一",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-01.mp3",
+      "zh_url": "audio/zh/zh_7941da94db.mp3",
+      "zh_clean": "一"
     },
     {
       "title": "dha",
       "sub": "L02 二",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-27.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-27.mp3",
+      "zh_url": "audio/zh/zh_2d8be272c9.mp3",
+      "zh_clean": "二"
     },
     {
       "title": "tru",
       "sub": "L02 三",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-19.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-19.mp3",
+      "zh_url": "audio/zh/zh_e662ff59a0.mp3",
+      "zh_clean": "三"
     },
     {
       "title": "spat",
       "sub": "L02 四",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-05.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-05.mp3",
+      "zh_url": "audio/zh/zh_21716cf311.mp3",
+      "zh_clean": "四"
     },
     {
       "title": "rima",
       "sub": "L02 五",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-07.mp3",
+      "zh_url": "audio/zh/zh_1fcc29d077.mp3",
+      "zh_clean": "五"
     },
     {
       "title": "mataru",
       "sub": "L02 六",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-31.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-31.mp3",
+      "zh_url": "audio/zh/zh_61b453523d.mp3",
+      "zh_clean": "六"
     },
     {
       "title": "empitu",
       "sub": "L02 七",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-06.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-06.mp3",
+      "zh_url": "audio/zh/zh_aad6914f8f.mp3",
+      "zh_clean": "七"
     },
     {
       "title": "maspat",
       "sub": "L02 八",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-22.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-22.mp3",
+      "zh_url": "audio/zh/zh_edf1acd5c6.mp3",
+      "zh_clean": "八"
     },
     {
       "title": "mngari",
       "sub": "L02 九",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-04.mp3",
+      "zh_url": "audio/zh/zh_9b4851f85d.mp3",
+      "zh_clean": "九"
     },
     {
       "title": "maxal",
       "sub": "L02 十",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-02.mp3",
+      "zh_url": "audio/zh/zh_181245720b.mp3",
+      "zh_clean": "十"
     },
     {
       "title": "Kingal kbkuy",
       "sub": "L02 一百",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P2-23.mp3",
+      "zh_url": "audio/zh/zh_61b0509932.mp3",
+      "zh_clean": "一百"
     },
     {
       "title": "dowriq",
       "sub": "L03 眼睛",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-15.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-15.mp3",
+      "zh_url": "audio/zh/zh_946f5c8c69.mp3",
+      "zh_clean": "眼睛"
     },
     {
       "title": "muhing",
       "sub": "L03 鼻子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-02.mp3",
+      "zh_url": "audio/zh/zh_e6134a2993.mp3",
+      "zh_clean": "鼻子"
     },
     {
       "title": "quwaq",
       "sub": "L03 嘴巴",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-08.mp3",
+      "zh_url": "audio/zh/zh_8c69df4cf1.mp3",
+      "zh_clean": "嘴巴"
     },
     {
       "title": "birat",
       "sub": "L03 耳朵",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-03.mp3",
+      "zh_url": "audio/zh/zh_62507462c9.mp3",
+      "zh_clean": "耳朵"
     },
     {
       "title": "tunux",
       "sub": "L03 頭",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-19.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-19.mp3",
+      "zh_url": "audio/zh/zh_2ce17249e6.mp3",
+      "zh_clean": "頭"
     },
     {
       "title": "dqras",
       "sub": "L03 臉",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-01.mp3",
+      "zh_url": "audio/zh/zh_248cc7e019.mp3",
+      "zh_clean": "臉"
     },
     {
       "title": "kawir",
       "sub": "L03 眉毛",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-14.mp3",
+      "zh_url": "audio/zh/zh_677cf628dc.mp3",
+      "zh_clean": "眉毛"
     },
     {
       "title": "sneunux",
       "sub": "L03 頭髮",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-07.mp3",
+      "zh_url": "audio/zh/zh_1120ba00f1.mp3",
+      "zh_clean": "頭髮"
     },
     {
       "title": "waru",
       "sub": "L03 脖子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-09.mp3",
+      "zh_url": "audio/zh/zh_73fab6c3d6.mp3",
+      "zh_clean": "脖子"
     },
     {
       "title": "baga",
       "sub": "L03 手",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-21.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-21.mp3",
+      "zh_url": "audio/zh/zh_3c7d183f1b.mp3",
+      "zh_clean": "手"
     },
     {
       "title": "qaqay",
       "sub": "L03 腳",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-33.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-33.mp3",
+      "zh_url": "audio/zh/zh_3ff6f46de2.mp3",
+      "zh_clean": "腳"
     },
     {
       "title": "btriq",
       "sub": "L03 腿",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-26.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-26.mp3",
+      "zh_url": "audio/zh/zh_9d023c6d9b.mp3",
+      "zh_clean": "腿"
     },
     {
       "title": "nbuyas",
       "sub": "L03 肚子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-20.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-20.mp3",
+      "zh_url": "audio/zh/zh_6a3a1a2cb6.mp3",
+      "zh_clean": "肚子"
     },
     {
       "title": "sulay",
       "sub": "L03 屁股",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-25.mp3",
+      "zh_url": "audio/zh/zh_d9cd443c21.mp3",
+      "zh_clean": "屁股"
     },
     {
       "title": "Empklawa mnarux",
       "sub": "L03 護理師",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-23.mp3",
+      "zh_url": "audio/zh/zh_6d4a92a605.mp3",
+      "zh_clean": "護理師"
     },
     {
       "title": "msapuh",
       "sub": "L03 醫生",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-34.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-34.mp3",
+      "zh_url": "audio/zh/zh_4e208090e4.mp3",
+      "zh_clean": "醫生"
     },
     {
       "title": "spuhan",
       "sub": "L03 醫院",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-12.mp3",
+      "zh_url": "audio/zh/zh_10a393842c.mp3",
+      "zh_clean": "醫院"
     },
     {
       "title": "beytaq qumi",
       "sub": "L03 打針",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-04.mp3",
+      "zh_url": "audio/zh/zh_f262e03ad5.mp3",
+      "zh_clean": "打針"
     },
     {
       "title": "btriq",
       "sub": "L03 大腿",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-27.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-27.mp3",
+      "zh_url": "audio/zh/zh_69276b9c68.mp3",
+      "zh_clean": "大腿"
     },
     {
       "title": "quduh",
       "sub": "L03 小腿",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-31.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P3-31.mp3",
+      "zh_url": "audio/zh/zh_26a9ea20ba.mp3",
+      "zh_clean": "小腿"
     },
     {
       "title": "kjiraw",
       "sub": "L04 老鷹",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-01.mp3",
+      "zh_url": "audio/zh/zh_858958460b.mp3",
+      "zh_clean": "老鷹"
     },
     {
       "title": "bowyak",
       "sub": "L04 山豬",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-13.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-13.mp3",
+      "zh_url": "audio/zh/zh_aa7be52ee8.mp3",
+      "zh_clean": "山豬"
     },
     {
       "title": "klaway",
       "sub": "L04 蝴蝶",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-14.mp3",
+      "zh_url": "audio/zh/zh_4d192dbe97.mp3",
+      "zh_clean": "蝴蝶"
     },
     {
       "title": "kacing",
       "sub": "L04 牛",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-26.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-26.mp3",
+      "zh_url": "audio/zh/zh_a933ef6a9b.mp3",
+      "zh_clean": "牛"
     },
     {
       "title": "rungay",
       "sub": "L04 猴子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-35.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-35.mp3",
+      "zh_url": "audio/zh/zh_5f024c07f4.mp3",
+      "zh_clean": "猴子"
     },
     {
       "title": "mirit",
       "sub": "L04 山羊",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-02.mp3",
+      "zh_url": "audio/zh/zh_cd131bf383.mp3",
+      "zh_clean": "山羊"
     },
     {
       "title": "quyu",
       "sub": "L04 蛇",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-07.mp3",
+      "zh_url": "audio/zh/zh_37e76c8a41.mp3",
+      "zh_clean": "蛇"
     },
     {
       "title": "qsurux",
       "sub": "L04 魚",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-17.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-17.mp3",
+      "zh_url": "audio/zh/zh_ee4a1ce61e.mp3",
+      "zh_clean": "魚"
     },
     {
       "title": "qpatur",
       "sub": "L04 青蛙",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-23.mp3",
+      "zh_url": "audio/zh/zh_5fc061b2b1.mp3",
+      "zh_clean": "青蛙"
     },
     {
       "title": "rudux",
       "sub": "L04 雞",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-29.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-29.mp3",
+      "zh_url": "audio/zh/zh_3a1c36d2b3.mp3",
+      "zh_clean": "雞"
     },
     {
       "title": "karang",
       "sub": "L04 螃蟹",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-15.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-15.mp3",
+      "zh_url": "audio/zh/zh_ba17a910ee.mp3",
+      "zh_clean": "螃蟹"
     },
     {
       "title": "sbirat",
       "sub": "L04 兔子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-12.mp3",
+      "zh_url": "audio/zh/zh_4c16854a6f.mp3",
+      "zh_clean": "兔子"
     },
     {
       "title": "rqnux",
       "sub": "L04 鹿",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-33.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-33.mp3",
+      "zh_url": "audio/zh/zh_ec485dc163.mp3",
+      "zh_clean": "鹿"
     },
     {
       "title": "mami",
       "sub": "L04 橘子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-03.mp3",
+      "zh_url": "audio/zh/zh_8130753d07.mp3",
+      "zh_clean": "橘子"
     },
     {
       "title": "baun",
       "sub": "L04 南瓜",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-19.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-19.mp3",
+      "zh_url": "audio/zh/zh_2e3c5c7b25.mp3",
+      "zh_clean": "南瓜"
     },
     {
       "title": "sruhing",
       "sub": "L04 山蘇",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-08.mp3",
+      "zh_url": "audio/zh/zh_7e66158c30.mp3",
+      "zh_clean": "山蘇"
     },
     {
       "title": "trabus",
       "sub": "L04 花生",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-09.mp3",
+      "zh_url": "audio/zh/zh_dd5a6e9548.mp3",
+      "zh_clean": "花生"
     },
     {
       "title": "sbiki",
       "sub": "L04 檳榔",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-04.mp3",
+      "zh_url": "audio/zh/zh_b09e07d18e.mp3",
+      "zh_clean": "檳榔"
     },
     {
       "title": "sari",
       "sub": "L04 芋頭",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-25.mp3",
+      "zh_url": "audio/zh/zh_6bc6460d5a.mp3",
+      "zh_clean": "芋頭"
     },
     {
       "title": "masu",
       "sub": "L04 小米",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-28.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-28.mp3",
+      "zh_url": "audio/zh/zh_2be4465777.mp3",
+      "zh_clean": "小米"
     },
     {
       "title": "bunga",
       "sub": "L04 地瓜",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-11.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-11.mp3",
+      "zh_url": "audio/zh/zh_068d79e44d.mp3",
+      "zh_clean": "地瓜"
     },
     {
       "title": "sungut",
       "sub": "L04 樹豆",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-16.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-16.mp3",
+      "zh_url": "audio/zh/zh_4fc654279b.mp3",
+      "zh_clean": "樹豆"
     },
     {
       "title": "sqmu",
       "sub": "L04 玉米",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-32.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-32.mp3",
+      "zh_url": "audio/zh/zh_c271c13a75.mp3",
+      "zh_clean": "玉米"
     },
     {
       "title": "payay",
       "sub": "L04 稻米",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-31.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P4-31.mp3",
+      "zh_url": "audio/zh/zh_655fd27b05.mp3",
+      "zh_clean": "稻米"
     },
     {
       "title": "Sapah tntunan paru",
       "sub": "L05 大樓",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-10.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-10.mp3",
+      "zh_url": "audio/zh/zh_83f129fabc.mp3",
+      "zh_clean": "大樓"
     },
     {
       "title": "dxgal saan rmigaw qmita",
       "sub": "L05 公園",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-22.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-22.mp3",
+      "zh_url": "audio/zh/zh_c572b7eb7f.mp3",
+      "zh_clean": "公園"
     },
     {
       "title": "tdruy qrngul",
       "sub": "L05 火車",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-04.mp3",
+      "zh_url": "audio/zh/zh_088d9811e4.mp3",
+      "zh_clean": "火車"
     },
     {
       "title": "asu skaya",
       "sub": "L05 飛機",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-01.mp3",
+      "zh_url": "audio/zh/zh_8ffb131d12.mp3",
+      "zh_clean": "飛機"
     },
     {
       "title": "tdruy",
       "sub": "L05 汽車",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-32.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-32.mp3",
+      "zh_url": "audio/zh/zh_117582945d.mp3",
+      "zh_clean": "汽車"
     },
     {
       "title": "Sapah pskuan patas",
       "sub": "L05 圖書館",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-29.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-29.mp3",
+      "zh_url": "audio/zh/zh_5a18a6de5d.mp3",
+      "zh_clean": "圖書館"
     },
     {
       "title": "tdruy kahaw pupuk",
       "sub": "L05 機車",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-31.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-31.mp3",
+      "zh_url": "audio/zh/zh_eb85e299b8.mp3",
+      "zh_clean": "機車"
     },
     {
       "title": "rduan tdruy",
       "sub": "L05 停車場",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-23.mp3",
+      "zh_url": "audio/zh/zh_c9f30d4a81.mp3",
+      "zh_clean": "停車場"
     },
     {
       "title": "pnrhulan",
       "sub": "L05 教會",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-13.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-13.mp3",
+      "zh_url": "audio/zh/zh_5849fc3070.mp3",
+      "zh_clean": "教會"
     },
     {
       "title": "sapah seuxal",
       "sub": "L05 傳統房屋",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-02.mp3",
+      "zh_url": "audio/zh/zh_a1643417eb.mp3",
+      "zh_clean": "傳統房屋"
     },
     {
       "title": "biyi",
       "sub": "L05 工寮",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-14.mp3",
+      "zh_url": "audio/zh/zh_0deb1239af.mp3",
+      "zh_clean": "工寮"
     },
     {
       "title": "ptasan",
       "sub": "L05 學校",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-28.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-28.mp3",
+      "zh_url": "audio/zh/zh_e2ceb5002b.mp3",
+      "zh_clean": "學校"
     },
     {
       "title": "sbrigan",
       "sub": "L05 雜貨店",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-15.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-15.mp3",
+      "zh_url": "audio/zh/zh_a3ce9e60ff.mp3",
+      "zh_clean": "雜貨店"
     },
     {
       "title": "tdruy bahu",
       "sub": "L05 公車",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-35.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-35.mp3",
+      "zh_url": "audio/zh/zh_bc05eda06f.mp3",
+      "zh_clean": "公車"
     },
     {
       "title": "tdruy smbarig damat",
       "sub": "L05 賣菜車",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-20.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-20.mp3",
+      "zh_url": "audio/zh/zh_a69b6ed73d.mp3",
+      "zh_clean": "賣菜車"
     },
     {
       "title": "libu babuy",
       "sub": "L05 豬舍",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-25.mp3",
+      "zh_url": "audio/zh/zh_bdf24bae36.mp3",
+      "zh_clean": "豬舍"
     },
     {
       "title": "rpun",
       "sub": "L05 穀倉",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-03.mp3",
+      "zh_url": "audio/zh/zh_b9f9d6d8a5.mp3",
+      "zh_clean": "穀倉"
     },
     {
       "title": "qmpahan",
       "sub": "L05 菜園",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-19.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-19.mp3",
+      "zh_url": "audio/zh/zh_6050448e64.mp3",
+      "zh_clean": "菜園"
     },
     {
       "title": "elug tdruy mktruma dxgal",
       "sub": "L05 捷運",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-11.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-11.mp3",
+      "zh_url": "audio/zh/zh_fa7dd07da4.mp3",
+      "zh_clean": "捷運"
     },
     {
       "title": "sbrigan",
       "sub": "L05 便利商店",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-17.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P5-17.mp3",
+      "zh_url": "audio/zh/zh_41b5b184d6.mp3",
+      "zh_clean": "便利商店"
     },
     {
       "title": "baki",
       "sub": "L06 爺爺",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-35.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-35.mp3",
+      "zh_url": "audio/zh/zh_e70bde13a2.mp3",
+      "zh_clean": "爺爺"
     },
     {
       "title": "payi",
       "sub": "L06 奶奶",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-01.mp3",
+      "zh_url": "audio/zh/zh_2144381ade.mp3",
+      "zh_clean": "奶奶"
     },
     {
       "title": "bubu",
       "sub": "L06 媽媽",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-03.mp3",
+      "zh_url": "audio/zh/zh_b2bc0f0bfe.mp3",
+      "zh_clean": "媽媽"
     },
     {
       "title": "tama",
       "sub": "L06 爸爸",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-16.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-16.mp3",
+      "zh_url": "audio/zh/zh_0d00c80f61.mp3",
+      "zh_clean": "爸爸"
     },
     {
       "title": "Swayi kuyuh",
       "sub": "L06 妹妹",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-17.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-17.mp3",
+      "zh_url": "audio/zh/zh_1c097b12de.mp3",
+      "zh_clean": "妹妹"
     },
     {
       "title": "Qbsuran kuyuh",
       "sub": "L06 姐姐",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-12.mp3",
+      "zh_url": "audio/zh/zh_033e1fb01c.mp3",
+      "zh_clean": "姐姐"
     },
     {
       "title": "Qbsuran snaw",
       "sub": "L06 哥哥",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-22.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-22.mp3",
+      "zh_url": "audio/zh/zh_39af35e7b7.mp3",
+      "zh_clean": "哥哥"
     },
     {
       "title": "Swayi snaw",
       "sub": "L06 弟弟",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-14.mp3",
+      "zh_url": "audio/zh/zh_427034659a.mp3",
+      "zh_clean": "弟弟"
     },
     {
       "title": "huling",
       "sub": "L06 小狗",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-27.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-27.mp3",
+      "zh_url": "audio/zh/zh_541167ce90.mp3",
+      "zh_clean": "小狗"
     },
     {
       "title": "hmrapas",
       "sub": "L06 玩耍",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-21.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-21.mp3",
+      "zh_url": "audio/zh/zh_4c7567c01f.mp3",
+      "zh_clean": "玩耍"
     },
     {
       "title": "hpuyan",
       "sub": "L06 廚房",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-02.mp3",
+      "zh_url": "audio/zh/zh_5dd64818a1.mp3",
+      "zh_clean": "廚房"
     },
     {
       "title": "gmabal sudu",
       "sub": "L06 拔草",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-23.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-23.mp3",
+      "zh_url": "audio/zh/zh_a342d617a1.mp3",
+      "zh_clean": "拔草"
     },
     {
       "title": "tleengan",
       "sub": "L06 椅子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-19.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-19.mp3",
+      "zh_url": "audio/zh/zh_43876e0825.mp3",
+      "zh_clean": "椅子"
     },
     {
       "title": "tluan",
       "sub": "L06 桌子",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-13.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-13.mp3",
+      "zh_url": "audio/zh/zh_9e2fde20b6.mp3",
+      "zh_clean": "桌子"
     },
     {
       "title": "ngangut",
       "sub": "L06 庭院",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-25.mp3",
+      "zh_url": "audio/zh/zh_1ba5fdb30d.mp3",
+      "zh_clean": "庭院"
     },
     {
       "title": "tqian",
       "sub": "L06 房間",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-05.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-05.mp3",
+      "zh_url": "audio/zh/zh_00433cf207.mp3",
+      "zh_clean": "房間"
     },
     {
       "title": "ngangut",
       "sub": "L06 廁所",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-06.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-06.mp3",
+      "zh_url": "audio/zh/zh_27628c9d7d.mp3",
+      "zh_clean": "廁所"
     },
     {
       "title": "tmayan lupung",
       "sub": "L06 客廳",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-08.mp3",
+      "zh_url": "audio/zh/zh_2ca7ad92a3.mp3",
+      "zh_clean": "客廳"
     },
     {
       "title": "ama",
       "sub": "L06 女婿",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-34.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-34.mp3",
+      "zh_url": "audio/zh/zh_00d15c838a.mp3",
+      "zh_clean": "女婿"
     },
     {
       "title": "ina",
       "sub": "L06 媳婦",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-31.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-31.mp3",
+      "zh_url": "audio/zh/zh_db81168e73.mp3",
+      "zh_clean": "媳婦"
     },
     {
       "title": "uqan mgrbu",
       "sub": "L06 早餐",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-07.mp3",
+      "zh_url": "audio/zh/zh_edb33656f8.mp3",
+      "zh_clean": "早餐"
     },
     {
       "title": "uqan keeman",
       "sub": "L06 晚餐",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P6-09.mp3",
+      "zh_url": "audio/zh/zh_96a6ae1411.mp3",
+      "zh_clean": "晚餐"
     },
     {
       "title": "yayung",
       "sub": "L07 河流",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-35.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-35.mp3",
+      "zh_url": "audio/zh/zh_f3845624bf.mp3",
+      "zh_clean": "河流"
     },
     {
       "title": "rulung",
       "sub": "L07 白雲",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-03.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-03.mp3",
+      "zh_url": "audio/zh/zh_921543ba86.mp3",
+      "zh_clean": "白雲"
     },
     {
       "title": "hidaw",
       "sub": "L07 太陽",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-01.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-01.mp3",
+      "zh_url": "audio/zh/zh_17a99c61fd.mp3",
+      "zh_clean": "太陽"
     },
     {
       "title": "dgiyaq",
       "sub": "L07 山",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-09.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-09.mp3",
+      "zh_url": "audio/zh/zh_86fa9c82d8.mp3",
+      "zh_clean": "山"
     },
     {
       "title": "silung",
       "sub": "L07 海",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-07.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-07.mp3",
+      "zh_url": "audio/zh/zh_9aa7f82989.mp3",
+      "zh_clean": "海"
     },
     {
       "title": "karat",
       "sub": "L07 天空",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-02.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-02.mp3",
+      "zh_url": "audio/zh/zh_1667312395.mp3",
+      "zh_clean": "天空"
     },
     {
       "title": "Hakaw Utux",
       "sub": "L07 彩虹",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-08.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-08.mp3",
+      "zh_url": "audio/zh/zh_279d6446d2.mp3",
+      "zh_clean": "彩虹"
     },
     {
       "title": "tutuy",
       "sub": "L07 起床",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-21.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-21.mp3",
+      "zh_url": "audio/zh/zh_59b19552d6.mp3",
+      "zh_clean": "起床"
     },
     {
       "title": "idas",
       "sub": "L07 月亮",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-04.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-04.mp3",
+      "zh_url": "audio/zh/zh_3b373249de.mp3",
+      "zh_clean": "月亮"
     },
     {
       "title": "pngrah",
       "sub": "L07 星星",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-05.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-05.mp3",
+      "zh_url": "audio/zh/zh_f26ad073e2.mp3",
+      "zh_clean": "星星"
     },
     {
       "title": "huda",
       "sub": "L07 雪",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-06.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-06.mp3",
+      "zh_url": "audio/zh/zh_c4fccd8dd1.mp3",
+      "zh_clean": "雪"
     },
     {
       "title": "tahut",
       "sub": "L07 火",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-29.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-29.mp3",
+      "zh_url": "audio/zh/zh_df3bbd5232.mp3",
+      "zh_clean": "火"
     },
     {
       "title": "kkuwi",
       "sub": "L07 貓頭鷹",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-12.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-12.mp3",
+      "zh_url": "audio/zh/zh_7b4a7da6c8.mp3",
+      "zh_clean": "貓頭鷹"
     },
     {
       "title": "mtaqi",
       "sub": "L07 睡覺",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-22.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-22.mp3",
+      "zh_url": "audio/zh/zh_af6db95642.mp3",
+      "zh_clean": "睡覺"
     },
     {
       "title": "dxgal spriq",
       "sub": "L07 草地",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-25.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-25.mp3",
+      "zh_url": "audio/zh/zh_ee20703410.mp3",
+      "zh_clean": "草地"
     },
     {
       "title": "qbhni",
       "sub": "L07 小鳥",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-14.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-14.mp3",
+      "zh_url": "audio/zh/zh_7db390f8f7.mp3",
+      "zh_clean": "小鳥"
     },
     {
       "title": "qsiya ayug",
       "sub": "L07 溪流",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-11.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-11.mp3",
+      "zh_url": "audio/zh/zh_536d424203.mp3",
+      "zh_clean": "溪流"
     },
     {
       "title": "rnaaw",
       "sub": "L07 山林",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-13.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-13.mp3",
+      "zh_url": "audio/zh/zh_a895107822.mp3",
+      "zh_clean": "山林"
     },
     {
       "title": "ngangut",
       "sub": "L07 外面",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-26.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-26.mp3",
+      "zh_url": "audio/zh/zh_0f7738748f.mp3",
+      "zh_clean": "外面"
     },
     {
       "title": "ruwan/kska",
       "sub": "L07 裡面",
-      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-16.mp3"
+      "url": "https://web.klokah.tw/lima/sound/33/vocabulary/P7-16.mp3",
+      "zh_url": "audio/zh/zh_98066766d2.mp3",
+      "zh_clean": "裡面"
     }
   ]
 };
