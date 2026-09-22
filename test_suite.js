@@ -62,11 +62,13 @@ assert(TRUKU_DATA.dialogues.length === 60, "太魯閣語 生活例句 === 60 句
 assert(TRUKU_DATA.vocab.length === 60, "太魯閣語 基礎詞彙 === 60 字");
 assert(TRUKU_DATA.lima.length === 150, "太魯閣語 LIMA 詞彙 === 150 字");
 
-assert(AMIS_DATA.wawa_songs.length === 30, "海岸阿美語 WaWa 兒歌 === 30 首");
-assert(AMIS_DATA.chart_songs.length === 20, "海岸阿美語 掛圖歌謠 === 20 首");
-assert(AMIS_DATA.dialogues.length === 60, "海岸阿美語 生活例句 === 60 句");
-assert(AMIS_DATA.vocab.length === 60, "海岸阿美語 基礎詞彙 === 60 字");
-assert(AMIS_DATA.lima.length === 150, "海岸阿美語 LIMA 詞彙 === 150 字");
+assert(AMIS_DATA.langName === "秀姑巒阿美語", "阿美語方言設定為秀姑巒阿美語");
+assert(AMIS_DATA.wawa_songs.length === 30, "秀姑巒阿美語 WaWa 兒歌 === 30 首");
+assert(AMIS_DATA.chart_songs.length === 20, "秀姑巒阿美語 掛圖歌謠 === 20 首");
+assert(AMIS_DATA.classic_songs.length === 36, "秀姑巒阿美語 經典歌謠 === 36 首");
+assert(AMIS_DATA.dialogues.length === 60, "秀姑巒阿美語 生活例句 === 60 句");
+assert(AMIS_DATA.vocab.length === 60, "秀姑巒阿美語 基礎詞彙 === 60 字");
+assert(AMIS_DATA.lima.length === 150, "秀姑巒阿美語 LIMA 詞彙 === 150 字");
 console.log("✅ 資料集完整性檢驗通過！");
 
 console.log("=== 2. 檢驗 CommutePlayer 初始化與分類切換 ===");
@@ -111,7 +113,7 @@ assert.strictEqual(CommutePlayer.getPlaylist().length, 25, "場所交通應為 2
 CommutePlayer.switchCategory("vocab_time");
 assert.strictEqual(CommutePlayer.getPlaylist().length, 22, "時間月份應為 22 字");
 
-// 切換語言至海岸阿美語
+// 切換語言至秀姑巒阿美語
 CommutePlayer.switchLang("amis");
 assert.strictEqual(CommutePlayer.getCurrentLang(), "amis", "語言切換至阿美語");
 assert.strictEqual(CommutePlayer.getPlaylist().length, 22, "阿美語時間月份亦為 22 字");

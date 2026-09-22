@@ -183,7 +183,7 @@ const CommutePlayer = (function() {
     }
 
     // 更新原生鎖定畫面 MediaSession
-    const langLabel = currentLang === "truku" ? "太魯閣語" : "海岸阿美語";
+    const langLabel = currentLang === "truku" ? "太魯閣語" : "秀姑巒阿美語";
     const catLabel = item.categoryName ? `[${item.categoryIcon || ''}${item.categoryName}] ` : '';
     AudioEngine.updateMediaSessionMetadata({
       title: item.title,

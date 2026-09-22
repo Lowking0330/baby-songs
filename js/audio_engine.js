@@ -267,7 +267,7 @@ const AudioEngine = (function() {
       navigator.mediaSession.metadata = new MediaMeta({
         title: meta.title || "族語歌謠聽力播放",
         artist: meta.artist || meta.sub || "幼兒族語啟蒙",
-        album: meta.album || "太魯閣語 ＆ 海岸阿美語",
+        album: meta.album || "太魯閣語 ＆ 秀姑巒阿美語",
         artwork: [
           { src: "icons/icon-192.png", sizes: "192x192", type: "image/png" },
           { src: "icons/icon-512.png", sizes: "512x512", type: "image/png" }

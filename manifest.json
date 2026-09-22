@@ -1,7 +1,7 @@
 {
-  "name": "寶寶族語隨身聽 - 太魯閣語 ＆ 海岸阿美語",
+  "name": "寶寶族語隨身聽 - 太魯閣語 ＆ 秀姑巒阿美語",
   "short_name": "寶寶族語隨身聽",
-  "description": "專為 1.5～3 歲幼兒打造之太魯閣語與海岸阿美語聽力啟蒙播放器，支援背景連播、手機鎖屏不中斷",
+  "description": "專為 1.5～3 歲幼兒打造之太魯閣語與秀姑巒阿美語聽力啟蒙播放器，支援背景連播、手機鎖屏不中斷",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#FFF8F0",
