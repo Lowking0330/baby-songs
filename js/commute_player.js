@@ -73,6 +73,11 @@ const CommutePlayer = (function() {
     if (!data) return [];
 
     let list = [];
+    const allVocab = [
+      ...data.vocab.map(s => ({ ...s, catType: "vocab" })),
+      ...data.lima.map(s => ({ ...s, catType: "vocab" }))
+    ];
+
     switch (currentCategory) {
       case "song_wawa":
         list = data.wawa_songs.map(s => ({ ...s, catType: "song" }));
@@ -85,6 +90,36 @@ const CommutePlayer = (function() {
         break;
       case "dialogues":
         list = data.dialogues.map(s => ({ ...s, catType: "dialogue" }));
+        break;
+      case "vocab_all":
+        list = allVocab;
+        break;
+      case "vocab_body":
+        list = allVocab.filter(s => s.category === "body");
+        break;
+      case "vocab_family":
+        list = allVocab.filter(s => s.category === "family");
+        break;
+      case "vocab_daily":
+        list = allVocab.filter(s => s.category === "daily");
+        break;
+      case "vocab_number":
+        list = allVocab.filter(s => s.category === "number");
+        break;
+      case "vocab_animal":
+        list = allVocab.filter(s => s.category === "animal");
+        break;
+      case "vocab_nature":
+        list = allVocab.filter(s => s.category === "nature");
+        break;
+      case "vocab_color":
+        list = allVocab.filter(s => s.category === "color");
+        break;
+      case "vocab_place":
+        list = allVocab.filter(s => s.category === "place");
+        break;
+      case "vocab_time":
+        list = allVocab.filter(s => s.category === "time");
         break;
       case "vocab_wawa":
         list = data.vocab.map(s => ({ ...s, catType: "vocab" }));
@@ -105,7 +140,7 @@ const CommutePlayer = (function() {
           ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
           ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
           ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
-          ...data.vocab.map(s => ({ ...s, catType: "vocab" }))
+          ...allVocab
         ];
         break;
     }
@@ -149,9 +184,10 @@ const CommutePlayer = (function() {
 
     // 更新原生鎖定畫面 MediaSession
     const langLabel = currentLang === "truku" ? "太魯閣語" : "海岸阿美語";
+    const catLabel = item.categoryName ? `[${item.categoryIcon || ''}${item.categoryName}] ` : '';
     AudioEngine.updateMediaSessionMetadata({
       title: item.title,
-      artist: `${item.sub ? item.sub + '・' : ''}${langLabel}`,
+      artist: `${catLabel}${item.sub ? item.sub + '・' : ''}${langLabel}`,
       album: `幼兒族語啟蒙 (${langLabel})`
     });
 

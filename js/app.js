@@ -66,14 +66,35 @@ const App = (function() {
       });
     });
 
-    // 綁定分類切換
+    // 統一分類切換處理（支援主分類與詞彙主題專區連動）
+    function setActiveCategory(cat) {
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        if (cat.startsWith('vocab_')) {
+          p.classList.toggle('active', p.dataset.cat === 'vocab_all');
+        } else {
+          p.classList.toggle('active', p.dataset.cat === cat);
+        }
+      });
+
+      document.querySelectorAll('.topic-pill').forEach(tp => {
+        tp.classList.toggle('active', tp.dataset.cat === cat);
+      });
+
+      CommutePlayer.switchCategory(cat);
+      renderPlaylist();
+    }
+
+    // 綁定主分類切換
     document.querySelectorAll('.cat-pill').forEach(pill => {
       pill.addEventListener('click', () => {
-        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        const cat = pill.dataset.cat;
-        CommutePlayer.switchCategory(cat);
-        renderPlaylist();
+        setActiveCategory(pill.dataset.cat);
+      });
+    });
+
+    // 綁定詞彙主題專區切換
+    document.querySelectorAll('.topic-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        setActiveCategory(pill.dataset.cat);
       });
     });
 
@@ -169,7 +190,7 @@ const App = (function() {
     if (item.catType === "dialogue" || item.unit) {
       tag = `💬 ${item.unit || "生活會話"}`;
     } else if (item.catType === "vocab") {
-      tag = "🔤 生活詞彙";
+      tag = `${item.categoryIcon || '🔤'} ${item.categoryName || '幼兒詞彙'}`;
     } else if (item.catType === "classic") {
       tag = "📻 經典兒歌";
     }
@@ -210,7 +231,8 @@ const App = (function() {
         const t = (item.title || "").toLowerCase();
         const s = (item.sub || "").toLowerCase();
         const u = (item.unit || "").toLowerCase();
-        return t.includes(searchQuery) || s.includes(searchQuery) || u.includes(searchQuery);
+        const c = (item.categoryName || "").toLowerCase();
+        return t.includes(searchQuery) || s.includes(searchQuery) || u.includes(searchQuery) || c.includes(searchQuery);
       });
     }
 
@@ -271,7 +293,8 @@ const App = (function() {
 
       const sub = document.createElement('div');
       sub.className = 'track-sub';
-      sub.textContent = `${item.unit ? '[' + item.unit + '] ' : ''}${item.sub || ''}`;
+      const catBadge = item.categoryName ? `[${item.categoryIcon || ''}${item.categoryName}] ` : (item.unit ? `[${item.unit}] ` : '');
+      sub.textContent = `${catBadge}${item.sub || ''}`;
 
       info.appendChild(title);
       info.appendChild(sub);

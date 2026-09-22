@@ -79,13 +79,48 @@ pl = CommutePlayer.getPlaylist();
 assert.strictEqual(pl.length, 60, "例句篇長度應為 60 句");
 assert.strictEqual(pl[0].unit, "幼兒日常生活-我長大了", "第一單元名稱相符");
 
+// 切換至詞彙專題分類檢驗
+CommutePlayer.switchCategory("vocab_all");
+pl = CommutePlayer.getPlaylist();
+assert.strictEqual(pl.length, 210, "全部詞彙長度應為 210 字");
+
+CommutePlayer.switchCategory("vocab_body");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 17, "身體部位應為 17 字");
+
+CommutePlayer.switchCategory("vocab_family");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 20, "親屬稱謂應為 20 字");
+
+CommutePlayer.switchCategory("vocab_daily");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 40, "家庭起居應為 40 字");
+
+CommutePlayer.switchCategory("vocab_number");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 21, "數字計數應為 21 字");
+
+CommutePlayer.switchCategory("vocab_animal");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 26, "動物世界應為 26 字");
+
+CommutePlayer.switchCategory("vocab_nature");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 28, "自然飲食應為 28 字");
+
+CommutePlayer.switchCategory("vocab_color");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 11, "顏色形狀應為 11 字");
+
+CommutePlayer.switchCategory("vocab_place");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 25, "場所交通應為 25 字");
+
+CommutePlayer.switchCategory("vocab_time");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 22, "時間月份應為 22 字");
+
 // 切換語言至海岸阿美語
 CommutePlayer.switchLang("amis");
 assert.strictEqual(CommutePlayer.getCurrentLang(), "amis", "語言切換至阿美語");
+assert.strictEqual(CommutePlayer.getPlaylist().length, 22, "阿美語時間月份亦為 22 字");
+
+CommutePlayer.switchCategory("dialogues");
 pl = CommutePlayer.getPlaylist();
 assert.strictEqual(pl.length, 60, "阿美語例句篇亦為 60 句");
 
-console.log("✅ 播放清單與語言切換通過！");
+console.log("✅ 播放清單、主題詞彙分類與語言切換通過！");
 
 console.log("=== 3. 檢驗幼兒磨耳朵播放模式與參數設定 ===");
 CommutePlayer.setPlayMode("repeat2_zh1");

@@ -3091,420 +3091,600 @@ const AMIS_DATA = {
       "sub": "起床",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-1.mp3",
       "zh_url": "audio/zh/zh_59b19552d6.mp3",
-      "zh_clean": "起床"
+      "zh_clean": "起床",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "miriiw",
       "sub": "刷牙",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-2.mp3",
       "zh_url": "audio/zh/zh_bf65a273f6.mp3",
-      "zh_clean": "刷牙"
+      "zh_clean": "刷牙",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "laloop",
       "sub": "洗臉",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-3.mp3",
       "zh_url": "audio/zh/zh_aa14742d71.mp3",
-      "zh_clean": "洗臉"
+      "zh_clean": "洗臉",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "maranam",
       "sub": "吃飯(早餐)",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-4.mp3",
       "zh_url": "audio/zh/zh_6ad53a0d92.mp3",
-      "zh_clean": "吃早餐"
+      "zh_clean": "吃早餐",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "mafecol",
       "sub": "吃飽",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-5.mp3",
       "zh_url": "audio/zh/zh_8e0a3466b2.mp3",
-      "zh_clean": "吃飽"
+      "zh_clean": "吃飽",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "cima",
       "sub": "誰",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-6.mp3",
       "zh_url": "audio/zh/zh_e2ec67dbd6.mp3",
-      "zh_clean": "誰"
+      "zh_clean": "誰",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "hawikid",
       "sub": "帶",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-7.mp3",
       "zh_url": "audio/zh/zh_e3e7d9e879.mp3",
-      "zh_clean": "帶"
+      "zh_clean": "帶",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "mitilid",
       "sub": "上學",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-8.mp3",
       "zh_url": "audio/zh/zh_25562b9e79.mp3",
-      "zh_clean": "上學"
+      "zh_clean": "上學",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "oron",
       "sub": "背",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-9.mp3",
       "zh_url": "audio/zh/zh_a6d9108337.mp3",
-      "zh_clean": "背"
+      "zh_clean": "背",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "kapang",
       "sub": "書包",
       "url": "https://web.klokah.tw/wawa/sound/word/3/1-10.mp3",
       "zh_url": "audio/zh/zh_8d8690bc55.mp3",
-      "zh_clean": "書包"
+      "zh_clean": "書包",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "loma",
       "sub": "家",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-1.mp3",
       "zh_url": "audio/zh/zh_a6cdd2a00b.mp3",
-      "zh_clean": "家"
+      "zh_clean": "家",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "akong",
       "sub": "(外)祖父",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-2.mp3",
       "zh_url": "audio/zh/zh_2c5f282304.mp3",
-      "zh_clean": "外祖父"
+      "zh_clean": "外祖父",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fufu",
       "sub": "(外)祖母",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-3.mp3",
       "zh_url": "audio/zh/zh_6c5cdcde5a.mp3",
-      "zh_clean": "外祖母"
+      "zh_clean": "外祖母",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "wama",
       "sub": "爸爸",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-4.mp3",
       "zh_url": "audio/zh/zh_0d00c80f61.mp3",
-      "zh_clean": "爸爸"
+      "zh_clean": "爸爸",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "wina",
       "sub": "媽媽",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-5.mp3",
       "zh_url": "audio/zh/zh_b2bc0f0bfe.mp3",
-      "zh_clean": "媽媽"
+      "zh_clean": "媽媽",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "salikaka",
       "sub": "兄弟姊妹",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-6.mp3",
       "zh_url": "audio/zh/zh_30efaeab93.mp3",
-      "zh_clean": "兄弟姊妹"
+      "zh_clean": "兄弟姊妹",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fainayan a kaka",
       "sub": "哥哥",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-7.mp3",
       "zh_url": "audio/zh/zh_39af35e7b7.mp3",
-      "zh_clean": "哥哥"
+      "zh_clean": "哥哥",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fafahiyan a kaka",
       "sub": "姊姊",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-8.mp3",
       "zh_url": "audio/zh/zh_d88344cc23.mp3",
-      "zh_clean": "姊姊"
+      "zh_clean": "姊姊",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fainayan a safa",
       "sub": "弟弟",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-9.mp3",
       "zh_url": "audio/zh/zh_427034659a.mp3",
-      "zh_clean": "弟弟"
+      "zh_clean": "弟弟",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fafahiyan a safa",
       "sub": "妹妹",
       "url": "https://web.klokah.tw/wawa/sound/word/3/2-10.mp3",
       "zh_url": "audio/zh/zh_1c097b12de.mp3",
-      "zh_clean": "妹妹"
+      "zh_clean": "妹妹",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "kailomaan",
       "sub": "豐年祭",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-1.mp3",
       "zh_url": "audio/zh/zh_7ce743e56c.mp3",
-      "zh_clean": "豐年祭"
+      "zh_clean": "豐年祭",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "makero",
       "sub": "跳舞",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-2.mp3",
       "zh_url": "audio/zh/zh_fad50bfdcb.mp3",
-      "zh_clean": "跳舞"
+      "zh_clean": "跳舞",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "romadiw",
       "sub": "唱歌",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-3.mp3",
       "zh_url": "audio/zh/zh_d49c9b66f6.mp3",
-      "zh_clean": "唱歌"
+      "zh_clean": "唱歌",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "no liteng a riko",
       "sub": "傳統服",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-4.mp3",
       "zh_url": "audio/zh/zh_14d6c92dcb.mp3",
-      "zh_clean": "傳統服"
+      "zh_clean": "傳統服",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "i cowa",
       "sub": "哪裡",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-5.mp3",
       "zh_url": "audio/zh/zh_315ac3feb8.mp3",
-      "zh_clean": "哪裡"
+      "zh_clean": "哪裡",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "sfi",
       "sub": "集會所",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-6.mp3",
       "zh_url": "audio/zh/zh_3e029981d5.mp3",
-      "zh_clean": "集會所"
+      "zh_clean": "集會所",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "matoasay",
       "sub": "耆老",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-7.mp3",
       "zh_url": "audio/zh/zh_d3eb2ca8c2.mp3",
-      "zh_clean": "耆老"
+      "zh_clean": "耆老",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "hafay",
       "sub": "小米",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-8.mp3",
       "zh_url": "audio/zh/zh_2be4465777.mp3",
-      "zh_clean": "小米"
+      "zh_clean": "小米",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "icep",
       "sub": "檳榔",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-9.mp3",
       "zh_url": "audio/zh/zh_b09e07d18e.mp3",
-      "zh_clean": "檳榔"
+      "zh_clean": "檳榔",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "kurah",
       "sub": "酒",
       "url": "https://web.klokah.tw/wawa/sound/word/3/3-10.mp3",
       "zh_url": "audio/zh/zh_811ba9ddbf.mp3",
-      "zh_clean": "酒"
+      "zh_clean": "酒",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "kiso",
       "sub": "你",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-1.mp3",
       "zh_url": "audio/zh/zh_df1fd91011.mp3",
-      "zh_clean": "你"
+      "zh_clean": "你",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "kako",
       "sub": "我",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-2.mp3",
       "zh_url": "audio/zh/zh_1681525453.mp3",
-      "zh_clean": "我"
+      "zh_clean": "我",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "ngangan",
       "sub": "名字",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-3.mp3",
       "zh_url": "audio/zh/zh_689fad203a.mp3",
-      "zh_clean": "名字"
+      "zh_clean": "名字",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "pina ko mihecaan",
       "sub": "幾歲",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-4.mp3",
       "zh_url": "audio/zh/zh_893d0e2953.mp3",
-      "zh_clean": "幾歲"
+      "zh_clean": "幾歲",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "minanaw",
       "sub": "洗(手)",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-5.mp3",
       "zh_url": "audio/zh/zh_fd6d26e916.mp3",
-      "zh_clean": "洗手"
+      "zh_clean": "洗手",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "kamay",
       "sub": "手",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-6.mp3",
       "zh_url": "audio/zh/zh_3c7d183f1b.mp3",
-      "zh_clean": "手"
+      "zh_clean": "手",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "tasalamaan",
       "sub": "玩具",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-7.mp3",
       "zh_url": "audio/zh/zh_c11b5af7f6.mp3",
-      "zh_clean": "玩具"
+      "zh_clean": "玩具",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "iraay",
       "sub": "有",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-8.mp3",
       "zh_url": "audio/zh/zh_cc4ad2fd27.mp3",
-      "zh_clean": "有"
+      "zh_clean": "有",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "awaay",
       "sub": "沒有",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-9.mp3",
       "zh_url": "audio/zh/zh_ffeb3033f6.mp3",
-      "zh_clean": "沒有"
+      "zh_clean": "沒有",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "solamet",
       "sub": "收拾",
       "url": "https://web.klokah.tw/wawa/sound/word/3/4-10.mp3",
       "zh_url": "audio/zh/zh_3ae6a8da14.mp3",
-      "zh_clean": "收拾"
+      "zh_clean": "收拾",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "cecay",
       "sub": "一",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-1.mp3",
       "zh_url": "audio/zh/zh_7941da94db.mp3",
-      "zh_clean": "一"
+      "zh_clean": "一",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "tosa",
       "sub": "二",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-2.mp3",
       "zh_url": "audio/zh/zh_2d8be272c9.mp3",
-      "zh_clean": "二"
+      "zh_clean": "二",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "tolo",
       "sub": "三",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-3.mp3",
       "zh_url": "audio/zh/zh_e662ff59a0.mp3",
-      "zh_clean": "三"
+      "zh_clean": "三",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "sepat",
       "sub": "四",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-4.mp3",
       "zh_url": "audio/zh/zh_21716cf311.mp3",
-      "zh_clean": "四"
+      "zh_clean": "四",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "lima",
       "sub": "五",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-5.mp3",
       "zh_url": "audio/zh/zh_1fcc29d077.mp3",
-      "zh_clean": "五"
+      "zh_clean": "五",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "enem",
       "sub": "六",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-6.mp3",
       "zh_url": "audio/zh/zh_61b453523d.mp3",
-      "zh_clean": "六"
+      "zh_clean": "六",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "pito",
       "sub": "七",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-7.mp3",
       "zh_url": "audio/zh/zh_aad6914f8f.mp3",
-      "zh_clean": "七"
+      "zh_clean": "七",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "falo",
       "sub": "八",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-8.mp3",
       "zh_url": "audio/zh/zh_edf1acd5c6.mp3",
-      "zh_clean": "八"
+      "zh_clean": "八",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "siwa",
       "sub": "九",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-9.mp3",
       "zh_url": "audio/zh/zh_9b4851f85d.mp3",
-      "zh_clean": "九"
+      "zh_clean": "九",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "moetep",
       "sub": "十",
       "url": "https://web.klokah.tw/wawa/sound/word/3/5-10.mp3",
       "zh_url": "audio/zh/zh_181245720b.mp3",
-      "zh_clean": "十"
+      "zh_clean": "十",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "waco",
       "sub": "狗",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-1.mp3",
       "zh_url": "audio/zh/zh_5090e44ef9.mp3",
-      "zh_clean": "狗"
+      "zh_clean": "狗",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "tomay",
       "sub": "熊",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-2.mp3",
       "zh_url": "audio/zh/zh_8df702f4ac.mp3",
-      "zh_clean": "熊"
+      "zh_clean": "熊",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "pusi",
       "sub": "貓",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-3.mp3",
       "zh_url": "audio/zh/zh_f984737f35.mp3",
-      "zh_clean": "貓"
+      "zh_clean": "貓",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "ko'ko",
       "sub": "雞",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-4.mp3",
       "zh_url": "audio/zh/zh_3a1c36d2b3.mp3",
-      "zh_clean": "雞"
+      "zh_clean": "雞",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "ayam",
       "sub": "小鳥",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-5.mp3",
       "zh_url": "audio/zh/zh_7db390f8f7.mp3",
-      "zh_clean": "小鳥"
+      "zh_clean": "小鳥",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "diyong",
       "sub": "豬",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-6.mp3",
       "zh_url": "audio/zh/zh_2c3c891256.mp3",
-      "zh_clean": "豬"
+      "zh_clean": "豬",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "fafoy",
       "sub": "山豬",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-7.mp3",
       "zh_url": "audio/zh/zh_aa7be52ee8.mp3",
-      "zh_clean": "山豬"
+      "zh_clean": "山豬",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "kalalapid",
       "sub": "飛鼠",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-8.mp3",
       "zh_url": "audio/zh/zh_a157aa0927.mp3",
-      "zh_clean": "飛鼠"
+      "zh_clean": "飛鼠",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "futin",
       "sub": "魚",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-9.mp3",
       "zh_url": "audio/zh/zh_ee4a1ce61e.mp3",
-      "zh_clean": "魚"
+      "zh_clean": "魚",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "ekong",
       "sub": "貓頭鷹",
       "url": "https://web.klokah.tw/wawa/sound/word/3/6-10.mp3",
       "zh_url": "audio/zh/zh_7b4a7da6c8.mp3",
-      "zh_clean": "貓頭鷹"
+      "zh_clean": "貓頭鷹",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     }
   ],
   "lima": [
@@ -3513,1050 +3693,1500 @@ const AMIS_DATA = {
       "sub": "L01 一月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-01.mp3",
       "zh_url": "audio/zh/zh_43bc301e73.mp3",
-      "zh_clean": "一月"
+      "zh_clean": "一月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakatosa a folad",
       "sub": "L01 二月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-02.mp3",
       "zh_url": "audio/zh/zh_b61c626886.mp3",
-      "zh_clean": "二月"
+      "zh_clean": "二月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakatolo a folad",
       "sub": "L01 三月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-03.mp3",
       "zh_url": "audio/zh/zh_eade91dc00.mp3",
-      "zh_clean": "三月"
+      "zh_clean": "三月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakasepat a folad",
       "sub": "L01 四月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-07.mp3",
       "zh_url": "audio/zh/zh_5178fda8e7.mp3",
-      "zh_clean": "四月"
+      "zh_clean": "四月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakalima a folad",
       "sub": "L01 五月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-08.mp3",
       "zh_url": "audio/zh/zh_cd474e4125.mp3",
-      "zh_clean": "五月"
+      "zh_clean": "五月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakaenem a folad",
       "sub": "L01 六月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-09.mp3",
       "zh_url": "audio/zh/zh_dc71b73f68.mp3",
-      "zh_clean": "六月"
+      "zh_clean": "六月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakapito a folad",
       "sub": "L01 七月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-13.mp3",
       "zh_url": "audio/zh/zh_328dcec7ed.mp3",
-      "zh_clean": "七月"
+      "zh_clean": "七月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakafalo a folad",
       "sub": "L01 八月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-14.mp3",
       "zh_url": "audio/zh/zh_b7263939ac.mp3",
-      "zh_clean": "八月"
+      "zh_clean": "八月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakasiwa a folad",
       "sub": "L01 九月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-15.mp3",
       "zh_url": "audio/zh/zh_cd9559ebaf.mp3",
-      "zh_clean": "九月"
+      "zh_clean": "九月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakamoetep a folad",
       "sub": "L01 十月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-20.mp3",
       "zh_url": "audio/zh/zh_ade2e82d67.mp3",
-      "zh_clean": "十月"
+      "zh_clean": "十月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Cecay ira ko cecay a folad",
       "sub": "L01 十一月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-21.mp3",
       "zh_url": "audio/zh/zh_4e04f1a9c3.mp3",
-      "zh_clean": "十一月"
+      "zh_clean": "十一月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Cecay ira ko tosa a folad",
       "sub": "L01 十二月",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-26.mp3",
       "zh_url": "audio/zh/zh_5c28133800.mp3",
-      "zh_clean": "十二月"
+      "zh_clean": "十二月",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "anini",
       "sub": "L01 今天",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-29.mp3",
       "zh_url": "audio/zh/zh_800dfdd902.mp3",
-      "zh_clean": "今天"
+      "zh_clean": "今天",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "inacila",
       "sub": "L01 昨天",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-22.mp3",
       "zh_url": "audio/zh/zh_2f8d6f1584.mp3",
-      "zh_clean": "昨天"
+      "zh_clean": "昨天",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "ano dafak",
       "sub": "L01 明天",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-23.mp3",
       "zh_url": "audio/zh/zh_8bcbd77d1f.mp3",
-      "zh_clean": "明天"
+      "zh_clean": "明天",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakacecay a lipay",
       "sub": "L01 星期一",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-05.mp3",
       "zh_url": "audio/zh/zh_5ce438210f.mp3",
-      "zh_clean": "星期一"
+      "zh_clean": "星期一",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakatosa a lipay",
       "sub": "L01 星期二",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-06.mp3",
       "zh_url": "audio/zh/zh_34e5216bc3.mp3",
-      "zh_clean": "星期二"
+      "zh_clean": "星期二",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakatolo a lipay",
       "sub": "L01 星期三",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-12.mp3",
       "zh_url": "audio/zh/zh_711d996d87.mp3",
-      "zh_clean": "星期三"
+      "zh_clean": "星期三",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakasepat a lipay",
       "sub": "L01 星期四",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-17.mp3",
       "zh_url": "audio/zh/zh_3df6af796b.mp3",
-      "zh_clean": "星期四"
+      "zh_clean": "星期四",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakalima a lipay",
       "sub": "L01 星期五",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-11.mp3",
       "zh_url": "audio/zh/zh_450ea3af46.mp3",
-      "zh_clean": "星期五"
+      "zh_clean": "星期五",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Sakaenem a lipay",
       "sub": "L01 星期六",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-10.mp3",
       "zh_url": "audio/zh/zh_1ae72f6826.mp3",
-      "zh_clean": "星期六"
+      "zh_clean": "星期六",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "Pilihayan",
       "sub": "L01 星期日",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P1-04.mp3",
       "zh_url": "audio/zh/zh_67b19578d0.mp3",
-      "zh_clean": "星期日"
+      "zh_clean": "星期日",
+      "category": "time",
+      "categoryName": "時間月份",
+      "categoryIcon": "📅"
     },
     {
       "title": "kohecalay",
       "sub": "L02 白色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-29.mp3",
       "zh_url": "audio/zh/zh_2fc96b2704.mp3",
-      "zh_clean": "白色"
+      "zh_clean": "白色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "kandaway",
       "sub": "L02 綠色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-10.mp3",
       "zh_url": "audio/zh/zh_c6f885142e.mp3",
-      "zh_clean": "綠色"
+      "zh_clean": "綠色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "kahengangay",
       "sub": "L02 紅色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-11.mp3",
       "zh_url": "audio/zh/zh_c375f3bdf9.mp3",
-      "zh_clean": "紅色"
+      "zh_clean": "紅色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "kohetingay",
       "sub": "L02 黑色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-25.mp3",
       "zh_url": "audio/zh/zh_9d2d1f62ae.mp3",
-      "zh_clean": "黑色"
+      "zh_clean": "黑色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "langdaway",
       "sub": "L02 藍色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-14.mp3",
       "zh_url": "audio/zh/zh_a51c5bc8a8.mp3",
-      "zh_clean": "藍色"
+      "zh_clean": "藍色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "kaliyalaway",
       "sub": "L02 黃色",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-15.mp3",
       "zh_url": "audio/zh/zh_df398ab201.mp3",
-      "zh_clean": "黃色"
+      "zh_clean": "黃色",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "arawrawway",
       "sub": "L02 圓形",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-35.mp3",
       "zh_url": "audio/zh/zh_979e65e561.mp3",
-      "zh_clean": "圓形"
+      "zh_clean": "圓形",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "masasangkakay",
       "sub": "L02 三角形",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-08.mp3",
       "zh_url": "audio/zh/zh_29f12d8069.mp3",
-      "zh_clean": "三角形"
+      "zh_clean": "三角形",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "masasikakay",
       "sub": "L02 正方形",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-09.mp3",
       "zh_url": "audio/zh/zh_3c5669187b.mp3",
-      "zh_clean": "正方形"
+      "zh_clean": "正方形",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "masapocopocoay",
       "sub": "L02 菱形",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-12.mp3",
       "zh_url": "audio/zh/zh_d28e2cf66b.mp3",
-      "zh_clean": "菱形"
+      "zh_clean": "菱形",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "Masatoedaway a sasika",
       "sub": "L02 長方形",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-34.mp3",
       "zh_url": "audio/zh/zh_c0577f78d4.mp3",
-      "zh_clean": "長方形"
+      "zh_clean": "長方形",
+      "category": "color",
+      "categoryName": "顏色形狀",
+      "categoryIcon": "🎨"
     },
     {
       "title": "cecay",
       "sub": "L02 一",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-01.mp3",
       "zh_url": "audio/zh/zh_7941da94db.mp3",
-      "zh_clean": "一"
+      "zh_clean": "一",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "tosa",
       "sub": "L02 二",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-27.mp3",
       "zh_url": "audio/zh/zh_2d8be272c9.mp3",
-      "zh_clean": "二"
+      "zh_clean": "二",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "tolo",
       "sub": "L02 三",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-19.mp3",
       "zh_url": "audio/zh/zh_e662ff59a0.mp3",
-      "zh_clean": "三"
+      "zh_clean": "三",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "sepat",
       "sub": "L02 四",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-05.mp3",
       "zh_url": "audio/zh/zh_21716cf311.mp3",
-      "zh_clean": "四"
+      "zh_clean": "四",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "lima",
       "sub": "L02 五",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-07.mp3",
       "zh_url": "audio/zh/zh_1fcc29d077.mp3",
-      "zh_clean": "五"
+      "zh_clean": "五",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "enem",
       "sub": "L02 六",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-31.mp3",
       "zh_url": "audio/zh/zh_61b453523d.mp3",
-      "zh_clean": "六"
+      "zh_clean": "六",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "pito",
       "sub": "L02 七",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-06.mp3",
       "zh_url": "audio/zh/zh_aad6914f8f.mp3",
-      "zh_clean": "七"
+      "zh_clean": "七",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "falo",
       "sub": "L02 八",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-22.mp3",
       "zh_url": "audio/zh/zh_edf1acd5c6.mp3",
-      "zh_clean": "八"
+      "zh_clean": "八",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "siwa",
       "sub": "L02 九",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-04.mp3",
       "zh_url": "audio/zh/zh_9b4851f85d.mp3",
-      "zh_clean": "九"
+      "zh_clean": "九",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "moetep",
       "sub": "L02 十",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-02.mp3",
       "zh_url": "audio/zh/zh_181245720b.mp3",
-      "zh_clean": "十"
+      "zh_clean": "十",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "cecay soot",
       "sub": "L02 一百",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P2-23.mp3",
       "zh_url": "audio/zh/zh_61b0509932.mp3",
-      "zh_clean": "一百"
+      "zh_clean": "一百",
+      "category": "number",
+      "categoryName": "數字計數",
+      "categoryIcon": "🔢"
     },
     {
       "title": "mata\\'",
       "sub": "L03 眼睛",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-15.mp3",
       "zh_url": "audio/zh/zh_946f5c8c69.mp3",
-      "zh_clean": "眼睛"
+      "zh_clean": "眼睛",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "ngoso",
       "sub": "L03 鼻子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-02.mp3",
       "zh_url": "audio/zh/zh_e6134a2993.mp3",
-      "zh_clean": "鼻子"
+      "zh_clean": "鼻子",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "ngoyos",
       "sub": "L03 嘴巴",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-08.mp3",
       "zh_url": "audio/zh/zh_8c69df4cf1.mp3",
-      "zh_clean": "嘴巴"
+      "zh_clean": "嘴巴",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "tangila",
       "sub": "L03 耳朵",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-03.mp3",
       "zh_url": "audio/zh/zh_62507462c9.mp3",
-      "zh_clean": "耳朵"
+      "zh_clean": "耳朵",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "fongoh",
       "sub": "L03 頭",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-19.mp3",
       "zh_url": "audio/zh/zh_2ce17249e6.mp3",
-      "zh_clean": "頭"
+      "zh_clean": "頭",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "pising",
       "sub": "L03 臉",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-01.mp3",
       "zh_url": "audio/zh/zh_248cc7e019.mp3",
-      "zh_clean": "臉"
+      "zh_clean": "臉",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "kalaw",
       "sub": "L03 眉毛",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-14.mp3",
       "zh_url": "audio/zh/zh_677cf628dc.mp3",
-      "zh_clean": "眉毛"
+      "zh_clean": "眉毛",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "fokes",
       "sub": "L03 頭髮",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-07.mp3",
       "zh_url": "audio/zh/zh_1120ba00f1.mp3",
-      "zh_clean": "頭髮"
+      "zh_clean": "頭髮",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "lil",
       "sub": "L03 脖子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-09.mp3",
       "zh_url": "audio/zh/zh_73fab6c3d6.mp3",
-      "zh_clean": "脖子"
+      "zh_clean": "脖子",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "kamay",
       "sub": "L03 手",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-21.mp3",
       "zh_url": "audio/zh/zh_3c7d183f1b.mp3",
-      "zh_clean": "手"
+      "zh_clean": "手",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "wa\\'ay",
       "sub": "L03 腳",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-33.mp3",
       "zh_url": "audio/zh/zh_3ff6f46de2.mp3",
-      "zh_clean": "腳"
+      "zh_clean": "腳",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "ce\\'pi",
       "sub": "L03 腿",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-26.mp3",
       "zh_url": "audio/zh/zh_9d023c6d9b.mp3",
-      "zh_clean": "腿"
+      "zh_clean": "腿",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "tiyad",
       "sub": "L03 肚子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-20.mp3",
       "zh_url": "audio/zh/zh_6a3a1a2cb6.mp3",
-      "zh_clean": "肚子"
+      "zh_clean": "肚子",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "hemot",
       "sub": "L03 屁股",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-25.mp3",
       "zh_url": "audio/zh/zh_d9cd443c21.mp3",
-      "zh_clean": "屁股"
+      "zh_clean": "屁股",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "kangkofo",
       "sub": "L03 護理師",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-23.mp3",
       "zh_url": "audio/zh/zh_6d4a92a605.mp3",
-      "zh_clean": "護理師"
+      "zh_clean": "護理師",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "ising",
       "sub": "L03 醫生",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-34.mp3",
       "zh_url": "audio/zh/zh_4e208090e4.mp3",
-      "zh_clean": "醫生"
+      "zh_clean": "醫生",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "piwin",
       "sub": "L03 醫院",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-12.mp3",
       "zh_url": "audio/zh/zh_10a393842c.mp3",
-      "zh_clean": "醫院"
+      "zh_clean": "醫院",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "pacocok",
       "sub": "L03 打針",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-04.mp3",
       "zh_url": "audio/zh/zh_f262e03ad5.mp3",
-      "zh_clean": "打針"
+      "zh_clean": "打針",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "cepi\\'",
       "sub": "L03 大腿",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-27.mp3",
       "zh_url": "audio/zh/zh_69276b9c68.mp3",
-      "zh_clean": "大腿"
+      "zh_clean": "大腿",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "\\'aftoy",
       "sub": "L03 小腿",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P3-31.mp3",
       "zh_url": "audio/zh/zh_26a9ea20ba.mp3",
-      "zh_clean": "小腿"
+      "zh_clean": "小腿",
+      "category": "body",
+      "categoryName": "身體部位",
+      "categoryIcon": "👤"
     },
     {
       "title": "Alilis",
       "sub": "L04 老鷹",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-01.mp3",
       "zh_url": "audio/zh/zh_858958460b.mp3",
-      "zh_clean": "老鷹"
+      "zh_clean": "老鷹",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Fafoy",
       "sub": "L04 山豬",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-13.mp3",
       "zh_url": "audio/zh/zh_aa7be52ee8.mp3",
-      "zh_clean": "山豬"
+      "zh_clean": "山豬",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Adipangpang",
       "sub": "L04 蝴蝶",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-14.mp3",
       "zh_url": "audio/zh/zh_4d192dbe97.mp3",
-      "zh_clean": "蝴蝶"
+      "zh_clean": "蝴蝶",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Kolong",
       "sub": "L04 牛",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-26.mp3",
       "zh_url": "audio/zh/zh_a933ef6a9b.mp3",
-      "zh_clean": "牛"
+      "zh_clean": "牛",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Lotong",
       "sub": "L04 猴子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-35.mp3",
       "zh_url": "audio/zh/zh_5f024c07f4.mp3",
-      "zh_clean": "猴子"
+      "zh_clean": "猴子",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Siri",
       "sub": "L04 山羊",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-02.mp3",
       "zh_url": "audio/zh/zh_cd131bf383.mp3",
-      "zh_clean": "山羊"
+      "zh_clean": "山羊",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Oner",
       "sub": "L04 蛇",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-07.mp3",
       "zh_url": "audio/zh/zh_37e76c8a41.mp3",
-      "zh_clean": "蛇"
+      "zh_clean": "蛇",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Foting",
       "sub": "L04 魚",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-17.mp3",
       "zh_url": "audio/zh/zh_ee4a1ce61e.mp3",
-      "zh_clean": "魚"
+      "zh_clean": "魚",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Takora",
       "sub": "L04 青蛙",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-23.mp3",
       "zh_url": "audio/zh/zh_5fc061b2b1.mp3",
-      "zh_clean": "青蛙"
+      "zh_clean": "青蛙",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Ko\\'ko",
       "sub": "L04 雞",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-29.mp3",
       "zh_url": "audio/zh/zh_3a1c36d2b3.mp3",
-      "zh_clean": "雞"
+      "zh_clean": "雞",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "kalang",
       "sub": "L04 螃蟹",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-15.mp3",
       "zh_url": "audio/zh/zh_ba17a910ee.mp3",
-      "zh_clean": "螃蟹"
+      "zh_clean": "螃蟹",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "takolil",
       "sub": "L04 兔子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-12.mp3",
       "zh_url": "audio/zh/zh_4c16854a6f.mp3",
-      "zh_clean": "兔子"
+      "zh_clean": "兔子",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Malonem",
       "sub": "L04 鹿",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-33.mp3",
       "zh_url": "audio/zh/zh_ec485dc163.mp3",
-      "zh_clean": "鹿"
+      "zh_clean": "鹿",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "Mami",
       "sub": "L04 橘子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-03.mp3",
       "zh_url": "audio/zh/zh_8130753d07.mp3",
-      "zh_clean": "橘子"
+      "zh_clean": "橘子",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Tamorak",
       "sub": "L04 南瓜",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-19.mp3",
       "zh_url": "audio/zh/zh_2e3c5c7b25.mp3",
-      "zh_clean": "南瓜"
+      "zh_clean": "南瓜",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Rokot",
       "sub": "L04 山蘇",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-08.mp3",
       "zh_url": "audio/zh/zh_7e66158c30.mp3",
-      "zh_clean": "山蘇"
+      "zh_clean": "山蘇",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Kodasing",
       "sub": "L04 花生",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-09.mp3",
       "zh_url": "audio/zh/zh_dd5a6e9548.mp3",
-      "zh_clean": "花生"
+      "zh_clean": "花生",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "I\\'cep",
       "sub": "L04 檳榔",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-04.mp3",
       "zh_url": "audio/zh/zh_b09e07d18e.mp3",
-      "zh_clean": "檳榔"
+      "zh_clean": "檳榔",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Tali",
       "sub": "L04 芋頭",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-25.mp3",
       "zh_url": "audio/zh/zh_6bc6460d5a.mp3",
-      "zh_clean": "芋頭"
+      "zh_clean": "芋頭",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Hafay",
       "sub": "L04 小米",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-28.mp3",
       "zh_url": "audio/zh/zh_2be4465777.mp3",
-      "zh_clean": "小米"
+      "zh_clean": "小米",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Konga",
       "sub": "L04 地瓜",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-11.mp3",
       "zh_url": "audio/zh/zh_068d79e44d.mp3",
-      "zh_clean": "地瓜"
+      "zh_clean": "地瓜",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Fataan",
       "sub": "L04 樹豆",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-16.mp3",
       "zh_url": "audio/zh/zh_4fc654279b.mp3",
-      "zh_clean": "樹豆"
+      "zh_clean": "樹豆",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Alilay",
       "sub": "L04 玉米",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-32.mp3",
       "zh_url": "audio/zh/zh_c271c13a75.mp3",
-      "zh_clean": "玉米"
+      "zh_clean": "玉米",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Panay",
       "sub": "L04 稻米",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P4-31.mp3",
       "zh_url": "audio/zh/zh_655fd27b05.mp3",
-      "zh_clean": "稻米"
+      "zh_clean": "稻米",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Takaraway a loma",
       "sub": "L05 大樓",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-10.mp3",
       "zh_url": "audio/zh/zh_83f129fabc.mp3",
-      "zh_clean": "大樓"
+      "zh_clean": "大樓",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "kongyen",
       "sub": "L05 公園",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-22.mp3",
       "zh_url": "audio/zh/zh_c572b7eb7f.mp3",
-      "zh_clean": "公園"
+      "zh_clean": "公園",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Cinamalay",
       "sub": "L05 火車",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-04.mp3",
       "zh_url": "audio/zh/zh_088d9811e4.mp3",
-      "zh_clean": "火車"
+      "zh_clean": "火車",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Hikoki",
       "sub": "L05 飛機",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-01.mp3",
       "zh_url": "audio/zh/zh_8ffb131d12.mp3",
-      "zh_clean": "飛機"
+      "zh_clean": "飛機",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Tosiya",
       "sub": "L05 汽車",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-32.mp3",
       "zh_url": "audio/zh/zh_117582945d.mp3",
-      "zh_clean": "汽車"
+      "zh_clean": "汽車",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Tosukowan",
       "sub": "L05 圖書館",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-29.mp3",
       "zh_url": "audio/zh/zh_5a18a6de5d.mp3",
-      "zh_clean": "圖書館"
+      "zh_clean": "圖書館",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Otopay",
       "sub": "L05 機車",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-31.mp3",
       "zh_url": "audio/zh/zh_eb85e299b8.mp3",
-      "zh_clean": "機車"
+      "zh_clean": "機車",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Patosiyaan",
       "sub": "L05 停車場",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-23.mp3",
       "zh_url": "audio/zh/zh_c9f30d4a81.mp3",
-      "zh_clean": "停車場"
+      "zh_clean": "停車場",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Kiwkay",
       "sub": "L05 教會",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-13.mp3",
       "zh_url": "audio/zh/zh_5849fc3070.mp3",
-      "zh_clean": "教會"
+      "zh_clean": "教會",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Nano toas a loma",
       "sub": "L05 傳統房屋",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-02.mp3",
       "zh_url": "audio/zh/zh_a1643417eb.mp3",
-      "zh_clean": "傳統房屋"
+      "zh_clean": "傳統房屋",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Taloan",
       "sub": "L05 工寮",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-14.mp3",
       "zh_url": "audio/zh/zh_0deb1239af.mp3",
-      "zh_clean": "工寮"
+      "zh_clean": "工寮",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Pitilidan",
       "sub": "L05 學校",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-28.mp3",
       "zh_url": "audio/zh/zh_e2ceb5002b.mp3",
-      "zh_clean": "學校"
+      "zh_clean": "學校",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Patiyaman",
       "sub": "L05 雜貨店",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-15.mp3",
       "zh_url": "audio/zh/zh_a3ce9e60ff.mp3",
-      "zh_clean": "雜貨店"
+      "zh_clean": "雜貨店",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Paso",
       "sub": "L05 公車",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-35.mp3",
       "zh_url": "audio/zh/zh_bc05eda06f.mp3",
-      "zh_clean": "公車"
+      "zh_clean": "公車",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Paliwalay to dateng a tosiya",
       "sub": "L05 賣菜車",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-20.mp3",
       "zh_url": "audio/zh/zh_a69b6ed73d.mp3",
-      "zh_clean": "賣菜車"
+      "zh_clean": "賣菜車",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Padiyongan",
       "sub": "L05 豬舍",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-25.mp3",
       "zh_url": "audio/zh/zh_bdf24bae36.mp3",
-      "zh_clean": "豬舍"
+      "zh_clean": "豬舍",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Ariri\\'",
       "sub": "L05 穀倉",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-03.mp3",
       "zh_url": "audio/zh/zh_b9f9d6d8a5.mp3",
-      "zh_clean": "穀倉"
+      "zh_clean": "穀倉",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Padatengan",
       "sub": "L05 菜園",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-19.mp3",
       "zh_url": "audio/zh/zh_6050448e64.mp3",
-      "zh_clean": "菜園"
+      "zh_clean": "菜園",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Ciyying",
       "sub": "L05 捷運",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-11.mp3",
       "zh_url": "audio/zh/zh_fa7dd07da4.mp3",
-      "zh_clean": "捷運"
+      "zh_clean": "捷運",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "Pynlisangtyn",
       "sub": "L05 便利商店",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P5-17.mp3",
       "zh_url": "audio/zh/zh_41b5b184d6.mp3",
-      "zh_clean": "便利商店"
+      "zh_clean": "便利商店",
+      "category": "place",
+      "categoryName": "場所交通",
+      "categoryIcon": "🚗"
     },
     {
       "title": "akong",
       "sub": "L06 爺爺",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-35.mp3",
       "zh_url": "audio/zh/zh_e70bde13a2.mp3",
-      "zh_clean": "爺爺"
+      "zh_clean": "爺爺",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Omi/mamo",
       "sub": "L06 奶奶",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-01.mp3",
       "zh_url": "audio/zh/zh_2144381ade.mp3",
-      "zh_clean": "奶奶"
+      "zh_clean": "奶奶",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "ina",
       "sub": "L06 媽媽",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-03.mp3",
       "zh_url": "audio/zh/zh_b2bc0f0bfe.mp3",
-      "zh_clean": "媽媽"
+      "zh_clean": "媽媽",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "mama",
       "sub": "L06 爸爸",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-16.mp3",
       "zh_url": "audio/zh/zh_0d00c80f61.mp3",
-      "zh_clean": "爸爸"
+      "zh_clean": "爸爸",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Fafahiyan safa",
       "sub": "L06 妹妹",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-17.mp3",
       "zh_url": "audio/zh/zh_1c097b12de.mp3",
-      "zh_clean": "妹妹"
+      "zh_clean": "妹妹",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Fafahiyan kaka",
       "sub": "L06 姐姐",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-12.mp3",
       "zh_url": "audio/zh/zh_033e1fb01c.mp3",
-      "zh_clean": "姐姐"
+      "zh_clean": "姐姐",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Fainayan kaka",
       "sub": "L06 哥哥",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-22.mp3",
       "zh_url": "audio/zh/zh_39af35e7b7.mp3",
-      "zh_clean": "哥哥"
+      "zh_clean": "哥哥",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Fainayan safa",
       "sub": "L06 弟弟",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-14.mp3",
       "zh_url": "audio/zh/zh_427034659a.mp3",
-      "zh_clean": "弟弟"
+      "zh_clean": "弟弟",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "Waco(totoy)",
       "sub": "L06 小狗",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-27.mp3",
       "zh_url": "audio/zh/zh_541167ce90.mp3",
-      "zh_clean": "小狗"
+      "zh_clean": "小狗",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "salama",
       "sub": "L06 玩耍",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-21.mp3",
       "zh_url": "audio/zh/zh_4c7567c01f.mp3",
-      "zh_clean": "玩耍"
+      "zh_clean": "玩耍",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "demi\\'",
       "sub": "L06 廚房",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-02.mp3",
       "zh_url": "audio/zh/zh_5dd64818a1.mp3",
-      "zh_clean": "廚房"
+      "zh_clean": "廚房",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "Fotfot to rengos",
       "sub": "L06 拔草",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-23.mp3",
       "zh_url": "audio/zh/zh_a342d617a1.mp3",
-      "zh_clean": "拔草"
+      "zh_clean": "拔草",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "hakenang",
       "sub": "L06 椅子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-19.mp3",
       "zh_url": "audio/zh/zh_43876e0825.mp3",
-      "zh_clean": "椅子"
+      "zh_clean": "椅子",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "parad",
       "sub": "L06 桌子",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-13.mp3",
       "zh_url": "audio/zh/zh_9e2fde20b6.mp3",
-      "zh_clean": "桌子"
+      "zh_clean": "桌子",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "potal",
       "sub": "L06 庭院",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-25.mp3",
       "zh_url": "audio/zh/zh_1ba5fdb30d.mp3",
-      "zh_clean": "庭院"
+      "zh_clean": "庭院",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "Kafotian(rawang)",
       "sub": "L06 房間",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-05.mp3",
       "zh_url": "audio/zh/zh_00433cf207.mp3",
-      "zh_clean": "房間"
+      "zh_clean": "房間",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "tatahengan(taisian)",
       "sub": "L06 廁所",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-06.mp3",
       "zh_url": "audio/zh/zh_27628c9d7d.mp3",
-      "zh_clean": "廁所"
+      "zh_clean": "廁所",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "palafangan",
       "sub": "L06 客廳",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-08.mp3",
       "zh_url": "audio/zh/zh_2ca7ad92a3.mp3",
-      "zh_clean": "客廳"
+      "zh_clean": "客廳",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "fainayan kadafo",
       "sub": "L06 女婿",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-34.mp3",
       "zh_url": "audio/zh/zh_00d15c838a.mp3",
-      "zh_clean": "女婿"
+      "zh_clean": "女婿",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "fafahiyan kadafo",
       "sub": "L06 媳婦",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-31.mp3",
       "zh_url": "audio/zh/zh_db81168e73.mp3",
-      "zh_clean": "媳婦"
+      "zh_clean": "媳婦",
+      "category": "family",
+      "categoryName": "親屬稱謂",
+      "categoryIcon": "👨‍👩‍👧‍👦"
     },
     {
       "title": "sakaranam",
       "sub": "L06 早餐",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-07.mp3",
       "zh_url": "audio/zh/zh_edb33656f8.mp3",
-      "zh_clean": "早餐"
+      "zh_clean": "早餐",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "sakalafi",
       "sub": "L06 晚餐",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P6-09.mp3",
       "zh_url": "audio/zh/zh_96a6ae1411.mp3",
-      "zh_clean": "晚餐"
+      "zh_clean": "晚餐",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "alo",
       "sub": "L07 河流",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-35.mp3",
       "zh_url": "audio/zh/zh_f3845624bf.mp3",
-      "zh_clean": "河流"
+      "zh_clean": "河流",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "kadit(ool)",
       "sub": "L07 白雲",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-03.mp3",
       "zh_url": "audio/zh/zh_921543ba86.mp3",
-      "zh_clean": "白雲"
+      "zh_clean": "白雲",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "cidal",
       "sub": "L07 太陽",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-01.mp3",
       "zh_url": "audio/zh/zh_17a99c61fd.mp3",
-      "zh_clean": "太陽"
+      "zh_clean": "太陽",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "Tokos(lotok)",
       "sub": "L07 山",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-09.mp3",
       "zh_url": "audio/zh/zh_86fa9c82d8.mp3",
-      "zh_clean": "山"
+      "zh_clean": "山",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "riyal",
       "sub": "L07 海",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-07.mp3",
       "zh_url": "audio/zh/zh_9aa7f82989.mp3",
-      "zh_clean": "海"
+      "zh_clean": "海",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "kakarayan",
       "sub": "L07 天空",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-02.mp3",
       "zh_url": "audio/zh/zh_1667312395.mp3",
-      "zh_clean": "天空"
+      "zh_clean": "天空",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "tilo ni idek",
       "sub": "L07 彩虹",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-08.mp3",
       "zh_url": "audio/zh/zh_279d6446d2.mp3",
-      "zh_clean": "彩虹"
+      "zh_clean": "彩虹",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "lomowad",
       "sub": "L07 起床",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-21.mp3",
       "zh_url": "audio/zh/zh_59b19552d6.mp3",
-      "zh_clean": "起床"
+      "zh_clean": "起床",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "folad",
       "sub": "L07 月亮",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-04.mp3",
       "zh_url": "audio/zh/zh_3b373249de.mp3",
-      "zh_clean": "月亮"
+      "zh_clean": "月亮",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "fo\\'is",
       "sub": "L07 星星",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-05.mp3",
       "zh_url": "audio/zh/zh_f26ad073e2.mp3",
-      "zh_clean": "星星"
+      "zh_clean": "星星",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "soeda",
       "sub": "L07 雪",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-06.mp3",
       "zh_url": "audio/zh/zh_c4fccd8dd1.mp3",
-      "zh_clean": "雪"
+      "zh_clean": "雪",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "namal",
       "sub": "L07 火",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-29.mp3",
       "zh_url": "audio/zh/zh_df3bbd5232.mp3",
-      "zh_clean": "火"
+      "zh_clean": "火",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "\\'ekong",
       "sub": "L07 貓頭鷹",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-12.mp3",
       "zh_url": "audio/zh/zh_7b4a7da6c8.mp3",
-      "zh_clean": "貓頭鷹"
+      "zh_clean": "貓頭鷹",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "mafoti",
       "sub": "L07 睡覺",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-22.mp3",
       "zh_url": "audio/zh/zh_af6db95642.mp3",
-      "zh_clean": "睡覺"
+      "zh_clean": "睡覺",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "rengorengosan",
       "sub": "L07 草地",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-25.mp3",
       "zh_url": "audio/zh/zh_ee20703410.mp3",
-      "zh_clean": "草地"
+      "zh_clean": "草地",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "ayam",
       "sub": "L07 小鳥",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-14.mp3",
       "zh_url": "audio/zh/zh_7db390f8f7.mp3",
-      "zh_clean": "小鳥"
+      "zh_clean": "小鳥",
+      "category": "animal",
+      "categoryName": "動物世界",
+      "categoryIcon": "🐶"
     },
     {
       "title": "sa\\'owac",
       "sub": "L07 溪流",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-11.mp3",
       "zh_url": "audio/zh/zh_536d424203.mp3",
-      "zh_clean": "溪流"
+      "zh_clean": "溪流",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "lotok",
       "sub": "L07 山林",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-13.mp3",
       "zh_url": "audio/zh/zh_a895107822.mp3",
-      "zh_clean": "山林"
+      "zh_clean": "山林",
+      "category": "nature",
+      "categoryName": "自然飲食",
+      "categoryIcon": "🌿"
     },
     {
       "title": "papotal",
       "sub": "L07 外面",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-26.mp3",
       "zh_url": "audio/zh/zh_0f7738748f.mp3",
-      "zh_clean": "外面"
+      "zh_clean": "外面",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     },
     {
       "title": "laloma\\'",
       "sub": "L07 裡面",
       "url": "https://web.klokah.tw/lima/sound/3/vocabulary/P7-16.mp3",
       "zh_url": "audio/zh/zh_98066766d2.mp3",
-      "zh_clean": "裡面"
+      "zh_clean": "裡面",
+      "category": "daily",
+      "categoryName": "家庭起居",
+      "categoryIcon": "🏠"
     }
   ]
 };

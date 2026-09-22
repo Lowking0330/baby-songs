@@ -157,6 +157,66 @@ header p {
   box-shadow: var(--shadow-md);
 }
 
+/* Vocab Topics Bar */
+.vocab-topics-box {
+  margin: 8px 16px 4px;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vocab-topics-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topic-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+
+.topic-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-pill {
+  flex-shrink: 0;
+  border: 1px solid #edf2f7;
+  background: #f8fafc;
+  color: #4a5568;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.topic-pill:hover {
+  background: #edf2f7;
+}
+
+.topic-pill.active {
+  background: #319795;
+  border-color: #319795;
+  color: white;
+  box-shadow: 0 2px 8px rgba(49, 151, 149, 0.3);
+}
+
 /* Hero Player Card */
 .hero-card {
   margin: 12px 16px 0;
