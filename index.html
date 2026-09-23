@@ -16,6 +16,18 @@
 <body>
 
 <div class="app-container">
+  <!-- PWA 安裝提示橫幅 -->
+  <div class="pwa-banner" id="pwaBanner" style="display:none;">
+    <div class="pwa-banner-text">
+      <div class="pwa-banner-title">📲 安裝到手機桌面</div>
+      <div class="pwa-banner-sub">全螢幕無網址列，離線無網路照樣順暢聽</div>
+    </div>
+    <div class="pwa-actions">
+      <button class="pwa-install-btn" id="pwaInstallBtn">立即加入</button>
+      <button class="pwa-banner-close" id="pwaCloseBtn" title="關閉">✕</button>
+    </div>
+  </div>
+
   <!-- 頂部標頭 -->
   <header>
     <div class="header-top">
@@ -39,7 +51,22 @@
     <button class="cat-pill" data-cat="dialogues">💬 幼兒生活例句 (60句)</button>
     <button class="cat-pill" data-cat="vocab_all">🔤 幼兒主題詞彙 (210字)</button>
     <button class="cat-pill" data-cat="song_classic">📻 經典歌謠篇</button>
+    <button class="cat-pill" data-cat="favorites" id="favPill">⭐ 寶寶最愛 (<span id="favCount">0</span>)</button>
     <button class="cat-pill" data-cat="all">🌟 綜合大輪播</button>
+  </div>
+
+  <!-- 幼兒生活情境歌單專區 -->
+  <div class="scenarios-box">
+    <div class="scenarios-header">
+      <span>🌈 幼兒一日作息情境歌單：</span>
+      <span style="font-size:10px; color:#a0aec0;">點選一鍵磨耳朵</span>
+    </div>
+    <div class="scenario-scroll">
+      <button class="scenario-pill" data-cat="scenario_morning">☀️ 晨間起居 (刷牙洗臉早餐)</button>
+      <button class="scenario-pill" data-cat="scenario_travel">🚗 外出兜風 (交通與動物)</button>
+      <button class="scenario-pill" data-cat="scenario_bedtime">🌙 睡前哄睡 (夜空抒情慢速)</button>
+      <button class="scenario-pill" data-cat="favorites">⭐ 寶寶最愛</button>
+    </div>
   </div>
 
   <!-- 幼兒主題詞彙快選專區 -->
@@ -189,6 +216,19 @@
 <script src="js/audio_engine.js"></script>
 <script src="js/commute_player.js"></script>
 <script src="js/app.js"></script>
+
+<!-- Service Worker 註冊 -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').then((reg) => {
+        console.log('✅ ServiceWorker 註冊成功，範圍:', reg.scope);
+      }).catch((err) => {
+        console.warn('ServiceWorker 註冊失敗:', err);
+      });
+    });
+  }
+</script>
 
 </body>
 </html>

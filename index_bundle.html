@@ -676,11 +676,172 @@ header p {
   justify-content: center;
 }
 
+/* ⭐ 收藏按鈕樣式 */
+.track-fav {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #cbd5e0;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.15s ease;
+  user-select: none;
+  border-radius: 50%;
+}
+.track-fav:active {
+  transform: scale(1.35);
+}
+.track-fav.active {
+  color: #ecc94b;
+  text-shadow: 0 0 6px rgba(236, 201, 75, 0.4);
+}
+
+/* 🌈 幼兒情境歌單專區 */
+.scenarios-box {
+  margin: 10px 16px 0;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  box-shadow: var(--shadow-sm);
+}
+.scenarios-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.scenario-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scenario-scroll::-webkit-scrollbar {
+  display: none;
+}
+.scenario-pill {
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+  color: #4a5568;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.scenario-pill.active {
+  border-color: transparent;
+  color: white;
+}
+.scenario-pill[data-cat="scenario_morning"].active {
+  background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+  box-shadow: 0 3px 10px rgba(237, 137, 54, 0.3);
+}
+.scenario-pill[data-cat="scenario_travel"].active {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  box-shadow: 0 3px 10px rgba(49, 130, 206, 0.3);
+}
+.scenario-pill[data-cat="scenario_bedtime"].active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 3px 10px rgba(118, 75, 162, 0.3);
+}
+.scenario-pill[data-cat="favorites"].active,
+.cat-pill[data-cat="favorites"].active {
+  background: linear-gradient(135deg, #ecc94b 0%, #d69e2e 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 3px 10px rgba(214, 158, 46, 0.35);
+}
+
+/* 📲 PWA 安裝橫幅 */
+.pwa-banner {
+  margin: 12px 16px 0;
+  background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+  color: white;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.25);
+  font-size: 12px;
+}
+.pwa-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pwa-banner-title {
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.pwa-banner-sub {
+  font-size: 11px;
+  opacity: 0.9;
+}
+.pwa-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pwa-install-btn {
+  background: #ffffff;
+  color: #2b6cb0;
+  border: none;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
+}
+.pwa-install-btn:active {
+  transform: scale(0.95);
+}
+.pwa-banner-close {
+  background: transparent;
+  border: none;
+  color: white;
+  opacity: 0.7;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+}
+
 </style>
 </head>
 <body>
 
 <div class="app-container">
+  <!-- PWA 安裝提示橫幅 -->
+  <div class="pwa-banner" id="pwaBanner" style="display:none;">
+    <div class="pwa-banner-text">
+      <div class="pwa-banner-title">📲 安裝到手機桌面</div>
+      <div class="pwa-banner-sub">全螢幕無網址列，離線無網路照樣順暢聽</div>
+    </div>
+    <div class="pwa-actions">
+      <button class="pwa-install-btn" id="pwaInstallBtn">立即加入</button>
+      <button class="pwa-banner-close" id="pwaCloseBtn" title="關閉">✕</button>
+    </div>
+  </div>
+
   <!-- 頂部標頭 -->
   <header>
     <div class="header-top">
@@ -704,7 +865,22 @@ header p {
     <button class="cat-pill" data-cat="dialogues">💬 幼兒生活例句 (60句)</button>
     <button class="cat-pill" data-cat="vocab_all">🔤 幼兒主題詞彙 (210字)</button>
     <button class="cat-pill" data-cat="song_classic">📻 經典歌謠篇</button>
+    <button class="cat-pill" data-cat="favorites" id="favPill">⭐ 寶寶最愛 (<span id="favCount">0</span>)</button>
     <button class="cat-pill" data-cat="all">🌟 綜合大輪播</button>
+  </div>
+
+  <!-- 幼兒生活情境歌單專區 -->
+  <div class="scenarios-box">
+    <div class="scenarios-header">
+      <span>🌈 幼兒一日作息情境歌單：</span>
+      <span style="font-size:10px; color:#a0aec0;">點選一鍵磨耳朵</span>
+    </div>
+    <div class="scenario-scroll">
+      <button class="scenario-pill" data-cat="scenario_morning">☀️ 晨間起居 (刷牙洗臉早餐)</button>
+      <button class="scenario-pill" data-cat="scenario_travel">🚗 外出兜風 (交通與動物)</button>
+      <button class="scenario-pill" data-cat="scenario_bedtime">🌙 睡前哄睡 (夜空抒情慢速)</button>
+      <button class="scenario-pill" data-cat="favorites">⭐ 寶寶最愛</button>
+    </div>
   </div>
 
   <!-- 幼兒主題詞彙快選專區 -->
@@ -10939,6 +11115,14 @@ const CommutePlayer = (function() {
   let isShuffle = false;
   let isLoopAll = true; // 預設整輪無限循環播放
 
+  // 寶寶最愛收藏清單 (Set)
+  let favoritesSet = new Set();
+
+  function getItemKey(item, lang) {
+    const l = lang || currentLang;
+    return `${l}_${item.id || item.url || item.title}`;
+  }
+
   // 睡眠定時器
   let sleepTimerMinutes = 0;
   let sleepTimerId = null;
@@ -10990,6 +11174,14 @@ const CommutePlayer = (function() {
       ...data.lima.map(s => ({ ...s, catType: "vocab" }))
     ];
 
+    const allItems = [
+      ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
+      ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
+      ...data.classic_songs.map(s => ({ ...s, catType: "classic" })),
+      ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
+      ...allVocab
+    ];
+
     switch (currentCategory) {
       case "song_wawa":
         list = data.wawa_songs.map(s => ({ ...s, catType: "song" }));
@@ -11039,6 +11231,24 @@ const CommutePlayer = (function() {
       case "vocab_lima":
         list = data.lima.map(s => ({ ...s, catType: "vocab" }));
         break;
+      case "scenario_morning": {
+        const kw = ['起床', '刷牙', '洗臉', '洗手', '早餐', '吃飽', '早安', '長大', '相見歡', '衣服', '鞋子', '太陽'];
+        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "scenario_travel": {
+        const kw = ['車', '火車', '飛機', '捷運', '公車', '動物', '山豬', '飛鼠', '鳥', '狗', '貓', '走', '跑', '彩虹', '公園', '學校', '玩'];
+        list = allItems.filter(it => it.category === 'place' || it.category === 'animal' || kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "scenario_bedtime": {
+        const kw = ['睡覺', '睡', '床', '月亮', '星星', '天黑', '安靜', '夜晚', '晚安', '摸摸頭', '搖籃', '休息', '收拾', '玩具'];
+        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "favorites":
+        list = allItems.filter(it => favoritesSet.has(getItemKey(it, currentLang)));
+        break;
       case "song_all":
         list = [
           ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
@@ -11048,12 +11258,7 @@ const CommutePlayer = (function() {
         break;
       case "all":
       default:
-        list = [
-          ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
-          ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
-          ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
-          ...allVocab
-        ];
+        list = allItems;
         break;
     }
 
@@ -11307,6 +11512,7 @@ const CommutePlayer = (function() {
       const item = playlist[0];
       if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
     }
+    return playlist;
   }
 
   function switchCategory(cat) {
@@ -11321,6 +11527,7 @@ const CommutePlayer = (function() {
       const item = playlist[0];
       if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
     }
+    return playlist;
   }
 
   function setPlayMode(mode) {
@@ -11418,6 +11625,16 @@ const CommutePlayer = (function() {
     getSentenceGap: () => sentenceGap,
     getIsShuffle: () => isShuffle,
     getIsLoopAll: () => isLoopAll,
+    setFavorites: (arr) => { favoritesSet = new Set(arr || []); },
+    getFavorites: () => Array.from(favoritesSet),
+    getItemKey: (item, lang) => getItemKey(item, lang),
+    updateFavoritesList: (arr) => {
+      favoritesSet = new Set(arr || []);
+      if (currentCategory === "favorites") {
+        return buildPlaylist("favorites");
+      }
+      return playlist;
+    },
     onTrackChange: (cb) => { onTrackChangeCb = cb; },
     onStateChange: (cb) => { onStateChangeCb = cb; }
   };
@@ -11435,11 +11652,20 @@ if (typeof module !== "undefined" && module.exports) {
 
 const App = (function() {
   const STORAGE_KEY = "indigenous_baby_done_v3";
+  const STORAGE_FAV_KEY = "indigenous_baby_favs_v2";
+
   let doneMap = {};
   try {
     doneMap = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
   } catch (e) {
     doneMap = {};
+  }
+
+  let favMap = {};
+  try {
+    favMap = JSON.parse(localStorage.getItem(STORAGE_FAV_KEY)) || {};
+  } catch (e) {
+    favMap = {};
   }
 
   function saveDone() {
@@ -11448,8 +11674,23 @@ const App = (function() {
     } catch (e) {}
   }
 
+  function saveFavs() {
+    try {
+      localStorage.setItem(STORAGE_FAV_KEY, JSON.stringify(favMap));
+    } catch (e) {}
+    updateFavUI();
+  }
+
+  function updateFavUI() {
+    const favKeys = Object.keys(favMap).filter(k => !!favMap[k]);
+    CommutePlayer.setFavorites(favKeys);
+    const count = favKeys.length;
+    const badge = document.getElementById('favCount');
+    if (badge) badge.textContent = count;
+  }
+
   function getItemKey(item) {
-    return `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
+    return CommutePlayer.getItemKey ? CommutePlayer.getItemKey(item) : `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
   }
 
   // DOM 節點快取
@@ -11479,14 +11720,22 @@ const App = (function() {
   let searchQuery = "";
 
   function init() {
-    // 預設載入 WaWa 兒歌 + 太魯閣語
-    CommutePlayer.init("song_wawa", "truku");
+    // 讀取 URL 初始參數（若有指定情境或最愛）
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('cat') || "song_wawa";
+    const initialLang = urlParams.get('lang') || "truku";
+
+    // 初始化最愛狀態
+    updateFavUI();
+
+    // 初始化播放清單
+    CommutePlayer.init(initialCat, initialLang);
 
     // 註冊播放器回呼
     CommutePlayer.onTrackChange(onTrackChange);
     CommutePlayer.onStateChange(onStateChange);
 
-    // 綁定語言切換
+    // 語言切換
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -11497,7 +11746,7 @@ const App = (function() {
       });
     });
 
-    // 統一分類切換處理（支援主分類與詞彙主題專區連動）
+    // 統一分類切換處理（支援主分類、情境歌單與詞彙專區連動）
     function setActiveCategory(cat) {
       document.querySelectorAll('.cat-pill').forEach(p => {
         if (cat.startsWith('vocab_')) {
@@ -11507,9 +11756,21 @@ const App = (function() {
         }
       });
 
+      document.querySelectorAll('.scenario-pill').forEach(sp => {
+        sp.classList.toggle('active', sp.dataset.cat === cat);
+      });
+
       document.querySelectorAll('.topic-pill').forEach(tp => {
         tp.classList.toggle('active', tp.dataset.cat === cat);
       });
+
+      // 睡前哄睡模式自動微調語速為 0.8x 溫柔慢速
+      if (cat === 'scenario_bedtime') {
+        CommutePlayer.setSpeed(0.8);
+        document.querySelectorAll('.speed-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.speed === '0.8');
+        });
+      }
 
       CommutePlayer.switchCategory(cat);
       renderPlaylist();
@@ -11522,12 +11783,60 @@ const App = (function() {
       });
     });
 
+    // 綁定情境歌單切換
+    document.querySelectorAll('.scenario-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        setActiveCategory(pill.dataset.cat);
+      });
+    });
+
     // 綁定詞彙主題專區切換
     document.querySelectorAll('.topic-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         setActiveCategory(pill.dataset.cat);
       });
     });
+
+    // PWA 安裝引導
+    let deferredPrompt = null;
+    const pwaBanner = document.getElementById('pwaBanner');
+    const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+    const pwaCloseBtn = document.getElementById('pwaCloseBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!sessionStorage.getItem('pwa_dismissed') && pwaBanner) {
+        pwaBanner.style.display = 'flex';
+      }
+    });
+
+    if (pwaInstallBtn) {
+      pwaInstallBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const choiceResult = await deferredPrompt.userChoice;
+          if (choiceResult.outcome === 'accepted') {
+            if (pwaBanner) pwaBanner.style.display = 'none';
+          }
+          deferredPrompt = null;
+        } else {
+          alert('如要在手機上安裝此 App：\n\n• iOS Safari：點擊底部分享按鈕 ➔ 選擇「加入主畫面」\n• Android Chrome：點擊右上角三點選單 ➔ 選擇「安裝應用程式」或「加到主螢幕」');
+        }
+      });
+    }
+
+    if (pwaCloseBtn && pwaBanner) {
+      pwaCloseBtn.addEventListener('click', () => {
+        pwaBanner.style.display = 'none';
+        sessionStorage.setItem('pwa_dismissed', '1');
+      });
+    }
+
+    // 若初始有自訂分類，同步高亮
+    if (initialCat !== "song_wawa") {
+      setActiveCategory(initialCat);
+    }
 
     // 綁定磨耳朵模式切換
     document.querySelectorAll('.mode-btn').forEach(btn => {
@@ -11682,7 +11991,13 @@ const App = (function() {
       empty.style.padding = '30px 16px';
       empty.style.color = '#a0aec0';
       empty.style.fontSize = '13px';
-      empty.textContent = searchQuery ? "找不到相符的歌謠或例句" : "目前分類尚無項目";
+      if (searchQuery) {
+        empty.textContent = "找不到相符的歌謠或例句";
+      } else if (CommutePlayer.getCurrentCategory() === "favorites") {
+        empty.innerHTML = "⭐ 尚未加入任何最愛項目<br><span style='font-size:12px; color:#718096; margin-top:6px; display:inline-block;'>點擊曲目右側的 ☆ 星星，就能隨時為寶寶建立專屬磨耳朵清單！</span>";
+      } else {
+        empty.textContent = "目前分類尚無項目";
+      }
       el.playlist.appendChild(empty);
       return;
     }
@@ -11730,6 +12045,28 @@ const App = (function() {
       info.appendChild(title);
       info.appendChild(sub);
 
+      // ⭐ 寶寶最愛收藏按鈕
+      const isFav = !!favMap[key];
+      const favBtn = document.createElement('div');
+      favBtn.className = `track-fav ${isFav ? 'active' : ''}`;
+      favBtn.textContent = isFav ? '⭐' : '☆';
+      favBtn.title = isFav ? '取消收藏' : '加入寶寶最愛';
+      favBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        favMap[key] = !favMap[key];
+        if (!favMap[key]) delete favMap[key];
+        saveFavs();
+        CommutePlayer.updateFavoritesList(Object.keys(favMap).filter(k => !!favMap[k]));
+        if (CommutePlayer.getCurrentCategory() === 'favorites') {
+          renderPlaylist();
+        } else {
+          const nowFav = !!favMap[key];
+          favBtn.className = `track-fav ${nowFav ? 'active' : ''}`;
+          favBtn.textContent = nowFav ? '⭐' : '☆';
+          favBtn.title = nowFav ? '取消收藏' : '加入寶寶最愛';
+        }
+      });
+
       // 圖示
       const icon = document.createElement('div');
       icon.className = 'track-play-icon';
@@ -11738,6 +12075,7 @@ const App = (function() {
       row.appendChild(check);
       row.appendChild(num);
       row.appendChild(info);
+      row.appendChild(favBtn);
       row.appendChild(icon);
 
       row.addEventListener('click', () => {
@@ -11768,6 +12106,19 @@ document.addEventListener('DOMContentLoaded', () => {
   App.init();
 });
 
+</script>
+
+<!-- Service Worker 註冊 -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').then((reg) => {
+        console.log('✅ ServiceWorker 註冊成功，範圍:', reg.scope);
+      }).catch((err) => {
+        console.warn('ServiceWorker 註冊失敗:', err);
+      });
+    });
+  }
 </script>
 
 </body>

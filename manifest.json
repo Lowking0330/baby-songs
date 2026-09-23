@@ -1,12 +1,15 @@
 {
   "name": "寶寶族語隨身聽 - 太魯閣語 ＆ 秀姑巒阿美語",
   "short_name": "寶寶族語隨身聽",
-  "description": "專為 1.5～3 歲幼兒打造之太魯閣語與秀姑巒阿美語聽力啟蒙播放器，支援背景連播、手機鎖屏不中斷",
+  "id": "indigenous-baby-songs-app",
+  "description": "專為 1.5～3 歲幼兒打造之太魯閣語與秀姑巒阿美語聽力啟蒙隨身聽，支援背景連播、手機鎖屏不中斷與完全離線快取",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#FFF8F0",
   "theme_color": "#FF8A5C",
   "orientation": "portrait-primary",
+  "categories": ["education", "music", "kids"],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -19,6 +22,23 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "⭐ 寶寶最愛",
+      "url": "./index.html?cat=favorites",
+      "description": "直接聆聽寶寶最愛的族語曲目"
+    },
+    {
+      "name": "☀️ 晨間起居",
+      "url": "./index.html?cat=scenario_morning",
+      "description": "晨間刷牙洗臉與早安兒歌"
+    },
+    {
+      "name": "🌙 睡前哄睡",
+      "url": "./index.html?cat=scenario_bedtime",
+      "description": "溫柔慢速睡前抒情族語沉浸"
     }
   ]
 }

@@ -27,6 +27,14 @@ const CommutePlayer = (function() {
   let isShuffle = false;
   let isLoopAll = true; // 預設整輪無限循環播放
 
+  // 寶寶最愛收藏清單 (Set)
+  let favoritesSet = new Set();
+
+  function getItemKey(item, lang) {
+    const l = lang || currentLang;
+    return `${l}_${item.id || item.url || item.title}`;
+  }
+
   // 睡眠定時器
   let sleepTimerMinutes = 0;
   let sleepTimerId = null;
@@ -78,6 +86,14 @@ const CommutePlayer = (function() {
       ...data.lima.map(s => ({ ...s, catType: "vocab" }))
     ];
 
+    const allItems = [
+      ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
+      ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
+      ...data.classic_songs.map(s => ({ ...s, catType: "classic" })),
+      ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
+      ...allVocab
+    ];
+
     switch (currentCategory) {
       case "song_wawa":
         list = data.wawa_songs.map(s => ({ ...s, catType: "song" }));
@@ -127,6 +143,24 @@ const CommutePlayer = (function() {
       case "vocab_lima":
         list = data.lima.map(s => ({ ...s, catType: "vocab" }));
         break;
+      case "scenario_morning": {
+        const kw = ['起床', '刷牙', '洗臉', '洗手', '早餐', '吃飽', '早安', '長大', '相見歡', '衣服', '鞋子', '太陽'];
+        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "scenario_travel": {
+        const kw = ['車', '火車', '飛機', '捷運', '公車', '動物', '山豬', '飛鼠', '鳥', '狗', '貓', '走', '跑', '彩虹', '公園', '學校', '玩'];
+        list = allItems.filter(it => it.category === 'place' || it.category === 'animal' || kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "scenario_bedtime": {
+        const kw = ['睡覺', '睡', '床', '月亮', '星星', '天黑', '安靜', '夜晚', '晚安', '摸摸頭', '搖籃', '休息', '收拾', '玩具'];
+        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        break;
+      }
+      case "favorites":
+        list = allItems.filter(it => favoritesSet.has(getItemKey(it, currentLang)));
+        break;
       case "song_all":
         list = [
           ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
@@ -136,12 +170,7 @@ const CommutePlayer = (function() {
         break;
       case "all":
       default:
-        list = [
-          ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
-          ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
-          ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
-          ...allVocab
-        ];
+        list = allItems;
         break;
     }
 
@@ -395,6 +424,7 @@ const CommutePlayer = (function() {
       const item = playlist[0];
       if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
     }
+    return playlist;
   }
 
   function switchCategory(cat) {
@@ -409,6 +439,7 @@ const CommutePlayer = (function() {
       const item = playlist[0];
       if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
     }
+    return playlist;
   }
 
   function setPlayMode(mode) {
@@ -506,6 +537,16 @@ const CommutePlayer = (function() {
     getSentenceGap: () => sentenceGap,
     getIsShuffle: () => isShuffle,
     getIsLoopAll: () => isLoopAll,
+    setFavorites: (arr) => { favoritesSet = new Set(arr || []); },
+    getFavorites: () => Array.from(favoritesSet),
+    getItemKey: (item, lang) => getItemKey(item, lang),
+    updateFavoritesList: (arr) => {
+      favoritesSet = new Set(arr || []);
+      if (currentCategory === "favorites") {
+        return buildPlaylist("favorites");
+      }
+      return playlist;
+    },
     onTrackChange: (cb) => { onTrackChangeCb = cb; },
     onStateChange: (cb) => { onStateChangeCb = cb; }
   };

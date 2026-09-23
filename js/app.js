@@ -4,11 +4,20 @@
 
 const App = (function() {
   const STORAGE_KEY = "indigenous_baby_done_v3";
+  const STORAGE_FAV_KEY = "indigenous_baby_favs_v2";
+
   let doneMap = {};
   try {
     doneMap = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
   } catch (e) {
     doneMap = {};
+  }
+
+  let favMap = {};
+  try {
+    favMap = JSON.parse(localStorage.getItem(STORAGE_FAV_KEY)) || {};
+  } catch (e) {
+    favMap = {};
   }
 
   function saveDone() {
@@ -17,8 +26,23 @@ const App = (function() {
     } catch (e) {}
   }
 
+  function saveFavs() {
+    try {
+      localStorage.setItem(STORAGE_FAV_KEY, JSON.stringify(favMap));
+    } catch (e) {}
+    updateFavUI();
+  }
+
+  function updateFavUI() {
+    const favKeys = Object.keys(favMap).filter(k => !!favMap[k]);
+    CommutePlayer.setFavorites(favKeys);
+    const count = favKeys.length;
+    const badge = document.getElementById('favCount');
+    if (badge) badge.textContent = count;
+  }
+
   function getItemKey(item) {
-    return `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
+    return CommutePlayer.getItemKey ? CommutePlayer.getItemKey(item) : `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
   }
 
   // DOM 節點快取
@@ -48,14 +72,22 @@ const App = (function() {
   let searchQuery = "";
 
   function init() {
-    // 預設載入 WaWa 兒歌 + 太魯閣語
-    CommutePlayer.init("song_wawa", "truku");
+    // 讀取 URL 初始參數（若有指定情境或最愛）
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('cat') || "song_wawa";
+    const initialLang = urlParams.get('lang') || "truku";
+
+    // 初始化最愛狀態
+    updateFavUI();
+
+    // 初始化播放清單
+    CommutePlayer.init(initialCat, initialLang);
 
     // 註冊播放器回呼
     CommutePlayer.onTrackChange(onTrackChange);
     CommutePlayer.onStateChange(onStateChange);
 
-    // 綁定語言切換
+    // 語言切換
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -66,7 +98,7 @@ const App = (function() {
       });
     });
 
-    // 統一分類切換處理（支援主分類與詞彙主題專區連動）
+    // 統一分類切換處理（支援主分類、情境歌單與詞彙專區連動）
     function setActiveCategory(cat) {
       document.querySelectorAll('.cat-pill').forEach(p => {
         if (cat.startsWith('vocab_')) {
@@ -76,9 +108,21 @@ const App = (function() {
         }
       });
 
+      document.querySelectorAll('.scenario-pill').forEach(sp => {
+        sp.classList.toggle('active', sp.dataset.cat === cat);
+      });
+
       document.querySelectorAll('.topic-pill').forEach(tp => {
         tp.classList.toggle('active', tp.dataset.cat === cat);
       });
+
+      // 睡前哄睡模式自動微調語速為 0.8x 溫柔慢速
+      if (cat === 'scenario_bedtime') {
+        CommutePlayer.setSpeed(0.8);
+        document.querySelectorAll('.speed-pill').forEach(p => {
+          p.classList.toggle('active', p.dataset.speed === '0.8');
+        });
+      }
 
       CommutePlayer.switchCategory(cat);
       renderPlaylist();
@@ -91,12 +135,60 @@ const App = (function() {
       });
     });
 
+    // 綁定情境歌單切換
+    document.querySelectorAll('.scenario-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        setActiveCategory(pill.dataset.cat);
+      });
+    });
+
     // 綁定詞彙主題專區切換
     document.querySelectorAll('.topic-pill').forEach(pill => {
       pill.addEventListener('click', () => {
         setActiveCategory(pill.dataset.cat);
       });
     });
+
+    // PWA 安裝引導
+    let deferredPrompt = null;
+    const pwaBanner = document.getElementById('pwaBanner');
+    const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+    const pwaCloseBtn = document.getElementById('pwaCloseBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!sessionStorage.getItem('pwa_dismissed') && pwaBanner) {
+        pwaBanner.style.display = 'flex';
+      }
+    });
+
+    if (pwaInstallBtn) {
+      pwaInstallBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const choiceResult = await deferredPrompt.userChoice;
+          if (choiceResult.outcome === 'accepted') {
+            if (pwaBanner) pwaBanner.style.display = 'none';
+          }
+          deferredPrompt = null;
+        } else {
+          alert('如要在手機上安裝此 App：\n\n• iOS Safari：點擊底部分享按鈕 ➔ 選擇「加入主畫面」\n• Android Chrome：點擊右上角三點選單 ➔ 選擇「安裝應用程式」或「加到主螢幕」');
+        }
+      });
+    }
+
+    if (pwaCloseBtn && pwaBanner) {
+      pwaCloseBtn.addEventListener('click', () => {
+        pwaBanner.style.display = 'none';
+        sessionStorage.setItem('pwa_dismissed', '1');
+      });
+    }
+
+    // 若初始有自訂分類，同步高亮
+    if (initialCat !== "song_wawa") {
+      setActiveCategory(initialCat);
+    }
 
     // 綁定磨耳朵模式切換
     document.querySelectorAll('.mode-btn').forEach(btn => {
@@ -251,7 +343,13 @@ const App = (function() {
       empty.style.padding = '30px 16px';
       empty.style.color = '#a0aec0';
       empty.style.fontSize = '13px';
-      empty.textContent = searchQuery ? "找不到相符的歌謠或例句" : "目前分類尚無項目";
+      if (searchQuery) {
+        empty.textContent = "找不到相符的歌謠或例句";
+      } else if (CommutePlayer.getCurrentCategory() === "favorites") {
+        empty.innerHTML = "⭐ 尚未加入任何最愛項目<br><span style='font-size:12px; color:#718096; margin-top:6px; display:inline-block;'>點擊曲目右側的 ☆ 星星，就能隨時為寶寶建立專屬磨耳朵清單！</span>";
+      } else {
+        empty.textContent = "目前分類尚無項目";
+      }
       el.playlist.appendChild(empty);
       return;
     }
@@ -299,6 +397,28 @@ const App = (function() {
       info.appendChild(title);
       info.appendChild(sub);
 
+      // ⭐ 寶寶最愛收藏按鈕
+      const isFav = !!favMap[key];
+      const favBtn = document.createElement('div');
+      favBtn.className = `track-fav ${isFav ? 'active' : ''}`;
+      favBtn.textContent = isFav ? '⭐' : '☆';
+      favBtn.title = isFav ? '取消收藏' : '加入寶寶最愛';
+      favBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        favMap[key] = !favMap[key];
+        if (!favMap[key]) delete favMap[key];
+        saveFavs();
+        CommutePlayer.updateFavoritesList(Object.keys(favMap).filter(k => !!favMap[k]));
+        if (CommutePlayer.getCurrentCategory() === 'favorites') {
+          renderPlaylist();
+        } else {
+          const nowFav = !!favMap[key];
+          favBtn.className = `track-fav ${nowFav ? 'active' : ''}`;
+          favBtn.textContent = nowFav ? '⭐' : '☆';
+          favBtn.title = nowFav ? '取消收藏' : '加入寶寶最愛';
+        }
+      });
+
       // 圖示
       const icon = document.createElement('div');
       icon.className = 'track-play-icon';
@@ -307,6 +427,7 @@ const App = (function() {
       row.appendChild(check);
       row.appendChild(num);
       row.appendChild(info);
+      row.appendChild(favBtn);
       row.appendChild(icon);
 
       row.addEventListener('click', () => {

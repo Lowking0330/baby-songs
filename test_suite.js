@@ -162,4 +162,45 @@ AudioEngine.updateMediaSessionMetadata({
 assert.strictEqual(mockMediaSession.metadata.title, "Alang mu");
 console.log("✅ MediaSession 聯動測試通過！");
 
-console.log("\n🎉 全部 5 項測試皆完美通過！");
+console.log("=== 6. 檢驗幼兒情境歌單與寶寶最愛收藏 ===");
+// 測試太魯閣語情境
+CommutePlayer.switchLang("truku");
+CommutePlayer.switchCategory("scenario_morning");
+const trukuMorning = CommutePlayer.getPlaylist().length;
+assert(trukuMorning >= 15, `太魯閣語晨間歌單數量應 >= 15 (實際: ${trukuMorning})`);
+
+CommutePlayer.switchCategory("scenario_travel");
+const trukuTravel = CommutePlayer.getPlaylist().length;
+assert(trukuTravel >= 30, `太魯閣語外出兜風歌單數量應 >= 30 (實際: ${trukuTravel})`);
+
+CommutePlayer.switchCategory("scenario_bedtime");
+const trukuBedtime = CommutePlayer.getPlaylist().length;
+assert(trukuBedtime >= 10, `太魯閣語睡前歌單數量應 >= 10 (實際: ${trukuBedtime})`);
+
+// 測試秀姑巒阿美語情境
+CommutePlayer.switchLang("amis");
+CommutePlayer.switchCategory("scenario_morning");
+const amisMorning = CommutePlayer.getPlaylist().length;
+assert(amisMorning >= 15, `秀姑巒阿美語晨間歌單數量應 >= 15 (實際: ${amisMorning})`);
+
+CommutePlayer.switchCategory("scenario_travel");
+const amisTravel = CommutePlayer.getPlaylist().length;
+assert(amisTravel >= 30, `秀姑巒阿美語外出兜風歌單數量應 >= 30 (實際: ${amisTravel})`);
+
+CommutePlayer.switchCategory("scenario_bedtime");
+const amisBedtime = CommutePlayer.getPlaylist().length;
+assert(amisBedtime >= 10, `秀姑巒阿美語睡前歌單數量應 >= 10 (實際: ${amisBedtime})`);
+
+// 測試寶寶最愛收藏邏輯
+const allAmis = CommutePlayer.switchCategory("all");
+const sample1Key = CommutePlayer.getItemKey(allAmis[0], "amis");
+const sample2Key = CommutePlayer.getItemKey(allAmis[1], "amis");
+CommutePlayer.setFavorites([sample1Key, sample2Key]);
+
+const favList = CommutePlayer.switchCategory("favorites");
+assert.strictEqual(favList.length, 2, "最愛清單應篩選出 2 首收藏項目");
+assert.strictEqual(CommutePlayer.getItemKey(favList[0], "amis"), sample1Key, "第一首收藏項目相符");
+
+console.log("✅ 幼兒情境歌單與寶寶最愛收藏測試通過！");
+
+console.log("\n🎉 全部 6 項測試皆完美通過！");
