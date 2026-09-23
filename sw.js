@@ -1,14 +1,14 @@
 /**
- * sw.js - 寶寶族語隨身聽 Service Worker
- * 支援：
- * 1. 核心 App Shell 靜態離線快取（斷網秒開）
- * 2. 族語官方 MP3 與微軟中文 MP3 智慧快取（Cache First with Network Fallback）
- * 3. 完美支援 iOS Safari / Android 音訊 Range Request (HTTP 206 Partial Content)
- * 4. 支援背景批次預先快取指令
+ * sw.js - 寶寶族語隨身聽 Service Worker (v3)
+ * 修復重點：
+ * 1. 跨域官方音訊（web.klokah.tw）直接原生放行，徹底避免 CORS 阻擋導致無法播放之重大問題
+ * 2. 同源微軟台灣女聲 MP3（audio/zh/）進行安全離線快取
+ * 3. 核心 App Shell 靜態快取，離線順暢開啟
+ * 4. 強制清理舊版快取並立即接管（skipWaiting & clients.claim）
  */
 
-const STATIC_CACHE = "baby-songs-static-v2";
-const AUDIO_CACHE = "baby-songs-audio-v2";
+const STATIC_CACHE = "baby-songs-static-v3";
+const ZH_AUDIO_CACHE = "baby-songs-zh-v3";
 
 const APP_SHELL = [
   "./",
@@ -24,22 +24,24 @@ const APP_SHELL = [
   "./icons/icon-512.png"
 ];
 
-// 安裝階段：預先快取核心 App Shell
+// 安裝階段：預先快取核心 App Shell 並立即生效
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(STATIC_CACHE).then((cache) => {
       return cache.addAll(APP_SHELL);
-    }).then(() => self.skipWaiting())
+    })
   );
 });
 
-// 啟動階段：清理舊版本快取
+// 啟動階段：徹底清理所有舊版本快取並立即接管控制權
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
         keys.map((key) => {
-          if (key !== STATIC_CACHE && key !== AUDIO_CACHE) {
+          if (key !== STATIC_CACHE && key !== ZH_AUDIO_CACHE) {
+            console.log("清理舊版快取:", key);
             return caches.delete(key);
           }
         })
@@ -48,102 +50,39 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// 判斷是否為音訊請求
-function isAudioRequest(url) {
-  return url.endsWith(".mp3") ||
-         url.includes("/sound/") ||
-         url.includes("/wawa/") ||
-         url.includes("/audio/") ||
-         url.includes("klokah.tw");
-}
-
-// 構造 HTTP 206 Partial Content Response（支援 Safari Range 請求）
-async function createRangeResponse(response, rangeHeader) {
-  const arrayBuffer = await response.arrayBuffer();
-  const totalLength = arrayBuffer.byteLength;
-  
-  // 解析 Range: bytes=start-end
-  const parts = rangeHeader.replace(/bytes=/, "").split("-");
-  const start = parseInt(parts[0], 10);
-  const end = parts[1] ? parseInt(parts[1], 10) : totalLength - 1;
-
-  if (start >= totalLength || end >= totalLength) {
-    return new Response(null, {
-      status: 416,
-      statusText: "Range Not Satisfiable",
-      headers: { "Content-Range": `bytes */${totalLength}` }
-    });
-  }
-
-  const slicedBuffer = arrayBuffer.slice(start, end + 1);
-  return new Response(slicedBuffer, {
-    status: 206,
-    statusText: "Partial Content",
-    headers: {
-      "Content-Type": response.headers.get("Content-Type") || "audio/mpeg",
-      "Content-Range": `bytes ${start}-${end}/${totalLength}`,
-      "Content-Length": slicedBuffer.byteLength,
-      "Accept-Ranges": "bytes",
-      "Cache-Control": "public, max-age=31536000"
-    }
-  });
-}
-
-// 處理音訊請求：Cache First with Network Fallback
-async function handleAudio(request) {
-  const cache = await caches.open(AUDIO_CACHE);
-  const cacheKey = request.url;
-  let cachedResponse = await cache.match(cacheKey, { ignoreSearch: true });
-
-  const rangeHeader = request.headers.get("range");
-
-  // 快取中有完整音訊
-  if (cachedResponse) {
-    if (rangeHeader && cachedResponse.status === 200) {
-      return createRangeResponse(cachedResponse.clone(), rangeHeader);
-    }
-    return cachedResponse;
-  }
-
-  // 快取中沒有，透過網路獲取完整音訊並寫入快取
-  try {
-    // 發起不帶 Range 的普通請求以取得完整音訊
-    const netResponse = await fetch(request.url, {
-      method: "GET",
-      headers: { Accept: "*/*" },
-      mode: "cors"
-    });
-
-    if (netResponse && netResponse.status === 200) {
-      // 複製一份存入快取
-      cache.put(cacheKey, netResponse.clone());
-
-      if (rangeHeader) {
-        return createRangeResponse(netResponse.clone(), rangeHeader);
-      }
-      return netResponse;
-    }
-
-    return netResponse;
-  } catch (err) {
-    // 斷網且無快取
-    if (cachedResponse) return cachedResponse;
-    throw err;
-  }
-}
-
 // 請求攔截
 self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = request.url;
 
-  // 1. 音訊請求
-  if (isAudioRequest(url)) {
-    event.respondWith(handleAudio(request));
+  // 1. 關鍵防護：非同源請求（如原民會 web.klokah.tw 官方音訊）直接放行！
+  // 絕對不呼叫 respondWith，讓瀏覽器原生多媒體管道直連，完全不受跨域 CORS 阻擋限制。
+  if (!url.startsWith(self.location.origin)) {
     return;
   }
 
-  // 2. 靜態資產：Cache First, Network Fallback
+  // 2. 本機同源中文 MP3 音訊快取 (audio/zh/)
+  if (url.includes("/audio/zh/") && url.endsWith(".mp3")) {
+    event.respondWith(
+      caches.open(ZH_AUDIO_CACHE).then(async (cache) => {
+        const cached = await cache.match(request, { ignoreSearch: true });
+        if (cached) return cached;
+        try {
+          const response = await fetch(request);
+          if (response && response.status === 200) {
+            cache.put(request, response.clone());
+          }
+          return response;
+        } catch (err) {
+          if (cached) return cached;
+          throw err;
+        }
+      })
+    );
+    return;
+  }
+
+  // 3. 靜態資產：Cache First with Network Fallback
   event.respondWith(
     caches.match(request, { ignoreSearch: true }).then((cached) => {
       if (cached) return cached;
@@ -155,42 +94,9 @@ self.addEventListener("fetch", (event) => {
         return networkResponse;
       });
     }).catch(() => {
-      // 離線回退
       if (request.mode === "navigate") {
         return caches.match("./index.html");
       }
     })
   );
-});
-
-// 支援來自主頁面的批次預載訊息
-self.addEventListener("message", (event) => {
-  const data = event.data;
-  if (!data) return;
-
-  if (data.type === "PRECACHE_AUDIO_LIST" && Array.isArray(data.urls)) {
-    caches.open(AUDIO_CACHE).then(async (cache) => {
-      let cachedCount = 0;
-      for (const url of data.urls) {
-        const match = await cache.match(url, { ignoreSearch: true });
-        if (!match) {
-          try {
-            const resp = await fetch(url, { mode: "cors" });
-            if (resp && resp.status === 200) {
-              await cache.put(url, resp);
-              cachedCount++;
-            }
-          } catch (e) {}
-        } else {
-          cachedCount++;
-        }
-      }
-      // 回報進度給 client
-      event.source.postMessage({
-        type: "PRECACHE_PROGRESS",
-        total: data.urls.length,
-        cached: cachedCount
-      });
-    });
-  }
 });

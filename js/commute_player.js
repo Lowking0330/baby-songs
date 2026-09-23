@@ -349,6 +349,11 @@ const CommutePlayer = (function() {
     if (!playlist.length) {
       buildPlaylist(currentCategory, currentLang);
     }
+    if (!playlist.length) {
+      isPlaying = false;
+      if (onStateChangeCb) onStateChangeCb(false);
+      return;
+    }
     isPlaying = true;
     AudioEngine.updateMediaSessionState(true);
     if (onStateChangeCb) onStateChangeCb(true);
@@ -375,9 +380,8 @@ const CommutePlayer = (function() {
     AudioEngine.unlockUserGesture();
     playbackSessionId++;
     clearAllTimers();
-    if (playlist.length > 0) {
-      currentIndex = (currentIndex + 1) % playlist.length;
-    }
+    if (!playlist.length) return;
+    currentIndex = (currentIndex + 1) % playlist.length;
     if (isPlaying) {
       playCurrentSequence();
     } else {
@@ -390,9 +394,8 @@ const CommutePlayer = (function() {
     AudioEngine.unlockUserGesture();
     playbackSessionId++;
     clearAllTimers();
-    if (playlist.length > 0) {
-      currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
-    }
+    if (!playlist.length) return;
+    currentIndex = (currentIndex - 1 + playlist.length) % playlist.length;
     if (isPlaying) {
       playCurrentSequence();
     } else {
@@ -418,11 +421,11 @@ const CommutePlayer = (function() {
     pause();
     buildPlaylist(currentCategory, currentLang);
     currentIndex = 0;
-    if (wasPlaying) {
+    if (wasPlaying && playlist.length > 0) {
       play();
     } else {
       const item = playlist[0];
-      if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
+      if (onTrackChangeCb) onTrackChangeCb(item || null, 0, playlist.length);
     }
     return playlist;
   }
@@ -433,11 +436,11 @@ const CommutePlayer = (function() {
     pause();
     buildPlaylist(currentCategory, currentLang);
     currentIndex = 0;
-    if (wasPlaying) {
+    if (wasPlaying && playlist.length > 0) {
       play();
     } else {
       const item = playlist[0];
-      if (onTrackChangeCb && item) onTrackChangeCb(item, 0, playlist.length);
+      if (onTrackChangeCb) onTrackChangeCb(item || null, 0, playlist.length);
     }
     return playlist;
   }

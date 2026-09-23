@@ -34,9 +34,10 @@ const App = (function() {
   }
 
   function updateFavUI() {
-    const favKeys = Object.keys(favMap).filter(k => !!favMap[k]);
-    CommutePlayer.setFavorites(favKeys);
-    const count = favKeys.length;
+    const curLang = CommutePlayer.getCurrentLang ? CommutePlayer.getCurrentLang() : "truku";
+    const curLangFavKeys = Object.keys(favMap).filter(k => !!favMap[k] && k.startsWith(`${curLang}_`));
+    CommutePlayer.setFavorites(Object.keys(favMap).filter(k => !!favMap[k]));
+    const count = curLangFavKeys.length;
     const badge = document.getElementById('favCount');
     if (badge) badge.textContent = count;
   }
@@ -94,6 +95,7 @@ const App = (function() {
         btn.classList.add('active');
         const lang = btn.dataset.lang;
         CommutePlayer.switchLang(lang);
+        updateFavUI();
         renderPlaylist();
       });
     });
@@ -275,7 +277,15 @@ const App = (function() {
 
   // 播放歌曲更新
   function onTrackChange(item, index, total) {
-    if (!item) return;
+    if (!item) {
+      el.heroTag.textContent = "⭐ 寶寶隨身聽";
+      el.heroTitle.textContent = "目前清單尚無項目";
+      el.heroSub.textContent = "請切換其他分類或點選 ☆ 加入最愛";
+      if (el.miniTitle) el.miniTitle.textContent = "尚無項目";
+      if (el.miniSub) el.miniSub.textContent = "-";
+      highlightPlayingItem(-1);
+      return;
+    }
 
     // 標籤解析
     let tag = "🎵 兒歌";
