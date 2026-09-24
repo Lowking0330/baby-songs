@@ -46,6 +46,40 @@ const App = (function() {
     return CommutePlayer.getItemKey ? CommutePlayer.getItemKey(item) : `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
   }
 
+  let toastTimer = null;
+  function showToast(text, duration = 2000) {
+    const toast = document.getElementById('toastMsg');
+    if (!toast) return;
+    toast.innerHTML = text;
+    toast.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, duration);
+  }
+
+  function updateLoopUI(mode, showTip = false) {
+    const loopBtn = document.getElementById('loopBtn');
+    if (!loopBtn) return;
+    loopBtn.classList.remove('active', 'loop-one');
+
+    if (mode === "one") {
+      loopBtn.innerHTML = "🔂";
+      loopBtn.classList.add('active', 'loop-one');
+      loopBtn.title = "單曲循環（重播這首）";
+      if (showTip) showToast("🔂 已開啟「單曲循環」（這首歌會一直重播）");
+    } else if (mode === "all") {
+      loopBtn.innerHTML = "🔁";
+      loopBtn.classList.add('active');
+      loopBtn.title = "整輪循環（全部輪播）";
+      if (showTip) showToast("🔁 已開啟「整輪循環」（整張歌單循環播放）");
+    } else {
+      loopBtn.innerHTML = "➡️";
+      loopBtn.title = "順序播放（播到底停止）";
+      if (showTip) showToast("➡️ 已關閉循環（播到最後一首停止）");
+    }
+  }
+
   // DOM 節點快取
   const el = {
     heroCard: document.getElementById('heroCard'),
@@ -248,9 +282,21 @@ const App = (function() {
     });
 
     el.loopBtn.addEventListener('click', () => {
-      const isLoop = CommutePlayer.toggleLoop();
-      el.loopBtn.classList.toggle('active', isLoop);
+      const mode = CommutePlayer.toggleLoop();
+      updateLoopUI(mode, true);
     });
+
+    // 點擊主卡片可立即從頭重播當前歌曲
+    if (el.heroCard) {
+      el.heroCard.style.cursor = 'pointer';
+      el.heroCard.title = "點擊可立即從頭重播當前歌曲";
+      el.heroCard.addEventListener('click', () => {
+        if (CommutePlayer.getPlaylist().length > 0) {
+          CommutePlayer.replayCurrent();
+          showToast("🔄 重新播放這首歌");
+        }
+      });
+    }
 
     // 搜尋過濾
     el.searchInput.addEventListener('input', (e) => {
@@ -273,6 +319,7 @@ const App = (function() {
       onTrackChange(initialList[0], 0, initialList.length);
     }
     renderPlaylist();
+    updateLoopUI(CommutePlayer.getLoopMode ? CommutePlayer.getLoopMode() : "all");
   }
 
   // 播放歌曲更新
@@ -441,7 +488,11 @@ const App = (function() {
       row.appendChild(icon);
 
       row.addEventListener('click', () => {
+        const isCurPlaying = originalIndex === CommutePlayer.getCurrentIndex();
         CommutePlayer.playIndex(originalIndex);
+        if (isCurPlaying) {
+          showToast("🔄 重新播放這首歌");
+        }
       });
 
       fragment.appendChild(row);

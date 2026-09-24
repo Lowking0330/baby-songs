@@ -25,7 +25,8 @@ const CommutePlayer = (function() {
   let playbackRate = 0.9; // 預設 0.9x 溫和慢速，方便寶寶聽清發音細節
   let sentenceGap = 1.5; // 句子間隔停頓秒數 (1.0s, 1.5s, 2.0s, 3.0s)
   let isShuffle = false;
-  let isLoopAll = true; // 預設整輪無限循環播放
+  // 循環模式：'all' (整輪循環), 'one' (單曲循環/單曲重播), 'off' (不循環)
+  let loopMode = "all";
 
   // 寶寶最愛收藏清單 (Set)
   let favoritesSet = new Set();
@@ -330,9 +331,16 @@ const CommutePlayer = (function() {
   // 自動進入下一首
   function goNextAuto() {
     if (!playlist.length) return;
+
+    // 🔂 單曲循環模式：無限次重播當前這首歌曲/例句/詞彙
+    if (loopMode === "one") {
+      playCurrentSequence();
+      return;
+    }
+
     let nextIdx = currentIndex + 1;
     if (nextIdx >= playlist.length) {
-      if (isLoopAll) {
+      if (loopMode === "all") {
         nextIdx = 0;
       } else {
         pause();
@@ -474,8 +482,31 @@ const CommutePlayer = (function() {
   }
 
   function toggleLoop() {
-    isLoopAll = !isLoopAll;
-    return isLoopAll;
+    if (loopMode === "all") {
+      loopMode = "one";
+    } else if (loopMode === "one") {
+      loopMode = "off";
+    } else {
+      loopMode = "all";
+    }
+    return loopMode;
+  }
+
+  function setLoopMode(mode) {
+    if (["all", "one", "off"].includes(mode)) {
+      loopMode = mode;
+    }
+    return loopMode;
+  }
+
+  // 立即重新播放當前曲目
+  function replayCurrent() {
+    AudioEngine.unlockUserGesture();
+    if (!playlist.length) return;
+    isPlaying = true;
+    AudioEngine.updateMediaSessionState(true);
+    if (onStateChangeCb) onStateChangeCb(true);
+    playCurrentSequence();
   }
 
   // 睡眠定時器
@@ -528,6 +559,9 @@ const CommutePlayer = (function() {
     setSentenceGap,
     toggleShuffle,
     toggleLoop,
+    setLoopMode,
+    getLoopMode: () => loopMode,
+    replayCurrent,
     setSleepTimer,
     getSleepTimeRemaining,
     getPlaylist: () => playlist,
@@ -539,7 +573,7 @@ const CommutePlayer = (function() {
     getSpeed: () => playbackRate,
     getSentenceGap: () => sentenceGap,
     getIsShuffle: () => isShuffle,
-    getIsLoopAll: () => isLoopAll,
+    getIsLoopAll: () => loopMode === "all",
     setFavorites: (arr) => { favoritesSet = new Set(arr || []); },
     getFavorites: () => Array.from(favoritesSet),
     getItemKey: (item, lang) => getItemKey(item, lang),

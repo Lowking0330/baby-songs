@@ -139,11 +139,34 @@ assert.strictEqual(CommutePlayer.getSentenceGap(), 2.0);
 
 const isShuffle = CommutePlayer.toggleShuffle();
 assert.strictEqual(CommutePlayer.getIsShuffle(), true);
+const isShuffleOff = CommutePlayer.toggleShuffle();
+assert.strictEqual(isShuffleOff, false, "洗牌功能已關閉以利後續排序檢驗");
 
-const isLoop = CommutePlayer.toggleLoop();
+// 測試三段式循環切換 (all -> one -> off -> all)
+CommutePlayer.setLoopMode("all");
+assert.strictEqual(CommutePlayer.getLoopMode(), "all");
+assert.strictEqual(CommutePlayer.getIsLoopAll(), true);
+
+let mode = CommutePlayer.toggleLoop();
+assert.strictEqual(mode, "one", "切換至單曲循環");
+assert.strictEqual(CommutePlayer.getLoopMode(), "one");
 assert.strictEqual(CommutePlayer.getIsLoopAll(), false);
 
-console.log("✅ 播放模式與參數設定通過！");
+mode = CommutePlayer.toggleLoop();
+assert.strictEqual(mode, "off", "切換至順序播放到底");
+assert.strictEqual(CommutePlayer.getLoopMode(), "off");
+assert.strictEqual(CommutePlayer.getIsLoopAll(), false);
+
+mode = CommutePlayer.toggleLoop();
+assert.strictEqual(mode, "all", "切換回整輪循環");
+assert.strictEqual(CommutePlayer.getLoopMode(), "all");
+assert.strictEqual(CommutePlayer.getIsLoopAll(), true);
+
+// 測試立即重播當前曲目
+assert(typeof CommutePlayer.replayCurrent === "function", "replayCurrent 函數應存在");
+CommutePlayer.replayCurrent();
+
+console.log("✅ 播放模式、三段式循環與即時重播測試通過！");
 
 console.log("=== 4. 檢驗睡眠定時器 ===");
 const endTime = CommutePlayer.setSleepTimer(15);

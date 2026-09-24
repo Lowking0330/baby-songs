@@ -825,6 +825,43 @@ header p {
   padding: 4px;
 }
 
+/* 🔔 操作即時浮動提示 Toast */
+.toast-msg {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  background: rgba(30, 41, 59, 0.94);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.toast-msg.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* 🔂 單曲循環按鈕特殊醒目高亮 */
+.ctrl-btn.loop-one {
+  background: #fefcbf !important;
+  border-color: #ecc94b !important;
+  color: #b7791f !important;
+  box-shadow: 0 0 12px rgba(236, 201, 75, 0.5) !important;
+  transform: scale(1.05);
+}
+
 </style>
 </head>
 <body>
@@ -923,8 +960,11 @@ header p {
     <button class="ctrl-btn" id="prevBtn" title="上一首">⏮</button>
     <button class="ctrl-btn play-btn" id="playBtn" title="播放 / 暫停">▶</button>
     <button class="ctrl-btn" id="nextBtn" title="下一首">⏭</button>
-    <button class="ctrl-btn active" id="loopBtn" title="整輪循環">🔁</button>
+    <button class="ctrl-btn active" id="loopBtn" title="循環模式：整輪循環 🔁 / 單曲循環 🔂 / 順序播放 ➡️">🔁</button>
   </div>
+
+  <!-- 操作浮動提示 Toast -->
+  <div class="toast-msg" id="toastMsg"></div>
 
   <!-- 幼兒磨耳朵模式選擇 -->
   <div class="section-title">
@@ -11113,7 +11153,8 @@ const CommutePlayer = (function() {
   let playbackRate = 0.9; // 預設 0.9x 溫和慢速，方便寶寶聽清發音細節
   let sentenceGap = 1.5; // 句子間隔停頓秒數 (1.0s, 1.5s, 2.0s, 3.0s)
   let isShuffle = false;
-  let isLoopAll = true; // 預設整輪無限循環播放
+  // 循環模式：'all' (整輪循環), 'one' (單曲循環/單曲重播), 'off' (不循環)
+  let loopMode = "all";
 
   // 寶寶最愛收藏清單 (Set)
   let favoritesSet = new Set();
@@ -11418,9 +11459,16 @@ const CommutePlayer = (function() {
   // 自動進入下一首
   function goNextAuto() {
     if (!playlist.length) return;
+
+    // 🔂 單曲循環模式：無限次重播當前這首歌曲/例句/詞彙
+    if (loopMode === "one") {
+      playCurrentSequence();
+      return;
+    }
+
     let nextIdx = currentIndex + 1;
     if (nextIdx >= playlist.length) {
-      if (isLoopAll) {
+      if (loopMode === "all") {
         nextIdx = 0;
       } else {
         pause();
@@ -11562,8 +11610,31 @@ const CommutePlayer = (function() {
   }
 
   function toggleLoop() {
-    isLoopAll = !isLoopAll;
-    return isLoopAll;
+    if (loopMode === "all") {
+      loopMode = "one";
+    } else if (loopMode === "one") {
+      loopMode = "off";
+    } else {
+      loopMode = "all";
+    }
+    return loopMode;
+  }
+
+  function setLoopMode(mode) {
+    if (["all", "one", "off"].includes(mode)) {
+      loopMode = mode;
+    }
+    return loopMode;
+  }
+
+  // 立即重新播放當前曲目
+  function replayCurrent() {
+    AudioEngine.unlockUserGesture();
+    if (!playlist.length) return;
+    isPlaying = true;
+    AudioEngine.updateMediaSessionState(true);
+    if (onStateChangeCb) onStateChangeCb(true);
+    playCurrentSequence();
   }
 
   // 睡眠定時器
@@ -11616,6 +11687,9 @@ const CommutePlayer = (function() {
     setSentenceGap,
     toggleShuffle,
     toggleLoop,
+    setLoopMode,
+    getLoopMode: () => loopMode,
+    replayCurrent,
     setSleepTimer,
     getSleepTimeRemaining,
     getPlaylist: () => playlist,
@@ -11627,7 +11701,7 @@ const CommutePlayer = (function() {
     getSpeed: () => playbackRate,
     getSentenceGap: () => sentenceGap,
     getIsShuffle: () => isShuffle,
-    getIsLoopAll: () => isLoopAll,
+    getIsLoopAll: () => loopMode === "all",
     setFavorites: (arr) => { favoritesSet = new Set(arr || []); },
     getFavorites: () => Array.from(favoritesSet),
     getItemKey: (item, lang) => getItemKey(item, lang),
@@ -11695,6 +11769,40 @@ const App = (function() {
 
   function getItemKey(item) {
     return CommutePlayer.getItemKey ? CommutePlayer.getItemKey(item) : `${CommutePlayer.getCurrentLang()}_${item.id || item.url || item.title}`;
+  }
+
+  let toastTimer = null;
+  function showToast(text, duration = 2000) {
+    const toast = document.getElementById('toastMsg');
+    if (!toast) return;
+    toast.innerHTML = text;
+    toast.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, duration);
+  }
+
+  function updateLoopUI(mode, showTip = false) {
+    const loopBtn = document.getElementById('loopBtn');
+    if (!loopBtn) return;
+    loopBtn.classList.remove('active', 'loop-one');
+
+    if (mode === "one") {
+      loopBtn.innerHTML = "🔂";
+      loopBtn.classList.add('active', 'loop-one');
+      loopBtn.title = "單曲循環（重播這首）";
+      if (showTip) showToast("🔂 已開啟「單曲循環」（這首歌會一直重播）");
+    } else if (mode === "all") {
+      loopBtn.innerHTML = "🔁";
+      loopBtn.classList.add('active');
+      loopBtn.title = "整輪循環（全部輪播）";
+      if (showTip) showToast("🔁 已開啟「整輪循環」（整張歌單循環播放）");
+    } else {
+      loopBtn.innerHTML = "➡️";
+      loopBtn.title = "順序播放（播到底停止）";
+      if (showTip) showToast("➡️ 已關閉循環（播到最後一首停止）");
+    }
   }
 
   // DOM 節點快取
@@ -11899,9 +12007,21 @@ const App = (function() {
     });
 
     el.loopBtn.addEventListener('click', () => {
-      const isLoop = CommutePlayer.toggleLoop();
-      el.loopBtn.classList.toggle('active', isLoop);
+      const mode = CommutePlayer.toggleLoop();
+      updateLoopUI(mode, true);
     });
+
+    // 點擊主卡片可立即從頭重播當前歌曲
+    if (el.heroCard) {
+      el.heroCard.style.cursor = 'pointer';
+      el.heroCard.title = "點擊可立即從頭重播當前歌曲";
+      el.heroCard.addEventListener('click', () => {
+        if (CommutePlayer.getPlaylist().length > 0) {
+          CommutePlayer.replayCurrent();
+          showToast("🔄 重新播放這首歌");
+        }
+      });
+    }
 
     // 搜尋過濾
     el.searchInput.addEventListener('input', (e) => {
@@ -11924,6 +12044,7 @@ const App = (function() {
       onTrackChange(initialList[0], 0, initialList.length);
     }
     renderPlaylist();
+    updateLoopUI(CommutePlayer.getLoopMode ? CommutePlayer.getLoopMode() : "all");
   }
 
   // 播放歌曲更新
@@ -12092,7 +12213,11 @@ const App = (function() {
       row.appendChild(icon);
 
       row.addEventListener('click', () => {
+        const isCurPlaying = originalIndex === CommutePlayer.getCurrentIndex();
         CommutePlayer.playIndex(originalIndex);
+        if (isCurPlaying) {
+          showToast("🔄 重新播放這首歌");
+        }
       });
 
       fragment.appendChild(row);

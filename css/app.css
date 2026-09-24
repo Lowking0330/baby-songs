@@ -810,3 +810,40 @@ header p {
   cursor: pointer;
   padding: 4px;
 }
+
+/* 🔔 操作即時浮動提示 Toast */
+.toast-msg {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  background: rgba(30, 41, 59, 0.94);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.toast-msg.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* 🔂 單曲循環按鈕特殊醒目高亮 */
+.ctrl-btn.loop-one {
+  background: #fefcbf !important;
+  border-color: #ecc94b !important;
+  color: #b7791f !important;
+  box-shadow: 0 0 12px rgba(236, 201, 75, 0.5) !important;
+  transform: scale(1.05);
+}
