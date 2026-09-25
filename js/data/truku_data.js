@@ -1,4 +1,4 @@
-/** 太魯閣語（Truku）幼兒聽力啟蒙海量資料庫 */
+/** 太魯閣語（Truku）幼兒聽力啟蒙資料庫 */
 const TRUKU_DATA = {
   "lang": "truku",
   "langName": "太魯閣語",
@@ -1713,189 +1713,64 @@ const TRUKU_DATA = {
   ],
   "classic_songs": [
     {
-      "title": "01 Alang mu ①",
+      "title": "01 Alang mu",
       "sub": "我的部落",
-      "url": "https://web.klokah.tw/text/sound/17343/214232.mp3"
+      "url": "audio/classic/truku_classic_01.mp3",
+      "type": "full_song"
     },
     {
-      "title": "01 Alang mu ②",
-      "sub": "我的部落",
-      "url": "https://web.klokah.tw/text/sound/17343/214233.mp3"
+      "title": "02 Manu ka nii?",
+      "sub": "這是什麼",
+      "url": "audio/classic/truku_classic_02.mp3",
+      "type": "full_song"
     },
     {
-      "title": "02 Manu ka nii? ①",
-      "sub": "這是什麼？",
-      "url": "https://web.klokah.tw/text/sound/17344/214234.mp3"
-    },
-    {
-      "title": "02 Manu ka nii? ②",
-      "sub": "這是什麼？",
-      "url": "https://web.klokah.tw/text/sound/17344/214235.mp3"
-    },
-    {
-      "title": "02 Manu ka nii? ③",
-      "sub": "這是什麼？",
-      "url": "https://web.klokah.tw/text/sound/17344/214236.mp3"
-    },
-    {
-      "title": "02 Manu ka nii? ④",
-      "sub": "這是什麼？",
-      "url": "https://web.klokah.tw/text/sound/17344/214237.mp3"
-    },
-    {
-      "title": "02 Manu ka nii? ⑤",
-      "sub": "這是什麼？",
-      "url": "https://web.klokah.tw/text/sound/17344/214238.mp3"
-    },
-    {
-      "title": "03 Keeman da ①",
+      "title": "03 Keeman da",
       "sub": "天黑了",
-      "url": "https://web.klokah.tw/text/sound/17345/214239.mp3"
+      "url": "audio/classic/truku_classic_03.mp3",
+      "type": "full_song"
     },
     {
-      "title": "03 Keeman da ②",
-      "sub": "天黑了",
-      "url": "https://web.klokah.tw/text/sound/17345/214240.mp3"
+      "title": "04 Uyas Hakaw Utux",
+      "sub": "彩虹橋之歌",
+      "url": "audio/classic/truku_classic_04.mp3",
+      "type": "full_song"
     },
     {
-      "title": "04 Uyas Hakaw Utux ①",
-      "sub": "靈橋歌",
-      "url": "https://web.klokah.tw/text/sound/17346/214241.mp3"
+      "title": "05 Iyah hini kana",
+      "sub": "大家快來",
+      "url": "audio/classic/truku_classic_05.mp3",
+      "type": "full_song"
     },
     {
-      "title": "04 Uyas Hakaw Utux ②",
-      "sub": "靈橋歌",
-      "url": "https://web.klokah.tw/text/sound/17346/214242.mp3"
+      "title": "06 Uyas kndsan",
+      "sub": "生活之歌",
+      "url": "audio/classic/truku_classic_06.mp3",
+      "type": "full_song"
     },
     {
-      "title": "04 Uyas Hakaw Utux ③",
-      "sub": "靈橋歌",
-      "url": "https://web.klokah.tw/text/sound/17346/214243.mp3"
-    },
-    {
-      "title": "04 Uyas Hakaw Utux ④",
-      "sub": "靈橋歌",
-      "url": "https://web.klokah.tw/text/sound/17346/214244.mp3"
-    },
-    {
-      "title": "05 Iyah hini kana ①",
-      "sub": "大家一起來",
-      "url": "https://web.klokah.tw/text/sound/17347/214245.mp3"
-    },
-    {
-      "title": "05 Iyah hini kana ②",
-      "sub": "大家一起來",
-      "url": "https://web.klokah.tw/text/sound/17347/214246.mp3"
-    },
-    {
-      "title": "05 Iyah hini kana ③",
-      "sub": "大家一起來",
-      "url": "https://web.klokah.tw/text/sound/17347/214247.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ①",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214248.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ②",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214249.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ③",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214250.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ④",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214251.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ⑤",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214252.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ⑥",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214253.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ⑦",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214254.mp3"
-    },
-    {
-      "title": "06 Uyas kndsan ⑧",
-      "sub": "生活歌",
-      "url": "https://web.klokah.tw/text/sound/17348/214255.mp3"
-    },
-    {
-      "title": "07 Lupung mu ①",
+      "title": "07 Lupung mu",
       "sub": "我的朋友",
-      "url": "https://web.klokah.tw/text/sound/17349/214256.mp3"
+      "url": "audio/classic/truku_classic_07.mp3",
+      "type": "full_song"
     },
     {
-      "title": "07 Lupung mu ②",
-      "sub": "我的朋友",
-      "url": "https://web.klokah.tw/text/sound/17349/214257.mp3"
-    },
-    {
-      "title": "07 Lupung mu ③",
-      "sub": "我的朋友",
-      "url": "https://web.klokah.tw/text/sound/17349/214258.mp3"
-    },
-    {
-      "title": "07 Lupung mu ④",
-      "sub": "我的朋友",
-      "url": "https://web.klokah.tw/text/sound/17349/214259.mp3"
-    },
-    {
-      "title": "08 Qnpahan sari ①",
+      "title": "08 Qnpahan sari",
       "sub": "芋頭田",
-      "url": "https://web.klokah.tw/text/sound/17350/214260.mp3"
+      "url": "audio/classic/truku_classic_08.mp3",
+      "type": "full_song"
     },
     {
-      "title": "08 Qnpahan sari ②",
-      "sub": "芋頭田",
-      "url": "https://web.klokah.tw/text/sound/17350/214261.mp3"
+      "title": "09 Wauwa Truku",
+      "sub": "太魯閣少女",
+      "url": "audio/classic/truku_classic_09.mp3",
+      "type": "full_song"
     },
     {
-      "title": "08 Qnpahan sari ③",
-      "sub": "芋頭田",
-      "url": "https://web.klokah.tw/text/sound/17350/214262.mp3"
-    },
-    {
-      "title": "08 Qnpahan sari ④",
-      "sub": "芋頭田",
-      "url": "https://web.klokah.tw/text/sound/17350/214263.mp3"
-    },
-    {
-      "title": "09 Wauwa Truku ①",
-      "sub": "太魯閣族女孩",
-      "url": "https://web.klokah.tw/text/sound/17351/214264.mp3"
-    },
-    {
-      "title": "09 Wauwa Truku ②",
-      "sub": "太魯閣族女孩",
-      "url": "https://web.klokah.tw/text/sound/17351/214265.mp3"
-    },
-    {
-      "title": "10 Yami ni quyu ①",
-      "sub": "我們和蛇",
-      "url": "https://web.klokah.tw/text/sound/17352/214266.mp3"
-    },
-    {
-      "title": "10 Yami ni quyu ②",
-      "sub": "我們和蛇",
-      "url": "https://web.klokah.tw/text/sound/17352/214267.mp3"
-    },
-    {
-      "title": "10 Yami ni quyu ③",
-      "sub": "我們和蛇",
-      "url": "https://web.klokah.tw/text/sound/17352/214268.mp3"
+      "title": "10 Yami ni quyu",
+      "sub": "我們與蛇",
+      "url": "audio/classic/truku_classic_10.mp3",
+      "type": "full_song"
     }
   ],
   "dialogues": [

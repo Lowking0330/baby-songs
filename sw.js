@@ -7,8 +7,8 @@
  * 4. 強制清理舊版快取並立即接管（skipWaiting & clients.claim）
  */
 
-const STATIC_CACHE = "baby-songs-static-v3";
-const ZH_AUDIO_CACHE = "baby-songs-zh-v3";
+const STATIC_CACHE = "baby-songs-static-v4";
+const AUDIO_CACHE = "baby-songs-audio-v4";
 
 const APP_SHELL = [
   "./",
@@ -40,7 +40,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((keys) => {
       return Promise.all(
         keys.map((key) => {
-          if (key !== STATIC_CACHE && key !== ZH_AUDIO_CACHE) {
+          if (key !== STATIC_CACHE && key !== AUDIO_CACHE) {
             console.log("清理舊版快取:", key);
             return caches.delete(key);
           }
@@ -61,10 +61,10 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // 2. 本機同源中文 MP3 音訊快取 (audio/zh/)
-  if (url.includes("/audio/zh/") && url.endsWith(".mp3")) {
+  // 2. 本機同源 MP3 音訊快取 (audio/)
+  if (url.includes("/audio/") && url.endsWith(".mp3")) {
     event.respondWith(
-      caches.open(ZH_AUDIO_CACHE).then(async (cache) => {
+      caches.open(AUDIO_CACHE).then(async (cache) => {
         const cached = await cache.match(request, { ignoreSearch: true });
         if (cached) return cached;
         try {

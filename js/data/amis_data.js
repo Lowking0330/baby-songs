@@ -1705,7 +1705,7 @@ const AMIS_DATA = {
       "tid": 8005,
       "title": "掛圖-家庭篇-04-數字歌",
       "sub": "數字歌",
-      "url": "https://web.klokah.tw/text/sound/8005/99034.mp3",
+      "url": "audio/chart/amis_chart_8005.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2248,184 +2248,64 @@ const AMIS_DATA = {
   ],
   "classic_songs": [
     {
-      "title": "01 Micudad ①",
-      "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/16157/203259.mp3"
+      "title": "01 Micudad",
+      "sub": "上學歌",
+      "url": "audio/classic/amis_classic_01.mp3",
+      "type": "full_song"
     },
     {
-      "title": "01 Micudad ②",
-      "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/16157/203260.mp3"
+      "title": "02 Cima kiso?",
+      "sub": "你是誰",
+      "url": "audio/classic/amis_classic_02.mp3",
+      "type": "full_song"
     },
     {
-      "title": "01 Micudad ③",
-      "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/16157/203261.mp3"
+      "title": "03 Sorita^",
+      "sub": "雪橇",
+      "url": "audio/classic/amis_classic_03.mp3",
+      "type": "full_song"
     },
     {
-      "title": "01 Micudad ④",
-      "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/16157/203262.mp3"
+      "title": "04 Mi'ocil",
+      "sub": "盪鞦韆",
+      "url": "audio/classic/amis_classic_04.mp3",
+      "type": "full_song"
     },
     {
-      "title": "02 Cima kiso? ①",
-      "sub": "你是誰?",
-      "url": "https://web.klokah.tw/text/sound/16158/203263.mp3"
-    },
-    {
-      "title": "02 Cima kiso? ②",
-      "sub": "你是誰?",
-      "url": "https://web.klokah.tw/text/sound/16158/203264.mp3"
-    },
-    {
-      "title": "03 Sorita^ ①",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203265.mp3"
-    },
-    {
-      "title": "03 Sorita^ ②",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203266.mp3"
-    },
-    {
-      "title": "03 Sorita^ ③",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203267.mp3"
-    },
-    {
-      "title": "03 Sorita^ ④",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203268.mp3"
-    },
-    {
-      "title": "03 Sorita^ ⑤",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203269.mp3"
-    },
-    {
-      "title": "03 Sorita^ ⑥",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203270.mp3"
-    },
-    {
-      "title": "03 Sorita^ ⑦",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203271.mp3"
-    },
-    {
-      "title": "03 Sorita^ ⑧",
-      "sub": "章魚",
-      "url": "https://web.klokah.tw/text/sound/16159/203272.mp3"
-    },
-    {
-      "title": "04 Mi'ocil ①",
-      "sub": "跟屁蟲",
-      "url": "https://web.klokah.tw/text/sound/16160/203273.mp3"
-    },
-    {
-      "title": "04 Mi'ocil ②",
-      "sub": "跟屁蟲",
-      "url": "https://web.klokah.tw/text/sound/16160/203274.mp3"
-    },
-    {
-      "title": "05 'Alopal ①",
+      "title": "05 'Alopal",
       "sub": "小柿子",
-      "url": "https://web.klokah.tw/text/sound/16161/203275.mp3"
+      "url": "audio/classic/amis_classic_05.mp3",
+      "type": "full_song"
     },
     {
-      "title": "05 'Alopal ②",
-      "sub": "小柿子",
-      "url": "https://web.klokah.tw/text/sound/16161/203276.mp3"
+      "title": "06 Koliciw",
+      "sub": "車輪",
+      "url": "audio/classic/amis_classic_06.mp3",
+      "type": "full_song"
     },
     {
-      "title": "05 'Alopal ③",
-      "sub": "小柿子",
-      "url": "https://web.klokah.tw/text/sound/16161/203431.mp3"
+      "title": "07 Tolawtolaw",
+      "sub": "蜻蜓",
+      "url": "audio/classic/amis_classic_07.mp3",
+      "type": "full_song"
     },
     {
-      "title": "05 'Alopal ④",
-      "sub": "小柿子",
-      "url": "https://web.klokah.tw/text/sound/16161/203432.mp3"
+      "title": "08 Takola'",
+      "sub": "青蛙",
+      "url": "audio/classic/amis_classic_08.mp3",
+      "type": "full_song"
     },
     {
-      "title": "05 'Alopal ⑤",
-      "sub": "小柿子",
-      "url": "https://web.klokah.tw/text/sound/16161/203277.mp3"
-    },
-    {
-      "title": "06 Koliciw ①",
-      "sub": "腳踏車",
-      "url": "https://web.klokah.tw/text/sound/16162/203278.mp3"
-    },
-    {
-      "title": "06 Koliciw ②",
-      "sub": "腳踏車",
-      "url": "https://web.klokah.tw/text/sound/16162/203279.mp3"
-    },
-    {
-      "title": "07 Tolawtolaw ①",
-      "sub": "白鷺鷥",
-      "url": "https://web.klokah.tw/text/sound/16163/203280.mp3"
-    },
-    {
-      "title": "07 Tolawtolaw ②",
-      "sub": "白鷺鷥",
-      "url": "https://web.klokah.tw/text/sound/16163/203281.mp3"
-    },
-    {
-      "title": "07 Tolawtolaw ③",
-      "sub": "白鷺鷥",
-      "url": "https://web.klokah.tw/text/sound/16163/203282.mp3"
-    },
-    {
-      "title": "07 Tolawtolaw ④",
-      "sub": "白鷺鷥",
-      "url": "https://web.klokah.tw/text/sound/16163/203433.mp3"
-    },
-    {
-      "title": "08 Takola' ①",
-      "sub": "小青蛙",
-      "url": "https://web.klokah.tw/text/sound/16164/203283.mp3"
-    },
-    {
-      "title": "08 Takola' ②",
-      "sub": "小青蛙",
-      "url": "https://web.klokah.tw/text/sound/16164/203285.mp3"
-    },
-    {
-      "title": "08 Takola' ③",
-      "sub": "小青蛙",
-      "url": "https://web.klokah.tw/text/sound/16164/203286.mp3"
-    },
-    {
-      "title": "09 Kiso kako cingra ①",
+      "title": "09 Kiso kako cingra",
       "sub": "你我他",
-      "url": "https://web.klokah.tw/text/sound/16165/203287.mp3"
+      "url": "audio/classic/amis_classic_09.mp3",
+      "type": "full_song"
     },
     {
-      "title": "09 Kiso kako cingra ②",
-      "sub": "你我他",
-      "url": "https://web.klokah.tw/text/sound/16165/203288.mp3"
-    },
-    {
-      "title": "09 Kiso kako cingra ③",
-      "sub": "你我他",
-      "url": "https://web.klokah.tw/text/sound/16165/203289.mp3"
-    },
-    {
-      "title": "09 Kiso kako cingra ④",
-      "sub": "你我他",
-      "url": "https://web.klokah.tw/text/sound/16165/203290.mp3"
-    },
-    {
-      "title": "10 Makalat no kakonah kako ①",
-      "sub": "螞蟻欺侮我",
-      "url": "https://web.klokah.tw/text/sound/16166/203291.mp3"
-    },
-    {
-      "title": "10 Makalat no kakonah kako ②",
-      "sub": "螞蟻欺侮我",
-      "url": "https://web.klokah.tw/text/sound/16166/203292.mp3"
+      "title": "10 Makalat no kakonah kako",
+      "sub": "我被螞蟻咬",
+      "url": "audio/classic/amis_classic_10.mp3",
+      "type": "full_song"
     }
   ],
   "dialogues": [

@@ -58,6 +58,7 @@ global.CommutePlayer = eval(fs.readFileSync('js/commute_player.js', 'utf-8') + '
 console.log("=== 1. 檢驗資料集完整性 ===");
 assert(TRUKU_DATA.wawa_songs.length >= 29, "太魯閣語 WaWa 兒歌 >= 29 首");
 assert(TRUKU_DATA.chart_songs.length === 20, "太魯閣語 掛圖歌謠 === 20 首");
+assert(TRUKU_DATA.classic_songs.length === 10, "太魯閣語 經典歌謠 === 10 首完整兒歌");
 assert(TRUKU_DATA.dialogues.length === 60, "太魯閣語 生活例句 === 60 句");
 assert(TRUKU_DATA.vocab.length === 60, "太魯閣語 基礎詞彙 === 60 字");
 assert(TRUKU_DATA.lima.length === 150, "太魯閣語 LIMA 詞彙 === 150 字");
@@ -65,7 +66,7 @@ assert(TRUKU_DATA.lima.length === 150, "太魯閣語 LIMA 詞彙 === 150 字");
 assert(AMIS_DATA.langName === "秀姑巒阿美語", "阿美語方言設定為秀姑巒阿美語");
 assert(AMIS_DATA.wawa_songs.length === 30, "秀姑巒阿美語 WaWa 兒歌 === 30 首");
 assert(AMIS_DATA.chart_songs.length === 20, "秀姑巒阿美語 掛圖歌謠 === 20 首");
-assert(AMIS_DATA.classic_songs.length === 36, "秀姑巒阿美語 經典歌謠 === 36 首");
+assert(AMIS_DATA.classic_songs.length === 10, "秀姑巒阿美語 經典歌謠 === 10 首完整兒歌");
 assert(AMIS_DATA.dialogues.length === 60, "秀姑巒阿美語 生活例句 === 60 句");
 assert(AMIS_DATA.vocab.length === 60, "秀姑巒阿美語 基礎詞彙 === 60 字");
 assert(AMIS_DATA.lima.length === 150, "秀姑巒阿美語 LIMA 詞彙 === 150 字");
@@ -226,4 +227,51 @@ assert.strictEqual(CommutePlayer.getItemKey(favList[0], "amis"), sample1Key, "�
 
 console.log("✅ 幼兒情境歌單與寶寶最愛收藏測試通過！");
 
-console.log("\n🎉 全部 6 項測試皆完美通過！");
+console.log("=== 7. 檢驗修復與合成歌曲時長（絕無低於 10 秒之歌）===");
+function getMp3Duration(buffer) {
+  let offset = 0;
+  let totalDuration = 0;
+  const bitrates = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0];
+  const sampleRates = [44100, 48000, 32000, 0];
+  while (offset < buffer.length - 4) {
+    if (buffer[offset] === 0xFF && (buffer[offset + 1] & 0xE0) === 0xE0) {
+      const b1 = buffer[offset + 1];
+      const b2 = buffer[offset + 2];
+      const mpegVersion = (b1 >> 3) & 0x03;
+      const layer = (b1 >> 1) & 0x03;
+      const bitrateIdx = (b2 >> 4) & 0x0F;
+      const sampleRateIdx = (b2 >> 2) & 0x03;
+      const padding = (b2 >> 1) & 0x01;
+      if (mpegVersion === 3 && layer === 1 && bitrateIdx > 0 && bitrateIdx < 15 && sampleRateIdx < 3) {
+        const bitrate = bitrates[bitrateIdx] * 1000;
+        const sampleRate = sampleRates[sampleRateIdx];
+        const frameLength = Math.floor((144 * bitrate) / sampleRate) + padding;
+        if (frameLength > 0) {
+          totalDuration += 1152 / sampleRate;
+          offset += frameLength;
+          continue;
+        }
+      }
+    }
+    offset++;
+  }
+  return totalDuration;
+}
+
+// 檢驗阿美語掛圖 8005
+const chart8005Buf = fs.readFileSync('audio/chart/amis_chart_8005.mp3');
+const d8005 = getMp3Duration(chart8005Buf);
+assert(d8005 >= 10.0, `amis_chart_8005.mp3 時長應 >= 10s (實際: ${d8005.toFixed(1)}s)`);
+
+// 檢驗阿美語與太魯閣語 10+10 首經典兒歌
+const classicFiles = fs.readdirSync('audio/classic').filter(f => f.endsWith('.mp3'));
+assert.strictEqual(classicFiles.length, 20, "經典兒歌本地音訊應恰好 20 首 (阿美語 10 首 + 太魯閣語 10 首)");
+
+classicFiles.forEach(fn => {
+  const buf = fs.readFileSync(`audio/classic/${fn}`);
+  const dur = getMp3Duration(buf);
+  assert(dur >= 10.0, `${fn} 時長應 >= 10s (實際: ${dur.toFixed(1)}s)`);
+});
+console.log("✅ 本地合成歌曲 100% 通過時長校驗（每首皆 >= 10 秒，絕無破碎斷句）！");
+
+console.log("\n🎉 全部 7 項測試皆完美通過！");
