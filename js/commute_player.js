@@ -87,10 +87,14 @@ const CommutePlayer = (function() {
       ...data.lima.map(s => ({ ...s, catType: "vocab" }))
     ];
 
-    const allItems = [
+    const allSongs = [
       ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
       ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
-      ...data.classic_songs.map(s => ({ ...s, catType: "classic" })),
+      ...data.classic_songs.map(s => ({ ...s, catType: "classic" }))
+    ];
+
+    const allItems = [
+      ...allSongs,
       ...data.dialogues.map(s => ({ ...s, catType: "dialogue" })),
       ...allVocab
     ];
@@ -104,6 +108,9 @@ const CommutePlayer = (function() {
         break;
       case "song_classic":
         list = data.classic_songs.map(s => ({ ...s, catType: "classic" }));
+        break;
+      case "song_all":
+        list = allSongs;
         break;
       case "dialogues":
         list = data.dialogues.map(s => ({ ...s, catType: "dialogue" }));
@@ -145,29 +152,25 @@ const CommutePlayer = (function() {
         list = data.lima.map(s => ({ ...s, catType: "vocab" }));
         break;
       case "scenario_morning": {
-        const kw = ['起床', '刷牙', '洗臉', '洗手', '早餐', '吃飽', '早安', '長大', '相見歡', '衣服', '鞋子', '太陽'];
-        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        // 晨間起居：早安、起床、刷牙、吃飯、上學、相見歡、運動、歡樂、太陽、白天 (100% 純兒歌，絕無短碎句)
+        const kw = ['起', '刷牙', '吃', '早', '相見歡', '上學', '運動', '日', '白天', '歡樂', '快樂', '大家', '部落'];
+        list = allSongs.filter(s => kw.some(k => ((s.title || '') + ' ' + (s.sub || '')).includes(k)));
         break;
       }
       case "scenario_travel": {
-        const kw = ['車', '火車', '飛機', '捷運', '公車', '動物', '山豬', '飛鼠', '鳥', '狗', '貓', '走', '跑', '彩虹', '公園', '學校', '玩'];
-        list = allItems.filter(it => it.category === 'place' || it.category === 'animal' || kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        // 外出兜風：動物、車、交通、出遊、走走、跑、大自然、彩虹 (100% 純兒歌，絕無短碎句)
+        const kw = ['動物', '山豬', '貓', '鳥', '飛鼠', '青蛙', '小魚', '魚', '走', '追逐', '車', '雪橇', '鞦韆', '彩虹', '玩', '手指'];
+        list = allSongs.filter(s => kw.some(k => ((s.title || '') + ' ' + (s.sub || '')).includes(k)));
         break;
       }
       case "scenario_bedtime": {
-        const kw = ['睡覺', '睡', '床', '月亮', '星星', '天黑', '安靜', '夜晚', '晚安', '摸摸頭', '搖籃', '休息', '收拾', '玩具'];
-        list = allItems.filter(it => kw.some(k => ((it.title || '') + ' ' + (it.sub || '') + ' ' + (it.unit || '')).includes(k)));
+        // 睡前哄睡：夜空、星、月、天黑、晚、靜、收玩具、摸摸頭、家、奶奶、四季、祈福、彩虹橋 (100% 純兒歌，絕無短碎句)
+        const kw = ['天黑', '夜', '晚', '收玩具', '頭', '家', '奶奶', '四季', '祈福', '祖靈', '月', '星'];
+        list = allSongs.filter(s => kw.some(k => ((s.title || '') + ' ' + (s.sub || '')).includes(k)));
         break;
       }
       case "favorites":
         list = allItems.filter(it => favoritesSet.has(getItemKey(it, currentLang)));
-        break;
-      case "song_all":
-        list = [
-          ...data.wawa_songs.map(s => ({ ...s, catType: "song" })),
-          ...data.chart_songs.map(s => ({ ...s, catType: "song" })),
-          ...data.classic_songs.map(s => ({ ...s, catType: "classic" }))
-        ];
         break;
       case "all":
       default:
@@ -221,8 +224,8 @@ const CommutePlayer = (function() {
       album: `幼兒族語啟蒙 (${langLabel})`
     });
 
-    // 判斷是否為兒歌全曲模式（若本身就是 full_song 或當前處於 song_continuous 模式）
-    const isSong = item.catType === "song" || item.catType === "classic" || item.type === "full_song" || playMode === "song_continuous";
+    // 判斷是否為兒歌全曲（僅純兒歌走全曲播放，非兒歌之詞彙與例句維持磨耳朵發音與停頓）
+    const isSong = item.catType === "song" || item.catType === "classic" || item.type === "full_song";
 
     if (isSong) {
       // === 兒歌全曲連續播放邏輯 ===

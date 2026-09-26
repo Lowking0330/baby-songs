@@ -109,7 +109,7 @@ const App = (function() {
   function init() {
     // 讀取 URL 初始參數（若有指定情境或最愛）
     const urlParams = new URLSearchParams(window.location.search);
-    const initialCat = urlParams.get('cat') || "song_wawa";
+    const initialCat = urlParams.get('cat') || "song_all";
     const initialLang = urlParams.get('lang') || "truku";
 
     // 初始化最愛狀態
@@ -221,10 +221,8 @@ const App = (function() {
       });
     }
 
-    // 若初始有自訂分類，同步高亮
-    if (initialCat !== "song_wawa") {
-      setActiveCategory(initialCat);
-    }
+    // 同步高亮初始分類
+    setActiveCategory(initialCat);
 
     // 綁定磨耳朵模式切換
     document.querySelectorAll('.mode-btn').forEach(btn => {

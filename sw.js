@@ -7,8 +7,7 @@
  * 4. 強制清理舊版快取並立即接管（skipWaiting & clients.claim）
  */
 
-const STATIC_CACHE = "baby-songs-static-v4";
-const AUDIO_CACHE = "baby-songs-audio-v4";
+const STATIC_CACHE = "baby-songs-static-v5";
 
 const APP_SHELL = [
   "./",
@@ -40,7 +39,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((keys) => {
       return Promise.all(
         keys.map((key) => {
-          if (key !== STATIC_CACHE && key !== AUDIO_CACHE) {
+          if (key !== STATIC_CACHE) {
             console.log("清理舊版快取:", key);
             return caches.delete(key);
           }
@@ -55,30 +54,10 @@ self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = request.url;
 
-  // 1. 關鍵防護：非同源請求（如原民會 web.klokah.tw 官方音訊）直接放行！
-  // 絕對不呼叫 respondWith，讓瀏覽器原生多媒體管道直連，完全不受跨域 CORS 阻擋限制。
-  if (!url.startsWith(self.location.origin)) {
-    return;
-  }
-
-  // 2. 本機同源 MP3 音訊快取 (audio/)
-  if (url.includes("/audio/") && url.endsWith(".mp3")) {
-    event.respondWith(
-      caches.open(AUDIO_CACHE).then(async (cache) => {
-        const cached = await cache.match(request, { ignoreSearch: true });
-        if (cached) return cached;
-        try {
-          const response = await fetch(request);
-          if (response && response.status === 200) {
-            cache.put(request, response.clone());
-          }
-          return response;
-        } catch (err) {
-          if (cached) return cached;
-          throw err;
-        }
-      })
-    );
+  // 1. 核心多媒體安全防護：所有 MP3 音訊請求一律放行，由原生瀏覽器多媒體管線直連！
+  // 徹底避免 Service Worker 破壞 iOS Safari 與 Android 必備之 HTTP 206 Partial Content (Range Request)，
+  // 杜絕任何音訊播放途中被截斷、卡死或提前跳歌的狀況！
+  if (url.endsWith(".mp3") || url.includes("/audio/") || request.headers.get("range") || !url.startsWith(self.location.origin)) {
     return;
   }
 

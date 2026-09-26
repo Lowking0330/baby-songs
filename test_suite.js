@@ -187,33 +187,39 @@ assert.strictEqual(mockMediaSession.metadata.title, "Alang mu");
 console.log("✅ MediaSession 聯動測試通過！");
 
 console.log("=== 6. 檢驗幼兒情境歌單與寶寶最愛收藏 ===");
-// 測試太魯閣語情境
+// 測試太魯閣語情境（必須 100% 為純兒歌，絕無短例句與單詞）
 CommutePlayer.switchLang("truku");
 CommutePlayer.switchCategory("scenario_morning");
-const trukuMorning = CommutePlayer.getPlaylist().length;
-assert(trukuMorning >= 15, `太魯閣語晨間歌單數量應 >= 15 (實際: ${trukuMorning})`);
+const trukuMorning = CommutePlayer.getPlaylist();
+assert(trukuMorning.length >= 15, `太魯閣語晨間歌單數量應 >= 15 (實際: ${trukuMorning.length})`);
+assert(trukuMorning.every(s => s.catType === 'song' || s.catType === 'classic'), "晨間歌單必須 100% 為純兒歌");
 
 CommutePlayer.switchCategory("scenario_travel");
-const trukuTravel = CommutePlayer.getPlaylist().length;
-assert(trukuTravel >= 30, `太魯閣語外出兜風歌單數量應 >= 30 (實際: ${trukuTravel})`);
+const trukuTravel = CommutePlayer.getPlaylist();
+assert(trukuTravel.length >= 15, `太魯閣語外出兜風歌單數量應 >= 15 (實際: ${trukuTravel.length})`);
+assert(trukuTravel.every(s => s.catType === 'song' || s.catType === 'classic'), "外出歌單必須 100% 為純兒歌");
 
 CommutePlayer.switchCategory("scenario_bedtime");
-const trukuBedtime = CommutePlayer.getPlaylist().length;
-assert(trukuBedtime >= 10, `太魯閣語睡前歌單數量應 >= 10 (實際: ${trukuBedtime})`);
+const trukuBedtime = CommutePlayer.getPlaylist();
+assert(trukuBedtime.length >= 15, `太魯閣語睡前歌單數量應 >= 15 (實際: ${trukuBedtime.length})`);
+assert(trukuBedtime.every(s => s.catType === 'song' || s.catType === 'classic'), "睡前歌單必須 100% 為純兒歌");
 
-// 測試秀姑巒阿美語情境
+// 測試秀姑巒阿美語情境（必須 100% 為純兒歌，絕無短例句與單詞）
 CommutePlayer.switchLang("amis");
 CommutePlayer.switchCategory("scenario_morning");
-const amisMorning = CommutePlayer.getPlaylist().length;
-assert(amisMorning >= 15, `秀姑巒阿美語晨間歌單數量應 >= 15 (實際: ${amisMorning})`);
+const amisMorning = CommutePlayer.getPlaylist();
+assert(amisMorning.length >= 15, `秀姑巒阿美語晨間歌單數量應 >= 15 (實際: ${amisMorning.length})`);
+assert(amisMorning.every(s => s.catType === 'song' || s.catType === 'classic'), "阿美語晨間歌單必須 100% 為純兒歌");
 
 CommutePlayer.switchCategory("scenario_travel");
-const amisTravel = CommutePlayer.getPlaylist().length;
-assert(amisTravel >= 30, `秀姑巒阿美語外出兜風歌單數量應 >= 30 (實際: ${amisTravel})`);
+const amisTravel = CommutePlayer.getPlaylist();
+assert(amisTravel.length >= 15, `秀姑巒阿美語外出兜風歌單數量應 >= 15 (實際: ${amisTravel.length})`);
+assert(amisTravel.every(s => s.catType === 'song' || s.catType === 'classic'), "阿美語外出歌單必須 100% 為純兒歌");
 
 CommutePlayer.switchCategory("scenario_bedtime");
-const amisBedtime = CommutePlayer.getPlaylist().length;
-assert(amisBedtime >= 10, `秀姑巒阿美語睡前歌單數量應 >= 10 (實際: ${amisBedtime})`);
+const amisBedtime = CommutePlayer.getPlaylist();
+assert(amisBedtime.length >= 15, `秀姑巒阿美語睡前歌單數量應 >= 15 (實際: ${amisBedtime.length})`);
+assert(amisBedtime.every(s => s.catType === 'song' || s.catType === 'classic'), "阿美語睡前歌單必須 100% 為純兒歌");
 
 // 測試寶寶最愛收藏邏輯
 const allAmis = CommutePlayer.switchCategory("all");
