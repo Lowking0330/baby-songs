@@ -278,6 +278,20 @@ classicFiles.forEach(fn => {
   const dur = getMp3Duration(buf);
   assert(dur >= 10.0, `${fn} 時長應 >= 10s (實際: ${dur.toFixed(1)}s)`);
 });
-console.log("✅ 本地合成歌曲 100% 通過時長校驗（每首皆 >= 10 秒，絕無破碎斷句）！");
+
+// 檢驗阿美語 4 首擴充輪唱完整版兒歌
+const extendedWawaFiles = [
+  'audio/wawa/amis_653_full.mp3',
+  'audio/wawa/amis_654_full.mp3',
+  'audio/wawa/amis_684_full.mp3',
+  'audio/wawa/amis_677_full.mp3'
+];
+extendedWawaFiles.forEach(path => {
+  assert(fs.existsSync(path), `${path} 檔案必須存在`);
+  const buf = fs.readFileSync(path);
+  const dur = getMp3Duration(buf);
+  assert(dur >= 12.0, `${path} 時長應 >= 12s (實際: ${dur.toFixed(1)}s)`);
+});
+console.log("✅ 本地合成與擴充歌曲 100% 通過時長校驗（每首皆 >= 10 秒，絕無破碎斷句）！");
 
 console.log("\n🎉 全部 7 項測試皆完美通過！");

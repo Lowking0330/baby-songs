@@ -99,54 +99,141 @@ const AudioEngine = (function() {
     isUnlocked = true;
   }
 
+  let currentPlaybackToken = 0;
+
   // 播放指定音訊 URL
   function playUrl(url, playbackRate, onEnded, onError) {
     initPrimaryAudio();
-    startSilentAudio();
+    // 關鍵修復：播放主音訊時暫停靜音音軌，避免搶奪行動裝置（Android / iOS）之系統音訊焦點 (Audio Focus)
+    stopSilentAudio();
     requestWakeLock();
 
+    const thisToken = ++currentPlaybackToken;
     let hasEnded = false;
+    let retryCount = 0;
+    const maxRetries = 2;
+    let lastTime = 0;
 
     // 清理舊回呼
     primaryAudio.onended = null;
     primaryAudio.onerror = null;
+    primaryAudio.ontimeupdate = null;
+    primaryAudio.onwaiting = null;
+    primaryAudio.onstalled = null;
 
-    primaryAudio.onended = () => {
-      if (hasEnded) return;
-      hasEnded = true;
-      primaryAudio.onended = null;
-      primaryAudio.onerror = null;
-      if (typeof onEnded === "function") onEnded();
-    };
-
-    primaryAudio.onerror = (err) => {
-      if (hasEnded) return;
-      hasEnded = true;
-      primaryAudio.onended = null;
-      primaryAudio.onerror = null;
-      console.warn("AudioEngine playUrl error:", err, url);
-      if (typeof onError === "function") onError(err);
-      else if (typeof onEnded === "function") onEnded(); // 自動降級接續
-    };
-
-    try {
-      primaryAudio.src = url;
-      primaryAudio.playbackRate = playbackRate || 1.0;
-      const playPromise = primaryAudio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((err) => {
-          if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) {
-            // 使用者手動切換或暫停，非真實播放錯誤
-            return;
-          }
-          if (hasEnded) return;
-          hasEnded = true;
-          if (typeof onError === "function") onError(err);
-          else if (typeof onEnded === "function") onEnded();
-        });
+    primaryAudio.ontimeupdate = () => {
+      if (thisToken !== currentPlaybackToken) return;
+      if (primaryAudio.currentTime > 0) {
+        lastTime = primaryAudio.currentTime;
       }
+    };
+
+    function finishSuccess() {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      hasEnded = true;
+      primaryAudio.onended = null;
+      primaryAudio.onerror = null;
+      primaryAudio.ontimeupdate = null;
+      primaryAudio.onwaiting = null;
+      primaryAudio.onstalled = null;
+      if (typeof onEnded === "function") onEnded();
+    }
+
+    function finishError(err) {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      hasEnded = true;
+      primaryAudio.onended = null;
+      primaryAudio.onerror = null;
+      primaryAudio.ontimeupdate = null;
+      primaryAudio.onwaiting = null;
+      primaryAudio.onstalled = null;
+      console.warn("AudioEngine: 播放重試多次後仍失敗，通知上層處理（絕不粗暴切歌）:", url, err);
+      if (typeof onError === "function") {
+        onError(err);
+      }
+      // 嚴正警告：絕不可 fallback 自動調用 onEnded() 導致跳歌！
+    }
+
+    function attemptPlay() {
+      if (thisToken !== currentPlaybackToken || hasEnded) return;
+
+      try {
+        const playPromise = primaryAudio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((err) => {
+            if (thisToken !== currentPlaybackToken || hasEnded) return;
+            if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) {
+              // 使用者切換曲目或手勢暫停，非真實播放錯誤
+              return;
+            }
+            handleFailure(err);
+          });
+        }
+      } catch (e) {
+        handleFailure(e);
+      }
+    }
+
+    function handleFailure(err) {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      if (retryCount < maxRetries) {
+        retryCount++;
+        console.warn(`AudioEngine: 偵測到網路微中斷或解碼抖動，自動斷點重試 (${retryCount}/${maxRetries}) 位於 ${lastTime.toFixed(1)}s:`, url);
+        setTimeout(() => {
+          if (thisToken !== currentPlaybackToken || hasEnded) return;
+          try {
+            primaryAudio.load();
+            if (lastTime > 0.5) {
+              primaryAudio.currentTime = Math.max(0, lastTime - 0.2);
+            }
+            attemptPlay();
+          } catch (e) {
+            handleFailure(e);
+          }
+        }, 1200);
+      } else {
+        finishError(err);
+      }
+    }
+
+    // 歌曲自然結束事件
+    primaryAudio.onended = () => {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      // 防早退保護：若音訊 duration 明確大於 5 秒，但目前播放時間落後總長度超過 2.5 秒（串流未傳完即中斷）
+      if (primaryAudio.duration && primaryAudio.duration > 5 && (primaryAudio.duration - primaryAudio.currentTime > 2.5)) {
+        console.warn(`AudioEngine: 偵測到串流過早截斷 (currentTime=${primaryAudio.currentTime.toFixed(1)}s, duration=${primaryAudio.duration.toFixed(1)}s)，啟動斷點重試續播...`);
+        handleFailure(new Error("Premature stream truncation"));
+        return;
+      }
+      finishSuccess();
+    };
+
+    // 錯誤事件
+    primaryAudio.onerror = (e) => {
+      console.warn("AudioEngine error event:", e, "src:", primaryAudio.currentSrc || url);
+      handleFailure(e);
+    };
+
+    // 設定音源與啟動播放
+    try {
+      if (primaryAudio.src !== url && !primaryAudio.src.endsWith(url)) {
+        primaryAudio.src = url;
+      }
+      primaryAudio.playbackRate = playbackRate || 1.0;
+      attemptPlay();
     } catch (e) {
-      if (!hasEnded && typeof onEnded === "function") onEnded();
+      handleFailure(e);
+    }
+  }
+
+  // 立即重新播放當前歌曲（從頭播放）
+  function replayCurrentAudio() {
+    if (primaryAudio) {
+      try {
+        primaryAudio.currentTime = 0;
+        const p = primaryAudio.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      } catch (e) {}
     }
   }
 
@@ -287,6 +374,7 @@ const AudioEngine = (function() {
   return {
     unlockUserGesture,
     playUrl,
+    replayCurrentAudio,
     pause,
     stop,
     isPlaying,

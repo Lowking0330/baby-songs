@@ -294,17 +294,18 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin: 16px 16px 0;
+  gap: 10px;
+  margin: 16px 12px 0;
+  flex-wrap: nowrap;
 }
 
 .ctrl-btn {
   background: white;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  font-size: 20px;
+  width: 46px;
+  height: 46px;
+  font-size: 19px;
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
@@ -312,18 +313,19 @@ header p {
   cursor: pointer;
   color: var(--text-main);
   transition: all 0.15s ease;
+  flex-shrink: 0;
 }
 
 .ctrl-btn:active {
-  transform: scale(0.92);
+  transform: scale(0.90);
 }
 
 .ctrl-btn.play-btn {
-  width: 70px;
-  height: 70px;
+  width: 62px;
+  height: 62px;
   background: linear-gradient(135deg, #ff8a5c 0%, #ff6826 100%);
   color: white;
-  font-size: 28px;
+  font-size: 26px;
   box-shadow: 0 4px 14px rgba(255, 104, 38, 0.4);
   border: none;
 }
@@ -332,6 +334,19 @@ header p {
   color: var(--primary);
   border-color: var(--primary);
   background: var(--primary-light);
+}
+
+.ctrl-btn.loop-one {
+  background: #fef3c7 !important;
+  border-color: #f59e0b !important;
+  color: #b45309 !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.45) !important;
+  animation: pulse-gold 2s infinite ease-in-out;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.45); }
+  50% { transform: scale(1.05); box-shadow: 0 0 16px rgba(245, 158, 11, 0.7); }
 }
 
 /* Play Mode Selector */

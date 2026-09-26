@@ -578,7 +578,7 @@ const AMIS_DATA = {
       "tid": 653,
       "title": "文化篇-03-相聚",
       "sub": "相聚",
-      "url": "https://web.klokah.tw/text/sound/653/12230.mp3",
+      "url": "audio/wawa/amis_653_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -608,7 +608,7 @@ const AMIS_DATA = {
       "tid": 654,
       "title": "文化篇-04-祈福歌",
       "sub": "祈福歌",
-      "url": "https://web.klokah.tw/text/sound/654/12234.mp3",
+      "url": "audio/wawa/amis_654_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -903,7 +903,7 @@ const AMIS_DATA = {
       "tid": 684,
       "title": "生活對話篇-05-你是誰",
       "sub": "你是誰",
-      "url": "https://web.klokah.tw/text/sound/684/13020.mp3",
+      "url": "audio/wawa/amis_684_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1098,7 +1098,7 @@ const AMIS_DATA = {
       "tid": 677,
       "title": "生活自理篇-05-上學",
       "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/677/12969.mp3",
+      "url": "audio/wawa/amis_677_full.mp3",
       "type": "full_song",
       "lyrics": [
         {

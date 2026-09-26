@@ -7,7 +7,7 @@
  * 4. 強制清理舊版快取並立即接管（skipWaiting & clients.claim）
  */
 
-const STATIC_CACHE = "baby-songs-static-v5";
+const STATIC_CACHE = "baby-songs-static-v6";
 
 const APP_SHELL = [
   "./",
@@ -18,6 +18,10 @@ const APP_SHELL = [
   "./js/audio_engine.js",
   "./js/commute_player.js",
   "./js/app.js",
+  "./audio/wawa/amis_653_full.mp3",
+  "./audio/wawa/amis_654_full.mp3",
+  "./audio/wawa/amis_684_full.mp3",
+  "./audio/wawa/amis_677_full.mp3",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png"

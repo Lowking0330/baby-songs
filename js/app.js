@@ -89,6 +89,7 @@ const App = (function() {
     playBtn: document.getElementById('playBtn'),
     prevBtn: document.getElementById('prevBtn'),
     nextBtn: document.getElementById('nextBtn'),
+    replayBtn: document.getElementById('replayBtn'),
     shuffleBtn: document.getElementById('shuffleBtn'),
     loopBtn: document.getElementById('loopBtn'),
     playlist: document.getElementById('playlist'),
@@ -101,6 +102,7 @@ const App = (function() {
     miniSub: document.getElementById('miniSub'),
     miniPlayBtn: document.getElementById('miniPlayBtn'),
     miniPrevBtn: document.getElementById('miniPrevBtn'),
+    miniReplayBtn: document.getElementById('miniReplayBtn'),
     miniNextBtn: document.getElementById('miniNextBtn')
   };
 
@@ -268,9 +270,21 @@ const App = (function() {
     el.playBtn.addEventListener('click', () => CommutePlayer.togglePlay());
     el.prevBtn.addEventListener('click', () => CommutePlayer.prev());
     el.nextBtn.addEventListener('click', () => CommutePlayer.next());
+    if (el.replayBtn) {
+      el.replayBtn.addEventListener('click', () => {
+        CommutePlayer.replayCurrent();
+        showToast("🔄 從頭重新播放這首歌");
+      });
+    }
     if (el.miniPlayBtn) el.miniPlayBtn.addEventListener('click', () => CommutePlayer.togglePlay());
     if (el.miniPrevBtn) el.miniPrevBtn.addEventListener('click', () => CommutePlayer.prev());
     if (el.miniNextBtn) el.miniNextBtn.addEventListener('click', () => CommutePlayer.next());
+    if (el.miniReplayBtn) {
+      el.miniReplayBtn.addEventListener('click', () => {
+        CommutePlayer.replayCurrent();
+        showToast("🔄 從頭重新播放這首歌");
+      });
+    }
 
     // 洗牌與循環
     el.shuffleBtn.addEventListener('click', () => {

@@ -308,17 +308,18 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin: 16px 16px 0;
+  gap: 10px;
+  margin: 16px 12px 0;
+  flex-wrap: nowrap;
 }
 
 .ctrl-btn {
   background: white;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 50%;
-  width: 52px;
-  height: 52px;
-  font-size: 20px;
+  width: 46px;
+  height: 46px;
+  font-size: 19px;
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
@@ -326,18 +327,19 @@ header p {
   cursor: pointer;
   color: var(--text-main);
   transition: all 0.15s ease;
+  flex-shrink: 0;
 }
 
 .ctrl-btn:active {
-  transform: scale(0.92);
+  transform: scale(0.90);
 }
 
 .ctrl-btn.play-btn {
-  width: 70px;
-  height: 70px;
+  width: 62px;
+  height: 62px;
   background: linear-gradient(135deg, #ff8a5c 0%, #ff6826 100%);
   color: white;
-  font-size: 28px;
+  font-size: 26px;
   box-shadow: 0 4px 14px rgba(255, 104, 38, 0.4);
   border: none;
 }
@@ -346,6 +348,19 @@ header p {
   color: var(--primary);
   border-color: var(--primary);
   background: var(--primary-light);
+}
+
+.ctrl-btn.loop-one {
+  background: #fef3c7 !important;
+  border-color: #f59e0b !important;
+  color: #b45309 !important;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.45) !important;
+  animation: pulse-gold 2s infinite ease-in-out;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(245, 158, 11, 0.45); }
+  50% { transform: scale(1.05); box-shadow: 0 0 16px rgba(245, 158, 11, 0.7); }
 }
 
 /* Play Mode Selector */
@@ -961,6 +976,7 @@ header p {
     <button class="ctrl-btn" id="prevBtn" title="上一首">⏮</button>
     <button class="ctrl-btn play-btn" id="playBtn" title="播放 / 暫停">▶</button>
     <button class="ctrl-btn" id="nextBtn" title="下一首">⏭</button>
+    <button class="ctrl-btn" id="replayBtn" title="從頭重播這首歌">🔄</button>
     <button class="ctrl-btn active" id="loopBtn" title="循環模式：整輪循環 🔁 / 單曲循環 🔂 / 順序播放 ➡️">🔁</button>
   </div>
 
@@ -1059,13 +1075,14 @@ header p {
     <div class="mini-sub" id="miniSub">-</div>
   </div>
   <div class="mini-controls">
-    <button class="mini-btn" id="miniPrevBtn">⏮</button>
-    <button class="mini-btn play" id="miniPlayBtn">▶</button>
-    <button class="mini-btn" id="miniNextBtn">⏭</button>
+    <button class="mini-btn" id="miniPrevBtn" title="上一首">⏮</button>
+    <button class="mini-btn" id="miniReplayBtn" title="從頭重播">🔄</button>
+    <button class="mini-btn play" id="miniPlayBtn" title="播放 / 暫停">▶</button>
+    <button class="mini-btn" id="miniNextBtn" title="下一首">⏭</button>
   </div>
 </div>
 
-<!-- 模組化腳本 -->
+
 <script>
 /** 太魯閣語（Truku）幼兒聽力啟蒙資料庫 */
 const TRUKU_DATA = {
@@ -6132,7 +6149,7 @@ const AMIS_DATA = {
       "tid": 653,
       "title": "文化篇-03-相聚",
       "sub": "相聚",
-      "url": "https://web.klokah.tw/text/sound/653/12230.mp3",
+      "url": "audio/wawa/amis_653_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -6162,7 +6179,7 @@ const AMIS_DATA = {
       "tid": 654,
       "title": "文化篇-04-祈福歌",
       "sub": "祈福歌",
-      "url": "https://web.klokah.tw/text/sound/654/12234.mp3",
+      "url": "audio/wawa/amis_654_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -6457,7 +6474,7 @@ const AMIS_DATA = {
       "tid": 684,
       "title": "生活對話篇-05-你是誰",
       "sub": "你是誰",
-      "url": "https://web.klokah.tw/text/sound/684/13020.mp3",
+      "url": "audio/wawa/amis_684_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -6652,7 +6669,7 @@ const AMIS_DATA = {
       "tid": 677,
       "title": "生活自理篇-05-上學",
       "sub": "上學",
-      "url": "https://web.klokah.tw/text/sound/677/12969.mp3",
+      "url": "audio/wawa/amis_677_full.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -10673,54 +10690,141 @@ const AudioEngine = (function() {
     isUnlocked = true;
   }
 
+  let currentPlaybackToken = 0;
+
   // 播放指定音訊 URL
   function playUrl(url, playbackRate, onEnded, onError) {
     initPrimaryAudio();
-    startSilentAudio();
+    // 關鍵修復：播放主音訊時暫停靜音音軌，避免搶奪行動裝置（Android / iOS）之系統音訊焦點 (Audio Focus)
+    stopSilentAudio();
     requestWakeLock();
 
+    const thisToken = ++currentPlaybackToken;
     let hasEnded = false;
+    let retryCount = 0;
+    const maxRetries = 2;
+    let lastTime = 0;
 
     // 清理舊回呼
     primaryAudio.onended = null;
     primaryAudio.onerror = null;
+    primaryAudio.ontimeupdate = null;
+    primaryAudio.onwaiting = null;
+    primaryAudio.onstalled = null;
 
-    primaryAudio.onended = () => {
-      if (hasEnded) return;
-      hasEnded = true;
-      primaryAudio.onended = null;
-      primaryAudio.onerror = null;
-      if (typeof onEnded === "function") onEnded();
-    };
-
-    primaryAudio.onerror = (err) => {
-      if (hasEnded) return;
-      hasEnded = true;
-      primaryAudio.onended = null;
-      primaryAudio.onerror = null;
-      console.warn("AudioEngine playUrl error:", err, url);
-      if (typeof onError === "function") onError(err);
-      else if (typeof onEnded === "function") onEnded(); // 自動降級接續
-    };
-
-    try {
-      primaryAudio.src = url;
-      primaryAudio.playbackRate = playbackRate || 1.0;
-      const playPromise = primaryAudio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((err) => {
-          if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) {
-            // 使用者手動切換或暫停，非真實播放錯誤
-            return;
-          }
-          if (hasEnded) return;
-          hasEnded = true;
-          if (typeof onError === "function") onError(err);
-          else if (typeof onEnded === "function") onEnded();
-        });
+    primaryAudio.ontimeupdate = () => {
+      if (thisToken !== currentPlaybackToken) return;
+      if (primaryAudio.currentTime > 0) {
+        lastTime = primaryAudio.currentTime;
       }
+    };
+
+    function finishSuccess() {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      hasEnded = true;
+      primaryAudio.onended = null;
+      primaryAudio.onerror = null;
+      primaryAudio.ontimeupdate = null;
+      primaryAudio.onwaiting = null;
+      primaryAudio.onstalled = null;
+      if (typeof onEnded === "function") onEnded();
+    }
+
+    function finishError(err) {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      hasEnded = true;
+      primaryAudio.onended = null;
+      primaryAudio.onerror = null;
+      primaryAudio.ontimeupdate = null;
+      primaryAudio.onwaiting = null;
+      primaryAudio.onstalled = null;
+      console.warn("AudioEngine: 播放重試多次後仍失敗，通知上層處理（絕不粗暴切歌）:", url, err);
+      if (typeof onError === "function") {
+        onError(err);
+      }
+      // 嚴正警告：絕不可 fallback 自動調用 onEnded() 導致跳歌！
+    }
+
+    function attemptPlay() {
+      if (thisToken !== currentPlaybackToken || hasEnded) return;
+
+      try {
+        const playPromise = primaryAudio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((err) => {
+            if (thisToken !== currentPlaybackToken || hasEnded) return;
+            if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) {
+              // 使用者切換曲目或手勢暫停，非真實播放錯誤
+              return;
+            }
+            handleFailure(err);
+          });
+        }
+      } catch (e) {
+        handleFailure(e);
+      }
+    }
+
+    function handleFailure(err) {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      if (retryCount < maxRetries) {
+        retryCount++;
+        console.warn(`AudioEngine: 偵測到網路微中斷或解碼抖動，自動斷點重試 (${retryCount}/${maxRetries}) 位於 ${lastTime.toFixed(1)}s:`, url);
+        setTimeout(() => {
+          if (thisToken !== currentPlaybackToken || hasEnded) return;
+          try {
+            primaryAudio.load();
+            if (lastTime > 0.5) {
+              primaryAudio.currentTime = Math.max(0, lastTime - 0.2);
+            }
+            attemptPlay();
+          } catch (e) {
+            handleFailure(e);
+          }
+        }, 1200);
+      } else {
+        finishError(err);
+      }
+    }
+
+    // 歌曲自然結束事件
+    primaryAudio.onended = () => {
+      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      // 防早退保護：若音訊 duration 明確大於 5 秒，但目前播放時間落後總長度超過 2.5 秒（串流未傳完即中斷）
+      if (primaryAudio.duration && primaryAudio.duration > 5 && (primaryAudio.duration - primaryAudio.currentTime > 2.5)) {
+        console.warn(`AudioEngine: 偵測到串流過早截斷 (currentTime=${primaryAudio.currentTime.toFixed(1)}s, duration=${primaryAudio.duration.toFixed(1)}s)，啟動斷點重試續播...`);
+        handleFailure(new Error("Premature stream truncation"));
+        return;
+      }
+      finishSuccess();
+    };
+
+    // 錯誤事件
+    primaryAudio.onerror = (e) => {
+      console.warn("AudioEngine error event:", e, "src:", primaryAudio.currentSrc || url);
+      handleFailure(e);
+    };
+
+    // 設定音源與啟動播放
+    try {
+      if (primaryAudio.src !== url && !primaryAudio.src.endsWith(url)) {
+        primaryAudio.src = url;
+      }
+      primaryAudio.playbackRate = playbackRate || 1.0;
+      attemptPlay();
     } catch (e) {
-      if (!hasEnded && typeof onEnded === "function") onEnded();
+      handleFailure(e);
+    }
+  }
+
+  // 立即重新播放當前歌曲（從頭播放）
+  function replayCurrentAudio() {
+    if (primaryAudio) {
+      try {
+        primaryAudio.currentTime = 0;
+        const p = primaryAudio.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      } catch (e) {}
     }
   }
 
@@ -10861,6 +10965,7 @@ const AudioEngine = (function() {
   return {
     unlockUserGesture,
     playUrl,
+    replayCurrentAudio,
     pause,
     stop,
     isPlaying,
@@ -11115,18 +11220,27 @@ const CommutePlayer = (function() {
       // === 兒歌全曲連續播放邏輯 ===
       AudioEngine.playUrl(item.url, playbackRate, () => {
         if (thisSession !== playbackSessionId || !isPlaying) return;
-        // 間隔停頓後跳下一首
+        // 間隔停頓後依循環模式前進或重播
         const gapMs = Math.max(800, Math.round(sentenceGap * 1000));
         scheduleTask(gapMs, () => {
           if (thisSession !== playbackSessionId || !isPlaying) return;
           goNextAuto();
         });
       }, (err) => {
-        // 出現連線錯誤自動跳下一首
-        scheduleTask(1000, () => {
-          if (thisSession !== playbackSessionId || !isPlaying) return;
-          goNextAuto();
-        });
+        console.warn("CommutePlayer: 歌曲連線重試失敗:", item.title, err);
+        // 若為單曲循環模式，絕不擅自跳至下一首其他歌曲
+        if (loopMode === "one") {
+          scheduleTask(2000, () => {
+            if (thisSession !== playbackSessionId || !isPlaying) return;
+            playCurrentSequence();
+          });
+        } else {
+          // 順序或整輪循環，等待 2.5 秒緩衝後嘗試下一首
+          scheduleTask(2500, () => {
+            if (thisSession !== playbackSessionId || !isPlaying) return;
+            goNextAuto();
+          });
+        }
       });
       return;
     }
@@ -11386,13 +11500,16 @@ const CommutePlayer = (function() {
     return loopMode;
   }
 
-  // 立即重新播放當前曲目
+  // 立即重新播放當前曲目（從頭播放）
   function replayCurrent() {
     AudioEngine.unlockUserGesture();
     if (!playlist.length) return;
     isPlaying = true;
     AudioEngine.updateMediaSessionState(true);
     if (onStateChangeCb) onStateChangeCb(true);
+    if (typeof AudioEngine.replayCurrentAudio === "function") {
+      AudioEngine.replayCurrentAudio();
+    }
     playCurrentSequence();
   }
 
@@ -11573,6 +11690,7 @@ const App = (function() {
     playBtn: document.getElementById('playBtn'),
     prevBtn: document.getElementById('prevBtn'),
     nextBtn: document.getElementById('nextBtn'),
+    replayBtn: document.getElementById('replayBtn'),
     shuffleBtn: document.getElementById('shuffleBtn'),
     loopBtn: document.getElementById('loopBtn'),
     playlist: document.getElementById('playlist'),
@@ -11585,6 +11703,7 @@ const App = (function() {
     miniSub: document.getElementById('miniSub'),
     miniPlayBtn: document.getElementById('miniPlayBtn'),
     miniPrevBtn: document.getElementById('miniPrevBtn'),
+    miniReplayBtn: document.getElementById('miniReplayBtn'),
     miniNextBtn: document.getElementById('miniNextBtn')
   };
 
@@ -11752,9 +11871,21 @@ const App = (function() {
     el.playBtn.addEventListener('click', () => CommutePlayer.togglePlay());
     el.prevBtn.addEventListener('click', () => CommutePlayer.prev());
     el.nextBtn.addEventListener('click', () => CommutePlayer.next());
+    if (el.replayBtn) {
+      el.replayBtn.addEventListener('click', () => {
+        CommutePlayer.replayCurrent();
+        showToast("🔄 從頭重新播放這首歌");
+      });
+    }
     if (el.miniPlayBtn) el.miniPlayBtn.addEventListener('click', () => CommutePlayer.togglePlay());
     if (el.miniPrevBtn) el.miniPrevBtn.addEventListener('click', () => CommutePlayer.prev());
     if (el.miniNextBtn) el.miniNextBtn.addEventListener('click', () => CommutePlayer.next());
+    if (el.miniReplayBtn) {
+      el.miniReplayBtn.addEventListener('click', () => {
+        CommutePlayer.replayCurrent();
+        showToast("🔄 從頭重新播放這首歌");
+      });
+    }
 
     // 洗牌與循環
     el.shuffleBtn.addEventListener('click', () => {
@@ -12002,6 +12133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+
 
 <!-- Service Worker 註冊 -->
 <script>

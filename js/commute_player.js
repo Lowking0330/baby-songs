@@ -231,18 +231,27 @@ const CommutePlayer = (function() {
       // === 兒歌全曲連續播放邏輯 ===
       AudioEngine.playUrl(item.url, playbackRate, () => {
         if (thisSession !== playbackSessionId || !isPlaying) return;
-        // 間隔停頓後跳下一首
+        // 間隔停頓後依循環模式前進或重播
         const gapMs = Math.max(800, Math.round(sentenceGap * 1000));
         scheduleTask(gapMs, () => {
           if (thisSession !== playbackSessionId || !isPlaying) return;
           goNextAuto();
         });
       }, (err) => {
-        // 出現連線錯誤自動跳下一首
-        scheduleTask(1000, () => {
-          if (thisSession !== playbackSessionId || !isPlaying) return;
-          goNextAuto();
-        });
+        console.warn("CommutePlayer: 歌曲連線重試失敗:", item.title, err);
+        // 若為單曲循環模式，絕不擅自跳至下一首其他歌曲
+        if (loopMode === "one") {
+          scheduleTask(2000, () => {
+            if (thisSession !== playbackSessionId || !isPlaying) return;
+            playCurrentSequence();
+          });
+        } else {
+          // 順序或整輪循環，等待 2.5 秒緩衝後嘗試下一首
+          scheduleTask(2500, () => {
+            if (thisSession !== playbackSessionId || !isPlaying) return;
+            goNextAuto();
+          });
+        }
       });
       return;
     }
@@ -502,13 +511,16 @@ const CommutePlayer = (function() {
     return loopMode;
   }
 
-  // 立即重新播放當前曲目
+  // 立即重新播放當前曲目（從頭播放）
   function replayCurrent() {
     AudioEngine.unlockUserGesture();
     if (!playlist.length) return;
     isPlaying = true;
     AudioEngine.updateMediaSessionState(true);
     if (onStateChangeCb) onStateChangeCb(true);
+    if (typeof AudioEngine.replayCurrentAudio === "function") {
+      AudioEngine.replayCurrentAudio();
+    }
     playCurrentSequence();
   }
 
