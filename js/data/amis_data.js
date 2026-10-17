@@ -8,7 +8,7 @@ const AMIS_DATA = {
       "tid": 690,
       "title": "動物篇-01-山豬",
       "sub": "山豬",
-      "url": "https://web.klokah.tw/text/sound/690/89423.mp3",
+      "url": "audio/wawa/amis_song_690.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -48,7 +48,7 @@ const AMIS_DATA = {
       "tid": 691,
       "title": "動物篇-02-貓咪",
       "sub": "貓咪",
-      "url": "https://web.klokah.tw/text/sound/691/89424.mp3",
+      "url": "audio/wawa/amis_song_691.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -78,7 +78,7 @@ const AMIS_DATA = {
       "tid": 692,
       "title": "動物篇-03-漂亮的鳥",
       "sub": "漂亮的鳥",
-      "url": "https://web.klokah.tw/text/sound/692/89425.mp3",
+      "url": "audio/wawa/amis_song_692.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -118,7 +118,7 @@ const AMIS_DATA = {
       "tid": 693,
       "title": "動物篇-04-飛鼠飛翔",
       "sub": "飛鼠飛翔",
-      "url": "https://web.klokah.tw/text/sound/693/89426.mp3",
+      "url": "audio/wawa/amis_song_693.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -168,7 +168,7 @@ const AMIS_DATA = {
       "tid": 694,
       "title": "動物篇-05-小青蛙",
       "sub": "小青蛙",
-      "url": "https://web.klokah.tw/text/sound/694/97049.mp3",
+      "url": "audio/wawa/amis_song_694.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -203,7 +203,7 @@ const AMIS_DATA = {
       "tid": 685,
       "title": "數字篇-01-手指運動",
       "sub": "手指運動",
-      "url": "https://web.klokah.tw/text/sound/685/89418.mp3",
+      "url": "audio/wawa/amis_song_685.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -293,7 +293,7 @@ const AMIS_DATA = {
       "tid": 686,
       "title": "數字篇-02-十個都在這裡",
       "sub": "十個都在這裡",
-      "url": "https://web.klokah.tw/text/sound/686/89420.mp3",
+      "url": "audio/wawa/amis_song_686.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -343,7 +343,7 @@ const AMIS_DATA = {
       "tid": 687,
       "title": "數字篇-03-漂亮小魚",
       "sub": "漂亮小魚",
-      "url": "https://web.klokah.tw/text/sound/687/89421.mp3",
+      "url": "audio/wawa/amis_song_687.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -398,7 +398,7 @@ const AMIS_DATA = {
       "tid": 688,
       "title": "數字篇-04-眼睛和鼻子",
       "sub": "眼睛和鼻子",
-      "url": "https://web.klokah.tw/text/sound/688/89422.mp3",
+      "url": "audio/wawa/amis_song_688.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -448,13 +448,13 @@ const AMIS_DATA = {
       "tid": 689,
       "title": "數字篇-05-數字歌",
       "sub": "數字歌",
-      "url": "https://web.klokah.tw/text/sound/689/13065.mp3",
+      "url": "audio/wawa/amis_song_689.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "cecay tosa a wawa, tolo sepat a wawa, lima a wawa.",
           "ch": "一個兩個小孩，三個四個小孩，五個小孩",
-          "url": "https://web.klokah.tw/text/sound/689/13065.mp3"
+          "url": "audio/wawa/amis_song_689.mp3"
         },
         {
           "ab": "^enem pito a wawa, falo siwa a wawa, mo^tep a wawa.",
@@ -478,7 +478,7 @@ const AMIS_DATA = {
       "tid": 649,
       "title": "文化篇-01-快樂的孩子",
       "sub": "快樂的孩子",
-      "url": "https://web.klokah.tw/text/sound/649/86337.mp3",
+      "url": "audio/wawa/amis_song_649.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -548,13 +548,13 @@ const AMIS_DATA = {
       "tid": 652,
       "title": "文化篇-02-歡樂歌",
       "sub": "歡樂歌",
-      "url": "https://web.klokah.tw/text/sound/652/12222.mp3",
+      "url": "audio/wawa/amis_song_652.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "fangca lay romi'ad a ni ni, ca ’edong tolo sid no pangcah.",
           "ch": "今天是美好的日子，穿著傳統的服飾",
-          "url": "https://web.klokah.tw/text/sound/652/12222.mp3"
+          "url": "audio/wawa/amis_song_652.mp3"
         },
         {
           "ab": "ta ta tayra i so raradan, lipahak madiw taha dafak.",
@@ -638,13 +638,13 @@ const AMIS_DATA = {
       "tid": 679,
       "title": "文化篇-05-nalowa",
       "sub": "nalowa",
-      "url": "https://web.klokah.tw/text/sound/679/12976.mp3",
+      "url": "audio/wawa/amis_song_679.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "Na lo wan na lo wan to hi yo in hi yo in hoy yan.",
           "ch": "",
-          "url": "https://web.klokah.tw/text/sound/679/12976.mp3"
+          "url": "audio/wawa/amis_song_679.mp3"
         },
         {
           "ab": "Na lo wan na lo wan to hi yo in hi yo in hoy yan.",
@@ -683,7 +683,7 @@ const AMIS_DATA = {
       "tid": 680,
       "title": "生活對話篇-01-上學去",
       "sub": "上學去",
-      "url": "https://web.klokah.tw/text/sound/680/97042.mp3",
+      "url": "audio/wawa/amis_song_680.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -743,7 +743,7 @@ const AMIS_DATA = {
       "tid": 681,
       "title": "生活對話篇-02-我的名字",
       "sub": "我的名字",
-      "url": "https://web.klokah.tw/text/sound/681/97044.mp3",
+      "url": "audio/wawa/amis_song_681.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -803,7 +803,7 @@ const AMIS_DATA = {
       "tid": 682,
       "title": "生活對話篇-03-找朋友",
       "sub": "找朋友",
-      "url": "https://web.klokah.tw/text/sound/682/97045.mp3",
+      "url": "audio/wawa/amis_song_682.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -853,7 +853,7 @@ const AMIS_DATA = {
       "tid": 683,
       "title": "生活對話篇-04-收玩具",
       "sub": "收玩具",
-      "url": "https://web.klokah.tw/text/sound/683/97047.mp3",
+      "url": "audio/wawa/amis_song_683.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -933,7 +933,7 @@ const AMIS_DATA = {
       "tid": 444,
       "title": "生活自理篇-01-起床歌",
       "sub": "起床歌",
-      "url": "https://web.klokah.tw/text/sound/444/86074.mp3",
+      "url": "audio/wawa/amis_song_444.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -963,7 +963,7 @@ const AMIS_DATA = {
       "tid": 449,
       "title": "生活自理篇-02-刷牙歌",
       "sub": "刷牙歌",
-      "url": "https://web.klokah.tw/text/sound/449/86331.mp3",
+      "url": "audio/wawa/amis_song_449.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1018,7 +1018,7 @@ const AMIS_DATA = {
       "tid": 453,
       "title": "生活自理篇-03-吃飯歌",
       "sub": "吃飯歌",
-      "url": "https://web.klokah.tw/text/sound/453/86332.mp3",
+      "url": "audio/wawa/amis_song_453.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1068,7 +1068,7 @@ const AMIS_DATA = {
       "tid": 459,
       "title": "生活自理篇-04-上學歌",
       "sub": "上學歌",
-      "url": "https://web.klokah.tw/text/sound/459/86333.mp3",
+      "url": "audio/wawa/amis_song_459.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1128,7 +1128,7 @@ const AMIS_DATA = {
       "tid": 615,
       "title": "稱謂篇-01-我的家人",
       "sub": "我的家人",
-      "url": "https://web.klokah.tw/text/sound/615/86334.mp3",
+      "url": "audio/wawa/amis_song_615.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1188,7 +1188,7 @@ const AMIS_DATA = {
       "tid": 616,
       "title": "稱謂篇-02-我的兄弟姊妹",
       "sub": "我的兄弟姊妹",
-      "url": "https://web.klokah.tw/text/sound/616/86335.mp3",
+      "url": "audio/wawa/amis_song_616.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1218,13 +1218,13 @@ const AMIS_DATA = {
       "tid": 617,
       "title": "稱謂篇-03-名字歌",
       "sub": "名字歌",
-      "url": "https://web.klokah.tw/text/sound/617/9415.mp3",
+      "url": "audio/wawa/amis_song_617.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "Cima kiso cima kiso ci Panay kako.",
           "ch": "請問你是誰，請問你是誰，我是Panay",
-          "url": "https://web.klokah.tw/text/sound/617/9415.mp3"
+          "url": "audio/wawa/amis_song_617.mp3"
         },
         {
           "ab": "Cima kiso cima kiso ci Panay kako.",
@@ -1268,7 +1268,7 @@ const AMIS_DATA = {
       "tid": 648,
       "title": "稱謂篇-04-歡樂一家人",
       "sub": "歡樂一家人",
-      "url": "https://web.klokah.tw/text/sound/648/86336.mp3",
+      "url": "audio/wawa/amis_song_648.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1318,13 +1318,13 @@ const AMIS_DATA = {
       "tid": 678,
       "title": "稱謂篇-05-跟屁蟲",
       "sub": "跟屁蟲",
-      "url": "https://web.klokah.tw/text/sound/678/12973.mp3",
+      "url": "audio/wawa/amis_song_678.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "lo mowad ci ina malingad ta la omah.",
           "ch": "媽媽上田要去工作，",
-          "url": "https://web.klokah.tw/text/sound/678/12973.mp3"
+          "url": "audio/wawa/amis_song_678.mp3"
         },
         {
           "ab": "la omah na ’onen ko ta yal i o mah.",
@@ -1345,7 +1345,7 @@ const AMIS_DATA = {
       "tid": 8012,
       "title": "掛圖-動物篇-01-相見歡",
       "sub": "相見歡",
-      "url": "https://web.klokah.tw/text/sound/8012/99020.mp3",
+      "url": "audio/chart/amis_song_8012.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1395,7 +1395,7 @@ const AMIS_DATA = {
       "tid": 8013,
       "title": "掛圖-動物篇-02-動物歌",
       "sub": "動物歌",
-      "url": "https://web.klokah.tw/text/sound/8013/99021.mp3",
+      "url": "audio/chart/amis_song_8013.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1445,7 +1445,7 @@ const AMIS_DATA = {
       "tid": 9158,
       "title": "掛圖-動物篇-03-快樂的動物",
       "sub": "快樂的動物",
-      "url": "https://web.klokah.tw/text/sound/9158/135718.mp3",
+      "url": "audio/chart/amis_song_9158.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1485,7 +1485,7 @@ const AMIS_DATA = {
       "tid": 8014,
       "title": "掛圖-動物篇-04-走一走",
       "sub": "走一走",
-      "url": "https://web.klokah.tw/text/sound/8014/99036.mp3",
+      "url": "audio/chart/amis_song_8014.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1515,7 +1515,7 @@ const AMIS_DATA = {
       "tid": 9159,
       "title": "掛圖-動物篇-05-追逐歌",
       "sub": "追逐歌",
-      "url": "https://web.klokah.tw/text/sound/9159/135719.mp3",
+      "url": "audio/chart/amis_song_9159.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1565,7 +1565,7 @@ const AMIS_DATA = {
       "tid": 8002,
       "title": "掛圖-家庭篇-01-運動歌",
       "sub": "運動歌",
-      "url": "https://web.klokah.tw/text/sound/8002/99031.mp3",
+      "url": "audio/chart/amis_song_8002.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1605,7 +1605,7 @@ const AMIS_DATA = {
       "tid": 8003,
       "title": "掛圖-家庭篇-02-遊戲歌",
       "sub": "遊戲歌",
-      "url": "https://web.klokah.tw/text/sound/8003/99032.mp3",
+      "url": "audio/chart/amis_song_8003.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1645,7 +1645,7 @@ const AMIS_DATA = {
       "tid": 8004,
       "title": "掛圖-家庭篇-03-打掃歌",
       "sub": "打掃歌",
-      "url": "https://web.klokah.tw/text/sound/8004/99033.mp3",
+      "url": "audio/chart/amis_song_8004.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1745,7 +1745,7 @@ const AMIS_DATA = {
       "tid": 8006,
       "title": "掛圖-家庭篇-05-我的家人真可愛",
       "sub": "我的家人真可愛",
-      "url": "https://web.klokah.tw/text/sound/8006/99035.mp3",
+      "url": "audio/chart/amis_song_8006.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1785,7 +1785,7 @@ const AMIS_DATA = {
       "tid": 8007,
       "title": "掛圖-自然篇-01-白天和夜晚",
       "sub": "白天和夜晚",
-      "url": "https://web.klokah.tw/text/sound/8007/99022.mp3",
+      "url": "audio/chart/amis_song_8007.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1835,7 +1835,7 @@ const AMIS_DATA = {
       "tid": 8008,
       "title": "掛圖-自然篇-02-我的家",
       "sub": "我的家",
-      "url": "https://web.klokah.tw/text/sound/8008/99023.mp3",
+      "url": "audio/chart/amis_song_8008.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1885,7 +1885,7 @@ const AMIS_DATA = {
       "tid": 8009,
       "title": "掛圖-自然篇-03-彩虹",
       "sub": "彩虹",
-      "url": "https://web.klokah.tw/text/sound/8009/99024.mp3",
+      "url": "audio/chart/amis_song_8009.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1975,7 +1975,7 @@ const AMIS_DATA = {
       "tid": 8010,
       "title": "掛圖-自然篇-04-奶奶的山上",
       "sub": "奶奶的山上",
-      "url": "https://web.klokah.tw/text/sound/8010/99025.mp3",
+      "url": "audio/chart/amis_song_8010.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2045,7 +2045,7 @@ const AMIS_DATA = {
       "tid": 8011,
       "title": "掛圖-自然篇-05-四季(春夏秋冬)",
       "sub": "四季(春夏秋冬)",
-      "url": "https://web.klokah.tw/text/sound/8011/99026.mp3",
+      "url": "audio/chart/amis_song_8011.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2095,7 +2095,7 @@ const AMIS_DATA = {
       "tid": 7908,
       "title": "掛圖-身體篇-01-摸摸你的頭",
       "sub": "摸摸你的頭",
-      "url": "https://web.klokah.tw/text/sound/7908/98061.mp3",
+      "url": "audio/chart/amis_song_7908.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2125,7 +2125,7 @@ const AMIS_DATA = {
       "tid": 7998,
       "title": "掛圖-身體篇-02-你的眼睛在哪裡",
       "sub": "你的眼睛在哪裡",
-      "url": "https://web.klokah.tw/text/sound/7998/99027.mp3",
+      "url": "audio/chart/amis_song_7998.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2155,7 +2155,7 @@ const AMIS_DATA = {
       "tid": 7999,
       "title": "掛圖-身體篇-03-你用什麼聽",
       "sub": "你用什麼聽",
-      "url": "https://web.klokah.tw/text/sound/7999/99028.mp3",
+      "url": "audio/chart/amis_song_7999.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2185,7 +2185,7 @@ const AMIS_DATA = {
       "tid": 8000,
       "title": "掛圖-身體篇-04-舉起你的手",
       "sub": "舉起你的手",
-      "url": "https://web.klokah.tw/text/sound/8000/99029.mp3",
+      "url": "audio/chart/amis_song_8000.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -2220,7 +2220,7 @@ const AMIS_DATA = {
       "tid": 8001,
       "title": "掛圖-身體篇-05-你有幾隻手指頭",
       "sub": "你有幾隻手指頭",
-      "url": "https://web.klokah.tw/text/sound/8001/99030.mp3",
+      "url": "audio/chart/amis_song_8001.mp3",
       "type": "full_song",
       "lyrics": [
         {

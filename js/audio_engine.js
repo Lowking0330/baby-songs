@@ -41,9 +41,8 @@ const AudioEngine = (function() {
 
   function startSilentAudio() {
     initSilentAudio();
-    if (silentAudio) {
+    if (silentAudio && silentAudio.paused) {
       try {
-        silentAudio.currentTime = 0;
         const p = silentAudio.play();
         if (p && typeof p.catch === "function") p.catch(() => {});
       } catch (e) {}
@@ -104,15 +103,15 @@ const AudioEngine = (function() {
   // 播放指定音訊 URL
   function playUrl(url, playbackRate, onEnded, onError) {
     initPrimaryAudio();
-    // 關鍵修復：播放主音訊時暫停靜音音軌，避免搶奪行動裝置（Android / iOS）之系統音訊焦點 (Audio Focus)
-    stopSilentAudio();
+    startSilentAudio();
     requestWakeLock();
 
     const thisToken = ++currentPlaybackToken;
     let hasEnded = false;
     let retryCount = 0;
-    const maxRetries = 2;
+    const maxRetries = 1;
     let lastTime = 0;
+    let isRetrying = false;
 
     // 清理舊回呼
     primaryAudio.onended = null;
@@ -147,23 +146,23 @@ const AudioEngine = (function() {
       primaryAudio.ontimeupdate = null;
       primaryAudio.onwaiting = null;
       primaryAudio.onstalled = null;
-      console.warn("AudioEngine: 播放重試多次後仍失敗，通知上層處理（絕不粗暴切歌）:", url, err);
+      console.warn("AudioEngine: 播放重試後仍失敗，通知上層處理:", url, err);
       if (typeof onError === "function") {
         onError(err);
       }
-      // 嚴正警告：絕不可 fallback 自動調用 onEnded() 導致跳歌！
     }
 
     function attemptPlay() {
       if (thisToken !== currentPlaybackToken || hasEnded) return;
 
       try {
+        primaryAudio.volume = 1.0;
+        primaryAudio.muted = false;
         const playPromise = primaryAudio.play();
         if (playPromise !== undefined) {
           playPromise.catch((err) => {
             if (thisToken !== currentPlaybackToken || hasEnded) return;
             if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) {
-              // 使用者切換曲目或手勢暫停，非真實播放錯誤
               return;
             }
             handleFailure(err);
@@ -175,14 +174,17 @@ const AudioEngine = (function() {
     }
 
     function handleFailure(err) {
-      if (hasEnded || thisToken !== currentPlaybackToken) return;
+      if (hasEnded || thisToken !== currentPlaybackToken || isRetrying) return;
       if (retryCount < maxRetries) {
         retryCount++;
-        console.warn(`AudioEngine: 偵測到網路微中斷或解碼抖動，自動斷點重試 (${retryCount}/${maxRetries}) 位於 ${lastTime.toFixed(1)}s:`, url);
+        isRetrying = true;
+        console.warn(`AudioEngine: 自動重試 (${retryCount}/${maxRetries}) 位於 ${lastTime.toFixed(1)}s:`, url);
         setTimeout(() => {
           if (thisToken !== currentPlaybackToken || hasEnded) return;
+          isRetrying = false;
           try {
-            primaryAudio.load();
+            primaryAudio.src = url;
+            primaryAudio.playbackRate = playbackRate || 1.0;
             if (lastTime > 0.5) {
               primaryAudio.currentTime = Math.max(0, lastTime - 0.2);
             }
@@ -190,7 +192,7 @@ const AudioEngine = (function() {
           } catch (e) {
             handleFailure(e);
           }
-        }, 1200);
+        }, 800);
       } else {
         finishError(err);
       }
@@ -199,9 +201,8 @@ const AudioEngine = (function() {
     // 歌曲自然結束事件
     primaryAudio.onended = () => {
       if (hasEnded || thisToken !== currentPlaybackToken) return;
-      // 防早退保護：若音訊 duration 明確大於 5 秒，但目前播放時間落後總長度超過 2.5 秒（串流未傳完即中斷）
       if (primaryAudio.duration && primaryAudio.duration > 5 && (primaryAudio.duration - primaryAudio.currentTime > 2.5)) {
-        console.warn(`AudioEngine: 偵測到串流過早截斷 (currentTime=${primaryAudio.currentTime.toFixed(1)}s, duration=${primaryAudio.duration.toFixed(1)}s)，啟動斷點重試續播...`);
+        console.warn(`AudioEngine: 偵測到串流過早截斷，啟動斷點續播...`);
         handleFailure(new Error("Premature stream truncation"));
         return;
       }
@@ -216,9 +217,7 @@ const AudioEngine = (function() {
 
     // 設定音源與啟動播放
     try {
-      if (primaryAudio.src !== url && !primaryAudio.src.endsWith(url)) {
-        primaryAudio.src = url;
-      }
+      primaryAudio.src = url;
       primaryAudio.playbackRate = playbackRate || 1.0;
       attemptPlay();
     } catch (e) {

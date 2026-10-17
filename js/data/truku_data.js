@@ -8,7 +8,7 @@ const TRUKU_DATA = {
       "tid": 904,
       "title": "動物篇-01-山豬",
       "sub": "山豬",
-      "url": "https://web.klokah.tw/text/sound/904/89541.mp3",
+      "url": "audio/wawa/truku_song_904.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -33,7 +33,7 @@ const TRUKU_DATA = {
       "tid": 905,
       "title": "動物篇-02-貓咪",
       "sub": "貓咪",
-      "url": "https://web.klokah.tw/text/sound/905/89542.mp3",
+      "url": "audio/wawa/truku_song_905.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -63,7 +63,7 @@ const TRUKU_DATA = {
       "tid": 906,
       "title": "動物篇-03-漂亮的鳥",
       "sub": "漂亮的鳥",
-      "url": "https://web.klokah.tw/text/sound/906/89543.mp3",
+      "url": "audio/wawa/truku_song_906.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -93,7 +93,7 @@ const TRUKU_DATA = {
       "tid": 907,
       "title": "動物篇-04-飛鼠飛翔",
       "sub": "飛鼠飛翔",
-      "url": "https://web.klokah.tw/text/sound/907/89544.mp3",
+      "url": "audio/wawa/truku_song_907.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -123,13 +123,13 @@ const TRUKU_DATA = {
       "tid": 908,
       "title": "動物篇-05-動物遊戲篇",
       "sub": "動物遊戲篇",
-      "url": "https://web.klokah.tw/text/sound/908/14283.mp3",
+      "url": "audio/wawa/truku_song_908.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "Kingal sbirat riru ngungu na, dha birat tutuy balaw.",
           "ch": "一隻兔子尾巴搖呀搖，兩隻耳朵豎起來",
-          "url": "https://web.klokah.tw/text/sound/908/14283.mp3"
+          "url": "audio/wawa/truku_song_908.mp3"
         },
         {
           "ab": "Spat kaqay sburung, wada binaw wada binaw isu da.",
@@ -143,7 +143,7 @@ const TRUKU_DATA = {
       "tid": 899,
       "title": "數字篇-01-手指運動",
       "sub": "手指運動",
-      "url": "https://web.klokah.tw/text/sound/899/89545.mp3",
+      "url": "audio/wawa/truku_song_899.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -173,7 +173,7 @@ const TRUKU_DATA = {
       "tid": 900,
       "title": "數字篇-02-十個都在這裡",
       "sub": "十個都在這裡",
-      "url": "https://web.klokah.tw/text/sound/900/89546.mp3",
+      "url": "audio/wawa/truku_song_900.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -203,7 +203,7 @@ const TRUKU_DATA = {
       "tid": 901,
       "title": "數字篇-03-漂亮小魚",
       "sub": "漂亮小魚",
-      "url": "https://web.klokah.tw/text/sound/901/89547.mp3",
+      "url": "audio/wawa/truku_song_901.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -233,7 +233,7 @@ const TRUKU_DATA = {
       "tid": 902,
       "title": "數字篇-04-眼睛和鼻子",
       "sub": "眼睛和鼻子",
-      "url": "https://web.klokah.tw/text/sound/902/89548.mp3",
+      "url": "audio/wawa/truku_song_902.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -263,7 +263,7 @@ const TRUKU_DATA = {
       "tid": 889,
       "title": "文化篇-01-快樂的孩子",
       "sub": "快樂的孩子",
-      "url": "https://web.klokah.tw/text/sound/889/87162.mp3",
+      "url": "audio/wawa/truku_song_889.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -293,13 +293,13 @@ const TRUKU_DATA = {
       "tid": 890,
       "title": "文化篇-02-歡樂歌",
       "sub": "歡樂歌",
-      "url": "https://web.klokah.tw/text/sound/890/14216.mp3",
+      "url": "audio/wawa/truku_song_890.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "suyang bi jiyax sayang, plukus ta lukus Truku.",
           "ch": "今天是美好的日子，穿著傳統的服飾",
-          "url": "https://web.klokah.tw/text/sound/890/14216.mp3"
+          "url": "audio/wawa/truku_song_890.mp3"
         },
         {
           "ab": "supu ta mqaras, supu muyas.",
@@ -323,13 +323,13 @@ const TRUKU_DATA = {
       "tid": 891,
       "title": "文化篇-03-相聚",
       "sub": "相聚",
-      "url": "https://web.klokah.tw/text/sound/891/14222.mp3",
+      "url": "audio/wawa/truku_song_891.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "kana mswai iyah kana suyang bi qtaan ka lukus kuyus ni.",
           "ch": "兄弟姊妹們大家一起來，女生的衣服真美麗",
-          "url": "https://web.klokah.tw/text/sound/891/14222.mp3"
+          "url": "audio/wawa/truku_song_891.mp3"
         },
         {
           "ab": "suyang bi bhangan hngng snwa, psupu ta mqaras kdjiyax.",
@@ -353,13 +353,13 @@ const TRUKU_DATA = {
       "tid": 892,
       "title": "文化篇-04-祈福歌",
       "sub": "祈福歌",
-      "url": "https://web.klokah.tw/text/sound/892/14226.mp3",
+      "url": "audio/wawa/truku_song_892.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "masu masu suyang bi uqun! sbiki malu bi sbigay.",
           "ch": "小米小米營養又美味，檳榔檳榔最佳的賀禮",
-          "url": "https://web.klokah.tw/text/sound/892/14226.mp3"
+          "url": "audio/wawa/truku_song_892.mp3"
         },
         {
           "ab": "sinaw sinaw sbgay utux ta, kika empsblaqi biknan.",
@@ -383,13 +383,13 @@ const TRUKU_DATA = {
       "tid": 893,
       "title": "文化篇-05-祖靈橋歌",
       "sub": "祖靈橋歌",
-      "url": "https://web.klokah.tw/text/sound/893/14230.mp3",
+      "url": "audio/wawa/truku_song_893.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "hakaw utux suyang bi ham gaga hiya rudan taha.",
           "ch": "彩虹橋好漂亮，我們的祖先在那裡",
-          "url": "https://web.klokah.tw/text/sound/893/14230.mp3"
+          "url": "audio/wawa/truku_song_893.mp3"
         },
         {
           "ab": "seejiq Truku mowsa ta kana, lita lita lita lita kmbiyax ta bi ha.",
@@ -403,7 +403,7 @@ const TRUKU_DATA = {
       "tid": 894,
       "title": "生活對話篇-01-上學去",
       "sub": "上學去",
-      "url": "https://web.klokah.tw/text/sound/894/97095.mp3",
+      "url": "audio/wawa/truku_song_894.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -433,7 +433,7 @@ const TRUKU_DATA = {
       "tid": 895,
       "title": "生活對話篇-02-我的名字",
       "sub": "我的名字",
-      "url": "https://web.klokah.tw/text/sound/895/97096.mp3",
+      "url": "audio/wawa/truku_song_895.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -463,7 +463,7 @@ const TRUKU_DATA = {
       "tid": 896,
       "title": "生活對話篇-03-找朋友",
       "sub": "找朋友",
-      "url": "https://web.klokah.tw/text/sound/896/97098.mp3",
+      "url": "audio/wawa/truku_song_896.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -493,7 +493,7 @@ const TRUKU_DATA = {
       "tid": 897,
       "title": "生活對話篇-04-收玩具",
       "sub": "收玩具",
-      "url": "https://web.klokah.tw/text/sound/897/97099.mp3",
+      "url": "audio/wawa/truku_song_897.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -523,13 +523,13 @@ const TRUKU_DATA = {
       "tid": 898,
       "title": "生活對話篇-05-這是什麼",
       "sub": "這是什麼",
-      "url": "https://web.klokah.tw/text/sound/898/14248.mp3",
+      "url": "audio/wawa/truku_song_898.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "manu ka bhgay bi? cvimu ni huda ha, manu ka mqurug bi? idas ni duhung ha.",
           "ch": "什麼東西白又白？鹽巴和雪；什麼東西圓又圓？月亮和雪",
-          "url": "https://web.klokah.tw/text/sound/898/14248.mp3"
+          "url": "audio/wawa/truku_song_898.mp3"
         },
         {
           "ab": "manu ka bbaraw bi? sneunux bubu mu, ima ka seejiq bi? bubu mu ka seejiq bi, wis wis wis wis .",
@@ -543,7 +543,7 @@ const TRUKU_DATA = {
       "tid": 879,
       "title": "生活自理篇-01-起床歌",
       "sub": "起床歌",
-      "url": "https://web.klokah.tw/text/sound/879/86414.mp3",
+      "url": "audio/wawa/truku_song_879.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -573,7 +573,7 @@ const TRUKU_DATA = {
       "tid": 880,
       "title": "生活自理篇-02-刷牙歌",
       "sub": "刷牙歌",
-      "url": "https://web.klokah.tw/text/sound/880/86415.mp3",
+      "url": "audio/wawa/truku_song_880.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -603,7 +603,7 @@ const TRUKU_DATA = {
       "tid": 882,
       "title": "生活自理篇-03-吃飯歌",
       "sub": "吃飯歌",
-      "url": "https://web.klokah.tw/text/sound/882/86416.mp3",
+      "url": "audio/wawa/truku_song_882.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -633,7 +633,7 @@ const TRUKU_DATA = {
       "tid": 881,
       "title": "生活自理篇-04-上學歌",
       "sub": "上學歌",
-      "url": "https://web.klokah.tw/text/sound/881/86417.mp3",
+      "url": "audio/wawa/truku_song_881.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -663,13 +663,13 @@ const TRUKU_DATA = {
       "tid": 883,
       "title": "生活自理篇-05-大家一起來",
       "sub": "大家一起來",
-      "url": "https://web.klokah.tw/text/sound/883/14188.mp3",
+      "url": "audio/wawa/truku_song_883.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "laqi laqi iyah hini, mkan idaw masu.",
           "ch": "小朋友，過來這裡吃飯",
-          "url": "https://web.klokah.tw/text/sound/883/14188.mp3"
+          "url": "audio/wawa/truku_song_883.mp3"
         },
         {
           "ab": "kingal dha tru spat supu miyah kana.",
@@ -693,7 +693,7 @@ const TRUKU_DATA = {
       "tid": 884,
       "title": "稱謂篇-01-我的家人",
       "sub": "我的家人",
-      "url": "https://web.klokah.tw/text/sound/884/86418.mp3",
+      "url": "audio/wawa/truku_song_884.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -723,7 +723,7 @@ const TRUKU_DATA = {
       "tid": 885,
       "title": "稱謂篇-02-我的兄弟姐妹",
       "sub": "我的兄弟姐妹",
-      "url": "https://web.klokah.tw/text/sound/885/86420.mp3",
+      "url": "audio/wawa/truku_song_885.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -753,13 +753,13 @@ const TRUKU_DATA = {
       "tid": 886,
       "title": "稱謂篇-03-名字歌",
       "sub": "名字歌",
-      "url": "https://web.klokah.tw/text/sound/886/14200.mp3",
+      "url": "audio/wawa/truku_song_886.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "ima hangan su? ima hangan su? yaku Icyang",
           "ch": "請問你是誰？我是Icyang",
-          "url": "https://web.klokah.tw/text/sound/886/14200.mp3"
+          "url": "audio/wawa/truku_song_886.mp3"
         },
         {
           "ab": "qita hini qita hini yaku Icyang, kuyuh ka yaku snaw ka yaku laqi Truku.",
@@ -783,7 +783,7 @@ const TRUKU_DATA = {
       "tid": 887,
       "title": "稱謂篇-04-歡樂一家人",
       "sub": "歡樂一家人",
-      "url": "https://web.klokah.tw/text/sound/887/86421.mp3",
+      "url": "audio/wawa/truku_song_887.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -813,13 +813,13 @@ const TRUKU_DATA = {
       "tid": 888,
       "title": "稱謂篇-05-我的部落",
       "sub": "我的部落",
-      "url": "https://web.klokah.tw/text/sound/888/14208.mp3",
+      "url": "audio/wawa/truku_song_888.mp3",
       "type": "full_song",
       "lyrics": [
         {
           "ab": "kuxul mu bi ka alang mu, kuxul mu bi ka alang mu.",
           "ch": "我喜歡我的部落",
-          "url": "https://web.klokah.tw/text/sound/888/14208.mp3"
+          "url": "audio/wawa/truku_song_888.mp3"
         },
         {
           "ab": "ga ga hiya ga bubu ni tama, kuxul mu bika alang mu.",
@@ -835,7 +835,7 @@ const TRUKU_DATA = {
       "tid": 9234,
       "title": "掛圖-動物篇-01-相見歡",
       "sub": "相見歡",
-      "url": "https://web.klokah.tw/text/sound/9234/135166.mp3",
+      "url": "audio/chart/truku_song_9234.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -875,7 +875,7 @@ const TRUKU_DATA = {
       "tid": 9235,
       "title": "掛圖-動物篇-02-動物歌",
       "sub": "動物歌",
-      "url": "https://web.klokah.tw/text/sound/9235/135169.mp3",
+      "url": "audio/chart/truku_song_9235.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -925,7 +925,7 @@ const TRUKU_DATA = {
       "tid": 9236,
       "title": "掛圖-動物篇-03-快樂的動物",
       "sub": "快樂的動物",
-      "url": "https://web.klokah.tw/text/sound/9236/135805.mp3",
+      "url": "audio/chart/truku_song_9236.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -965,7 +965,7 @@ const TRUKU_DATA = {
       "tid": 9237,
       "title": "掛圖-動物篇-04-走一走",
       "sub": "走一走",
-      "url": "https://web.klokah.tw/text/sound/9237/135173.mp3",
+      "url": "audio/chart/truku_song_9237.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -995,7 +995,7 @@ const TRUKU_DATA = {
       "tid": 9238,
       "title": "掛圖-動物篇-05-追逐歌",
       "sub": "追逐歌",
-      "url": "https://web.klokah.tw/text/sound/9238/135806.mp3",
+      "url": "audio/chart/truku_song_9238.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1045,7 +1045,7 @@ const TRUKU_DATA = {
       "tid": 9224,
       "title": "掛圖-家庭篇-01-運動歌",
       "sub": "運動歌",
-      "url": "https://web.klokah.tw/text/sound/9224/135133.mp3",
+      "url": "audio/chart/truku_song_9224.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1085,7 +1085,7 @@ const TRUKU_DATA = {
       "tid": 9225,
       "title": "掛圖-家庭篇-02-遊戲歌",
       "sub": "遊戲歌",
-      "url": "https://web.klokah.tw/text/sound/9225/135134.mp3",
+      "url": "audio/chart/truku_song_9225.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1125,7 +1125,7 @@ const TRUKU_DATA = {
       "tid": 9226,
       "title": "掛圖-家庭篇-03-打掃歌",
       "sub": "打掃歌",
-      "url": "https://web.klokah.tw/text/sound/9226/135135.mp3",
+      "url": "audio/chart/truku_song_9226.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1185,7 +1185,7 @@ const TRUKU_DATA = {
       "tid": 9227,
       "title": "掛圖-家庭篇-04-數字歌",
       "sub": "數字歌",
-      "url": "https://web.klokah.tw/text/sound/9227/135136.mp3",
+      "url": "audio/chart/truku_song_9227.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1215,7 +1215,7 @@ const TRUKU_DATA = {
       "tid": 9228,
       "title": "掛圖-家庭篇-05-我的家人真可愛",
       "sub": "我的家人真可愛",
-      "url": "https://web.klokah.tw/text/sound/9228/135137.mp3",
+      "url": "audio/chart/truku_song_9228.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1255,7 +1255,7 @@ const TRUKU_DATA = {
       "tid": 9229,
       "title": "掛圖-自然篇-01-白天和夜晚",
       "sub": "白天和夜晚",
-      "url": "https://web.klokah.tw/text/sound/9229/135141.mp3",
+      "url": "audio/chart/truku_song_9229.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1305,7 +1305,7 @@ const TRUKU_DATA = {
       "tid": 9230,
       "title": "掛圖-自然篇-02-我的家",
       "sub": "我的家",
-      "url": "https://web.klokah.tw/text/sound/9230/135145.mp3",
+      "url": "audio/chart/truku_song_9230.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1355,7 +1355,7 @@ const TRUKU_DATA = {
       "tid": 9231,
       "title": "掛圖-自然篇-03-彩虹",
       "sub": "彩虹",
-      "url": "https://web.klokah.tw/text/sound/9231/135153.mp3",
+      "url": "audio/chart/truku_song_9231.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1445,7 +1445,7 @@ const TRUKU_DATA = {
       "tid": 9232,
       "title": "掛圖-自然篇-04-奶奶的山上",
       "sub": "奶奶的山上",
-      "url": "https://web.klokah.tw/text/sound/9232/135158.mp3",
+      "url": "audio/chart/truku_song_9232.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1510,7 +1510,7 @@ const TRUKU_DATA = {
       "tid": 9233,
       "title": "掛圖-自然篇-05-四季(春夏秋冬)",
       "sub": "四季(春夏秋冬)",
-      "url": "https://web.klokah.tw/text/sound/9233/135162.mp3",
+      "url": "audio/chart/truku_song_9233.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1560,7 +1560,7 @@ const TRUKU_DATA = {
       "tid": 9220,
       "title": "掛圖-身體篇-01-摸摸你的頭",
       "sub": "摸摸你的頭",
-      "url": "https://web.klokah.tw/text/sound/9220/135129.mp3",
+      "url": "audio/chart/truku_song_9220.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1590,7 +1590,7 @@ const TRUKU_DATA = {
       "tid": 9221,
       "title": "掛圖-身體篇-02-你的眼睛在哪裡",
       "sub": "你的眼睛在哪裡",
-      "url": "https://web.klokah.tw/text/sound/9221/135130.mp3",
+      "url": "audio/chart/truku_song_9221.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1620,7 +1620,7 @@ const TRUKU_DATA = {
       "tid": 9239,
       "title": "掛圖-身體篇-03-你用什麼聽",
       "sub": "你用什麼聽",
-      "url": "https://web.klokah.tw/text/sound/9239/135196.mp3",
+      "url": "audio/chart/truku_song_9239.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1650,7 +1650,7 @@ const TRUKU_DATA = {
       "tid": 9222,
       "title": "掛圖-身體篇-04-舉起你的手",
       "sub": "舉起你的手",
-      "url": "https://web.klokah.tw/text/sound/9222/135131.mp3",
+      "url": "audio/chart/truku_song_9222.mp3",
       "type": "full_song",
       "lyrics": [
         {
@@ -1685,7 +1685,7 @@ const TRUKU_DATA = {
       "tid": 9223,
       "title": "掛圖-身體篇-05-你有幾隻手指頭",
       "sub": "你有幾隻手指頭",
-      "url": "https://web.klokah.tw/text/sound/9223/135132.mp3",
+      "url": "audio/chart/truku_song_9223.mp3",
       "type": "full_song",
       "lyrics": [
         {

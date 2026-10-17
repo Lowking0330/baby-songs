@@ -233,12 +233,20 @@ assert.strictEqual(CommutePlayer.getItemKey(favList[0], "amis"), sample1Key, "�
 
 console.log("✅ 幼兒情境歌單與寶寶最愛收藏測試通過！");
 
-console.log("=== 7. 檢驗修復與合成歌曲時長（絕無低於 10 秒之歌）===");
+console.log("=== 7. 檢驗全庫 119 首兒歌 100% 本地自託管與時長（絕無低於 10 秒之歌，徹底免疫 klokah 503 當機）===");
 function getMp3Duration(buffer) {
   let offset = 0;
+  if (buffer.slice(0, 3).toString() === 'ID3') {
+    const id3Size = ((buffer[6] & 0x7f) << 21) | ((buffer[7] & 0x7f) << 14) | ((buffer[8] & 0x7f) << 7) | (buffer[9] & 0x7f);
+    offset = 10 + id3Size;
+  }
   let totalDuration = 0;
-  const bitrates = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0];
-  const sampleRates = [44100, 48000, 32000, 0];
+  const bitratesV1 = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0];
+  const bitratesV2 = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160, 0];
+  const srV1 = [44100, 48000, 32000, 0];
+  const srV2 = [22050, 24000, 16000, 0];
+  const srV25 = [11025, 12000, 8000, 0];
+
   while (offset < buffer.length - 4) {
     if (buffer[offset] === 0xFF && (buffer[offset + 1] & 0xE0) === 0xE0) {
       const b1 = buffer[offset + 1];
@@ -248,12 +256,14 @@ function getMp3Duration(buffer) {
       const bitrateIdx = (b2 >> 4) & 0x0F;
       const sampleRateIdx = (b2 >> 2) & 0x03;
       const padding = (b2 >> 1) & 0x01;
-      if (mpegVersion === 3 && layer === 1 && bitrateIdx > 0 && bitrateIdx < 15 && sampleRateIdx < 3) {
-        const bitrate = bitrates[bitrateIdx] * 1000;
-        const sampleRate = sampleRates[sampleRateIdx];
-        const frameLength = Math.floor((144 * bitrate) / sampleRate) + padding;
-        if (frameLength > 0) {
-          totalDuration += 1152 / sampleRate;
+      if (mpegVersion !== 1 && layer === 1 && bitrateIdx > 0 && bitrateIdx < 15 && sampleRateIdx < 3) {
+        const isV1 = mpegVersion === 3;
+        const bitrate = (isV1 ? bitratesV1[bitrateIdx] : bitratesV2[bitrateIdx]) * 1000;
+        const sampleRate = isV1 ? srV1[sampleRateIdx] : (mpegVersion === 2 ? srV2[sampleRateIdx] : srV25[sampleRateIdx]);
+        const samplesPerFrame = isV1 ? 1152 : 576;
+        const frameLength = Math.floor(((isV1 ? 144 : 72) * bitrate) / sampleRate) + padding;
+        if (frameLength > 4) {
+          totalDuration += samplesPerFrame / sampleRate;
           offset += frameLength;
           continue;
         }
@@ -264,34 +274,25 @@ function getMp3Duration(buffer) {
   return totalDuration;
 }
 
-// 檢驗阿美語掛圖 8005
-const chart8005Buf = fs.readFileSync('audio/chart/amis_chart_8005.mp3');
-const d8005 = getMp3Duration(chart8005Buf);
-assert(d8005 >= 10.0, `amis_chart_8005.mp3 時長應 >= 10s (實際: ${d8005.toFixed(1)}s)`);
-
-// 檢驗阿美語與太魯閣語 10+10 首經典兒歌
-const classicFiles = fs.readdirSync('audio/classic').filter(f => f.endsWith('.mp3'));
-assert.strictEqual(classicFiles.length, 20, "經典兒歌本地音訊應恰好 20 首 (阿美語 10 首 + 太魯閣語 10 首)");
-
-classicFiles.forEach(fn => {
-  const buf = fs.readFileSync(`audio/classic/${fn}`);
-  const dur = getMp3Duration(buf);
-  assert(dur >= 10.0, `${fn} 時長應 >= 10s (實際: ${dur.toFixed(1)}s)`);
-});
-
-// 檢驗阿美語 4 首擴充輪唱完整版兒歌
-const extendedWawaFiles = [
-  'audio/wawa/amis_653_full.mp3',
-  'audio/wawa/amis_654_full.mp3',
-  'audio/wawa/amis_684_full.mp3',
-  'audio/wawa/amis_677_full.mp3'
+const allSongItems = [
+  ...TRUKU_DATA.wawa_songs,
+  ...TRUKU_DATA.chart_songs,
+  ...TRUKU_DATA.classic_songs,
+  ...AMIS_DATA.wawa_songs,
+  ...AMIS_DATA.chart_songs,
+  ...AMIS_DATA.classic_songs
 ];
-extendedWawaFiles.forEach(path => {
-  assert(fs.existsSync(path), `${path} 檔案必須存在`);
-  const buf = fs.readFileSync(path);
+
+assert.strictEqual(allSongItems.length, 119, "全庫兒歌總數應為 119 首 (太魯閣語 59 首 + 秀姑巒阿美語 60 首)");
+
+allSongItems.forEach((song) => {
+  assert(!song.url.startsWith('http'), `兒歌 ${song.title} 必須為本地自託管路徑，不可依賴外部主機 (${song.url})`);
+  assert(fs.existsSync(song.url), `兒歌本地音檔必須存在: ${song.url}`);
+  const buf = fs.readFileSync(song.url);
   const dur = getMp3Duration(buf);
-  assert(dur >= 12.0, `${path} 時長應 >= 12s (實際: ${dur.toFixed(1)}s)`);
+  assert(dur >= 10.0, `${song.title} (${song.url}) 時長應 >= 10s (實際: ${dur.toFixed(2)}s)`);
 });
-console.log("✅ 本地合成與擴充歌曲 100% 通過時長校驗（每首皆 >= 10 秒，絕無破碎斷句）！");
+
+console.log("✅ 全庫 119 首兒歌 100% 本地自託管與時長校驗通過（每首皆 >= 10 秒，0 外部斷線風險）！");
 
 console.log("\n🎉 全部 7 項測試皆完美通過！");

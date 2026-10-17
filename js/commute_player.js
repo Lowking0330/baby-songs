@@ -269,7 +269,7 @@ const CommutePlayer = (function() {
       });
     } else if (playMode === "repeat1_zh1") {
       // 模式：單次精聽（族語 1 次 ＋ 中文 1 次）
-      AudioEngine.playUrl(item.url, playbackRate, () => {
+      const afterIndigenous = () => {
         if (thisSession !== playbackSessionId || !isPlaying) return;
         scheduleTask(500, () => {
           if (thisSession !== playbackSessionId || !isPlaying) return;
@@ -282,7 +282,8 @@ const CommutePlayer = (function() {
             });
           });
         });
-      });
+      };
+      AudioEngine.playUrl(item.url, playbackRate, afterIndigenous, afterIndigenous);
     } else {
       // 模式：沉浸磨耳朵（預設：族語 2 次 ＋ 中文 1 次）
       playIndigenousTwice(item, thisSession, () => {
@@ -328,16 +329,17 @@ const CommutePlayer = (function() {
 
   // 輔助：連續播放族語 2 次（中間微停頓 450ms）
   function playIndigenousTwice(item, sessionToken, onComplete) {
+    const done = () => {
+      if (sessionToken !== playbackSessionId || !isPlaying) return;
+      onComplete();
+    };
     AudioEngine.playUrl(item.url, playbackRate, () => {
       if (sessionToken !== playbackSessionId || !isPlaying) return;
       scheduleTask(450, () => {
         if (sessionToken !== playbackSessionId || !isPlaying) return;
-        AudioEngine.playUrl(item.url, playbackRate, () => {
-          if (sessionToken !== playbackSessionId || !isPlaying) return;
-          onComplete();
-        });
+        AudioEngine.playUrl(item.url, playbackRate, done, done);
       });
-    });
+    }, done);
   }
 
   // 自動進入下一首
@@ -518,9 +520,6 @@ const CommutePlayer = (function() {
     isPlaying = true;
     AudioEngine.updateMediaSessionState(true);
     if (onStateChangeCb) onStateChangeCb(true);
-    if (typeof AudioEngine.replayCurrentAudio === "function") {
-      AudioEngine.replayCurrentAudio();
-    }
     playCurrentSequence();
   }
 
